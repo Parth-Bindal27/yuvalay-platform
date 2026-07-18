@@ -1,0 +1,1203 @@
+/* ==========================================
+        GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* ==========================================
+        NAVBAR
+========================================== */
+
+*{
+    font-family:"Inter",sans-serif;
+}
+
+.navbar{
+
+    position:fixed;
+
+    top:18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(96%,1400px);
+
+    height:82px;
+
+    padding:0 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    border-radius:22px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+    z-index:9999;
+
+}
+
+.navbar.scrolled{
+
+    top:10px;
+
+    height:68px;
+
+    background:rgba(255,255,255,.9);
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+        LOGO
+========================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    text-decoration:none;
+
+    flex-shrink:0;
+
+}
+
+.logo img{
+
+    width:58px;
+
+    height:52px;
+
+    object-fit:contain;
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1.1;
+
+}
+
+.logo-text h2{
+
+    margin:0;
+
+    color:#111;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.logo-text span{
+
+    margin-top:2px;
+
+    font-size:12px;
+
+    color:#666;
+
+    letter-spacing:.4px;
+
+}
+
+/* ==========================================
+        NAVIGATION
+========================================== */
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:36px;
+
+    flex:1;
+
+    margin:0 45px;
+
+}
+
+.nav-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#97B928;
+
+}
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#B6D63E;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.nav-link:hover::after,
+
+.nav-link.active::after{
+
+    width:100%;
+
+}
+
+.nav-link.active{
+
+    color:#97B928;
+
+}
+
+.arrow{
+
+    font-size:14px;
+
+}
+/* ==========================================
+        RIGHT SIDE
+========================================== */
+
+.right-side{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================
+        DONATE BUTTON
+========================================== */
+
+.donate-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:14px 24px;
+
+    border-radius:16px;
+
+    background:#B6D63E;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:.35s ease;
+
+}
+
+.donate-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 14px 30px rgba(182,214,62,.35);
+
+}
+
+.desktop-donate{
+
+    display:flex;
+
+}
+
+.mobile-donate{
+
+    display:none;
+
+    width:100%;
+
+}
+
+/* ==========================================
+        SEARCH
+========================================== */
+
+.search-btn{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f5f6f7;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.search-btn:hover{
+
+    background:#B6D63E;
+
+    transform:rotate(10deg);
+
+}
+
+/* ==========================================
+        LOGIN / SIGNUP
+========================================== */
+
+.desktop-auth{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.login-btn,
+.signup-btn{
+
+    padding:14px 22px;
+
+    border-radius:16px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.login-btn{
+
+    color:#111;
+
+    border:1px solid #d9d9d9;
+
+}
+
+.login-btn:hover{
+
+    background:#f3f4f6;
+
+}
+
+.signup-btn{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+.signup-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+/* ==========================================
+        PROFILE
+========================================== */
+
+.profile{
+
+    position:relative;
+
+}
+
+.profile-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:6px 10px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.profile-btn:hover{
+
+    background:#f3f4f6;
+
+}
+
+.profile-btn img{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid #B6D63E;
+
+}
+
+.profile-btn span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#111;
+
+}
+
+.profile-btn svg{
+
+    transition:.3s;
+
+}
+
+.rotate{
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================================
+        PROFILE DROPDOWN
+========================================== */
+
+.profile-dropdown{
+
+    position:absolute;
+
+    right:0;
+
+    top:68px;
+
+    width:240px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.15);
+
+    border:1px solid #ececec;
+
+    animation:dropdown .25s ease;
+
+}
+
+.profile-dropdown a,
+.profile-dropdown button{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 18px;
+
+    background:none;
+
+    border:none;
+
+    text-decoration:none;
+
+    color:#111;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover{
+
+    background:#f5f6f7;
+
+}
+
+.profile-dropdown svg{
+
+    font-size:18px;
+
+    color:#7ca926;
+
+}
+
+@keyframes dropdown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+        MOBILE MENU
+========================================== */
+
+.menu-btn{
+
+    display:none;
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#f5f6f7;
+
+    cursor:pointer;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    transition:.3s;
+
+}
+
+.menu-btn:hover{
+
+    background:#B6D63E;
+
+}
+
+.mobile-auth{
+
+    display:none;
+
+}
+
+/* ==========================================
+        LARGE LAPTOP
+========================================== */
+
+@media(max-width:1280px){
+
+.nav-menu{
+
+gap:24px;
+
+margin:0 28px;
+
+}
+
+.logo-text h2{
+
+font-size:20px;
+
+}
+
+}
+
+/* ==========================================
+        LAPTOP
+========================================== */
+
+@media(max-width:1100px){
+
+.nav-menu{
+
+gap:18px;
+
+margin:0 20px;
+
+}
+
+.nav-link{
+
+font-size:14px;
+
+}
+
+.logo-text span{
+
+display:none;
+
+}
+
+}
+
+/* ==========================================
+        TABLET
+========================================== */
+
+@media(max-width:1450px){
+
+.desktop-auth{
+
+display:none;
+
+}
+
+.desktop-donate{
+
+display:none;
+
+}
+
+.search-btn{
+
+display:none;
+
+}
+
+.menu-btn{
+
+display:flex;
+
+}
+
+.nav-menu{
+
+position:fixed;
+
+top:95px;
+
+right:-105%;
+
+width:330px;
+
+height:calc(100vh - 110px);
+
+margin:0;
+
+padding:35px;
+
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(20px);
+
+border-radius:22px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+justify-content:flex-start;
+
+gap:24px;
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.15);
+
+transition:.4s ease;
+
+overflow-y:auto;
+
+}
+
+.nav-menu.active{
+
+right:18px;
+
+}
+
+.nav-link{
+
+width:100%;
+
+font-size:16px;
+
+padding:6px 0;
+
+justify-content:space-between;
+
+}
+
+.mobile-auth{
+
+display:flex;
+
+flex-direction:column;
+
+width:100%;
+
+gap:14px;
+
+margin-top:10px;
+
+padding-top:25px;
+
+border-top:1px solid #ececec;
+
+}
+
+.mobile-donate{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.mobile-auth .login-btn,
+
+.mobile-auth .signup-btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.mobile-item{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+height:50px;
+
+border-radius:14px;
+
+background:#f5f6f7;
+
+color:#111;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.mobile-item:hover{
+
+background:#eef7d0;
+
+}
+
+.logout-mobile{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+height:50px;
+
+border:none;
+
+border-radius:14px;
+
+background:#ef4444;
+
+color:white;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.logout-mobile:hover{
+
+background:#dc2626;
+
+}
+
+}
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media(max-width:600px){
+
+.navbar{
+
+height:68px;
+
+padding:0 18px;
+
+top:10px;
+
+width:95%;
+
+}
+
+.logo img{
+
+width:42px;
+
+height:42px;
+
+}
+
+.logo-text h2{
+
+font-size:18px;
+
+}
+
+.logo-text span{
+
+display:none;
+
+}
+
+.nav-menu{
+
+width:100%;
+
+height:calc(100vh - 90px);
+
+top:82px;
+
+right:-110%;
+
+border-radius:18px 18px 0 0;
+
+padding:28px;
+
+}
+
+.nav-menu.active{
+
+right:0;
+
+}
+
+.profile-btn span{
+
+display:none;
+
+}
+
+.profile-dropdown{
+
+right:-8px;
+
+width:220px;
+
+}
+
+}
+
+/* ==========================================
+        SCROLLBAR
+========================================== */
+
+.nav-menu::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.nav-menu::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.nav-menu::-webkit-scrollbar-thumb{
+
+    background:#d7d7d7;
+
+    border-radius:20px;
+
+}
+
+.nav-menu::-webkit-scrollbar-thumb:hover{
+
+    background:#b6d63e;
+
+}
+
+/* ==========================================
+        HOVER ANIMATIONS
+========================================== */
+
+.logo{
+
+    transition:.35s ease;
+
+}
+
+.logo:hover{
+
+    transform:scale(1.03);
+
+}
+
+.logo img{
+
+    transition:.35s ease;
+
+}
+
+.logo:hover img{
+
+    transform:rotate(-6deg) scale(1.08);
+
+}
+
+.nav-link{
+
+    transition:
+    color .3s,
+    transform .3s;
+
+}
+
+.nav-link:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.arrow{
+
+    transition:.3s;
+
+}
+
+.nav-link:hover .arrow{
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================================
+        BUTTON ANIMATION
+========================================== */
+
+.login-btn,
+.signup-btn,
+.donate-btn,
+.search-btn,
+.menu-btn,
+.profile-btn{
+
+    transition:
+    transform .3s,
+    box-shadow .3s,
+    background .3s;
+
+}
+
+.login-btn:hover,
+.signup-btn:hover,
+.donate-btn:hover,
+.search-btn:hover,
+.menu-btn:hover,
+.profile-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+        PROFILE IMAGE
+========================================== */
+
+.profile-btn img{
+
+    transition:.3s;
+
+}
+
+.profile-btn:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+        DROPDOWN
+========================================== */
+
+.profile-dropdown{
+
+    transform-origin:top right;
+
+}
+
+.profile-dropdown a{
+
+    transition:
+    background .25s,
+    padding-left .25s;
+
+}
+
+.profile-dropdown button{
+
+    transition:
+    background .25s,
+    padding-left .25s;
+
+}
+
+.profile-dropdown a:hover,
+
+.profile-dropdown button:hover{
+
+    padding-left:24px;
+
+}
+
+/* ==========================================
+        FOCUS
+========================================== */
+
+button:focus,
+
+a:focus{
+
+    outline:none;
+
+}
+
+button:focus-visible,
+
+a:focus-visible{
+
+    outline:2px solid #B6D63E;
+
+    outline-offset:3px;
+
+    border-radius:10px;
+
+}
+
+/* ==========================================
+        SELECTION
+========================================== */
+
+::selection{
+
+    background:#B6D63E;
+
+    color:#111;
+
+}
+
+/* ==========================================
+        SMOOTH
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================
+        GLASS EFFECT
+========================================== */
+
+.navbar::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.35),
+        rgba(255,255,255,.05)
+    );
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+        RESPONSIVE FIXES
+========================================== */
+
+img{
+
+    max-width:100%;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+.menu-btn:active,
+
+.search-btn:active,
+
+.donate-btn:active{
+
+    transform:scale(.96);
+
+}
+
+.profile-dropdown{
+
+    z-index:99999;
+
+}
+
+.navbar{
+
+    overflow:visible;
+
+}
+
+/* ==========================================
+        END
+========================================== */
