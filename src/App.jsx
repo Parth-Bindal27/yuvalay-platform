@@ -12,23 +12,56 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/Profile/Profile";
+import Gallery from "./pages/Gallery/Gallery";
+import About from "./pages/About/About";
+// Admin
+import MediaCenter from "./pages/Admin/MediaCenter";
 
+// Routes
 import ProtectedRoute from "./routes/ProtectedRoute";
+import AdminRoute from "./routes/AdminRoute";
 
 function App() {
   return (
     <BrowserRouter>
-
       <Navbar />
 
-      <main style={{ minHeight: "100vh", paddingTop: "90px" }}>
+      <main
+        style={{
+          minHeight: "100vh",
+          paddingTop: "90px",
+        }}
+      >
         <Routes>
 
-          <Route path="/" element={<Home />} />
+          {/* Public Routes */}
 
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/"
+            element={<Home />}
+          />
 
-          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/about"
+            element={<About />}
+          />
+
+          <Route
+            path="/gallery"
+            element={<Gallery />}
+          />
+
+          <Route
+            path="/login"
+            element={<Login />}
+          />
+
+          <Route
+            path="/signup"
+            element={<Signup />}
+          />
+
+          {/* User Routes */}
 
           <Route
             path="/dashboard"
@@ -48,11 +81,21 @@ function App() {
             }
           />
 
+          {/* Admin Routes */}
+
+          <Route
+            path="/admin"
+            element={
+              <AdminRoute>
+                <MediaCenter />
+              </AdminRoute>
+            }
+          />
+
         </Routes>
       </main>
 
       <Footer />
-
     </BrowserRouter>
   );
 }

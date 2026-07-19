@@ -1,3 +1,4 @@
+import { checkAdmin } from "../../services/adminService";
 import "./Navbar.css";
 import { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -25,6 +26,7 @@ export default function Navbar() {
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const profileRef = useRef(null);
@@ -60,6 +62,28 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
   }, [mobileOpen]);
 
+  useEffect(() => {
+
+  async function verifyAdmin() {
+
+    if (!currentUser) {
+      setIsAdmin(false);
+      return;
+    }
+
+    console.log("Logged in email:", currentUser.email);
+
+    const admin = await checkAdmin(currentUser.email);
+
+    console.log("Admin Data:", admin);
+
+    setIsAdmin(!!admin);
+  }
+
+  verifyAdmin();
+
+}, [currentUser]);
+
   const logout = async () => {
     await signOut(auth);
 
@@ -93,13 +117,23 @@ export default function Navbar() {
       path: "/events",
     },
     {
-      name: "Gallery",
-      path: "/gallery",
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-    },
+  name: "Gallery",
+  path: "/gallery",
+},
+
+...(isAdmin
+  ? [
+      {
+        name: "Admin",
+        path: "/admin",
+      },
+    ]
+  : []),
+
+{
+  name: "Contact",
+  path: "/contact",
+},
   ];
 
   return (

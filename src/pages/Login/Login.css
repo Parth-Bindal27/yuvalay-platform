@@ -218,3 +218,13 @@ font-size:40px;
     background:#f5f5f5;
 
 }
+
+.signup-text span{
+    color:#B6D63E;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.signup-text span:hover{
+    text-decoration:underline;
+}
