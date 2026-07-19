@@ -1,0 +1,264 @@
+/* ===========================================
+   CONTACT FORM
+=========================================== */
+
+.contact-form-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.08);
+
+}
+
+.form-header{
+
+    margin-bottom:35px;
+
+}
+
+.form-header h3{
+
+    font-size:2rem;
+
+    color:#111;
+
+    margin:16px 0;
+
+}
+
+.form-header p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.contact-form-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/* ===========================================
+   INPUTS
+=========================================== */
+
+.input-group{
+
+    position:relative;
+
+}
+
+.input-group input,
+.input-group textarea{
+
+    width:100%;
+
+    padding:20px;
+
+    font-size:1rem;
+
+    border-radius:18px;
+
+    border:1px solid #ddd;
+
+    background:rgba(255,255,255,.9);
+
+    outline:none;
+
+    transition:.35s;
+
+    resize:none;
+
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+
+    border-color:#B6D63E;
+
+    box-shadow:
+        0 0 0 4px rgba(182,214,62,.15);
+
+}
+
+/* ===========================================
+   FLOATING LABELS
+=========================================== */
+
+.input-group label{
+
+    position:absolute;
+
+    left:20px;
+
+    top:20px;
+
+    color:#777;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+    background:#fff;
+
+    padding:0 6px;
+
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label{
+
+    top:-10px;
+
+    left:15px;
+
+    font-size:.82rem;
+
+    color:#6b8e23;
+
+}
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.send-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#111;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.send-btn:hover{
+
+    background:#B6D63E;
+
+    color:#111;
+
+    transform:translateY(-3px);
+
+}
+
+.send-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform:skewX(-20deg);
+
+    transition:.8s;
+
+}
+
+.send-btn:hover::before{
+
+    left:150%;
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:768px){
+
+.contact-form-card{
+
+padding:30px 24px;
+
+}
+
+.form-header h3{
+
+font-size:1.6rem;
+
+}
+
+.input-group input,
+.input-group textarea{
+
+padding:18px;
+
+}
+
+.send-btn{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.form-header h3{
+
+font-size:1.4rem;
+
+}
+
+.form-header p{
+
+font-size:.95rem;
+
+}
+
+}

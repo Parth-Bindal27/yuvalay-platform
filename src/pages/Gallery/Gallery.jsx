@@ -1,146 +1,34 @@
-import "./Gallery.css";
-import { useEffect, useState } from "react";
-import { getGallery } from "../../services/galleryService";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+
+import GalleryHero from "../../components/Gallery/GalleryHero";
+import FeaturedGallery from "../../components/Gallery/FeaturedGallery";
+import EventGallery from "../../components/Gallery/EventGallery";
+import MasonryGallery from "../../components/Gallery/MasonryGallery";
+import VideoGallery from "../../components/Gallery/VideoGallery";
+import MemoriesTimeline from "../../components/Gallery/MemoriesTimeline";
+import GalleryCTA from "../../components/Gallery/GalleryCTA";
 
 export default function Gallery() {
-  const [gallery, setGallery] = useState([]);
-  const [filtered, setFiltered] = useState([]);
-  const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("All");
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  useEffect(() => {
-    loadGallery();
-  }, []);
-
-  useEffect(() => {
-    let data = [...gallery];
-
-    if (category !== "All") {
-      data = data.filter((item) => item.category === category);
-    }
-
-    if (search) {
-      data = data.filter(
-        (item) =>
-          item.title?.toLowerCase().includes(search.toLowerCase()) ||
-          item.caption?.toLowerCase().includes(search.toLowerCase())
-      );
-    }
-
-    setFiltered(data);
-  }, [gallery, search, category]);
-
-  const loadGallery = async () => {
-    try {
-      const images = await getGallery();
-      setGallery(images);
-      setFiltered(images);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  const categories = [
-    "All",
-    ...new Set(gallery.map((item) => item.category))
-  ];
-
   return (
-    <section className="gallery-page">
+    <>
+      <Navbar />
 
-      <div className="gallery-header">
+      <GalleryHero />
 
-        <h1>Gallery</h1>
+      <FeaturedGallery />
 
-        <p>
-          Explore moments captured at Yuvalay Makerspace.
-        </p>
+      <EventGallery />
 
-        <div className="gallery-controls">
+      <MasonryGallery />
 
-          <input
-            type="text"
-            placeholder="Search images..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+      <VideoGallery />
 
-          <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-          >
-            {categories.map((cat) => (
-              <option key={cat}>{cat}</option>
-            ))}
-          </select>
+      <MemoriesTimeline />
 
-        </div>
+      <GalleryCTA />
 
-      </div>
-
-      <div className="gallery-grid">
-
-        {filtered.map((image) => (
-
-          <div
-            className="gallery-item"
-            key={image.id}
-            onClick={() => setSelectedImage(image)}
-          >
-
-            <img
-              src={image.image_url}
-              alt={image.title}
-            />
-
-            <div className="gallery-overlay">
-
-              <h3>{image.title}</h3>
-
-              <p>{image.category}</p>
-
-            </div>
-
-          </div>
-
-        ))}
-
-      </div>
-
-      {selectedImage && (
-
-        <div
-          className="lightbox"
-          onClick={() => setSelectedImage(null)}
-        >
-
-          <div
-            className="lightbox-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-
-            <img
-              src={selectedImage.image_url}
-              alt={selectedImage.title}
-            />
-
-            <div className="lightbox-info">
-
-              <h2>{selectedImage.title}</h2>
-
-              <p>{selectedImage.caption}</p>
-
-              <span>{selectedImage.category}</span>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      )}
-
-    </section>
+      <Footer />
+    </>
   );
 }

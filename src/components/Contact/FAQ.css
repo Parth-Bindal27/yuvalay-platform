@@ -1,0 +1,275 @@
+/* ===========================================
+   FAQ SECTION
+=========================================== */
+
+.faq-section{
+
+    position:relative;
+
+    width:min(1200px,92%);
+
+    margin:140px auto;
+
+}
+
+.faq-heading{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+}
+
+.faq-heading h2{
+
+    font-size:clamp(2.8rem,5vw,4.5rem);
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    color:#111;
+
+    margin-bottom:20px;
+
+}
+
+.faq-heading p{
+
+    color:#666;
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+}
+
+.faq-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* ===========================================
+   FAQ CARD
+=========================================== */
+
+.faq-item{
+
+    overflow:hidden;
+
+    border-radius:26px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(24px);
+
+    -webkit-backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.07);
+
+    transition:.35s;
+
+}
+
+.faq-item:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 30px 60px rgba(0,0,0,.10);
+
+}
+
+.faq-item.active{
+
+    border-color:rgba(182,214,62,.5);
+
+}
+
+/* ===========================================
+   QUESTION
+=========================================== */
+
+.faq-question{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:28px 34px;
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    color:#111;
+
+    text-align:left;
+
+}
+
+.faq-question svg{
+
+    color:#7c7c7c;
+
+    transition:.35s;
+
+    font-size:1rem;
+
+}
+
+.rotate{
+
+    transform:rotate(180deg);
+
+    color:#B6D63E !important;
+
+}
+
+/* ===========================================
+   ANSWER
+=========================================== */
+
+.faq-answer{
+
+    overflow:hidden;
+
+}
+
+.faq-answer p{
+
+    padding:0 34px 28px;
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+}
+
+/* ===========================================
+   SHINE EFFECT
+=========================================== */
+
+.faq-item{
+
+    position:relative;
+
+}
+
+.faq-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(182,214,62,.10),
+
+        transparent 60%
+
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+    pointer-events:none;
+
+}
+
+.faq-item:hover::before{
+
+    opacity:1;
+
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media(max-width:768px){
+
+.faq-section{
+
+margin:90px auto;
+
+}
+
+.faq-heading{
+
+margin-bottom:45px;
+
+}
+
+.faq-heading h2{
+
+font-size:2.3rem;
+
+}
+
+.faq-question{
+
+padding:22px;
+
+font-size:1rem;
+
+}
+
+.faq-answer p{
+
+padding:0 22px 22px;
+
+font-size:.95rem;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.faq-heading h2{
+
+font-size:2rem;
+
+}
+
+.faq-heading p{
+
+font-size:.95rem;
+
+}
+
+}

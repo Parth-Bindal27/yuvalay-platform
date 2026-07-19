@@ -15,6 +15,10 @@ import Profile from "./pages/Profile/Profile";
 import Gallery from "./pages/Gallery/Gallery";
 import About from "./pages/About/About";
 import Programs from "./pages/Programs/Programs";
+import Contact from "./pages/Contact/Contact";
+import Donate from "./pages/Donate/Donate";
+
+
 // Admin
 import MediaCenter from "./pages/Admin/MediaCenter";
 
@@ -54,6 +58,8 @@ function App() {
             element={<Gallery />}
           />
 
+          <Route path="/contact" element={<Contact />} />
+
           <Route
             path="/login"
             element={<Login />}
@@ -63,6 +69,8 @@ function App() {
             path="/signup"
             element={<Signup />}
           />
+
+          <Route path="/donate" element={<Donate />} />
 
           {/* User Routes */}
 
