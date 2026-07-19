@@ -1,0 +1,134 @@
+.community-programs{
+    padding:120px 8%;
+    background:#fafdf6;
+}
+
+.community-heading{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.community-heading span{
+    color:#7ea61f;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.community-heading h2{
+    margin:20px 0;
+    font-size:clamp(2.6rem,5vw,4.2rem);
+    line-height:1.15;
+    color:#111;
+}
+
+.community-heading p{
+    color:#666;
+    line-height:1.9;
+}
+
+.community-grid{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:30px;
+}
+
+.community-card{
+    position:relative;
+    overflow:hidden;
+    padding:38px;
+    border-radius:28px;
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.8);
+    transition:.35s;
+    box-shadow:0 20px 45px rgba(0,0,0,.06);
+}
+
+.community-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(182,214,62,.18),
+        transparent 70%
+    );
+    opacity:0;
+    transition:.35s;
+}
+
+.community-card:hover::before{
+    opacity:1;
+}
+
+.community-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 55px rgba(0,0,0,.12);
+}
+
+.community-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+}
+
+.community-icon{
+    width:72px;
+    height:72px;
+    border-radius:20px;
+    background:#b6d63e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#111;
+    font-size:1.8rem;
+}
+
+.community-badge{
+    padding:8px 16px;
+    border-radius:999px;
+    background:#eef7d0;
+    color:#6e9700;
+    font-weight:600;
+    font-size:.85rem;
+}
+
+.community-card h3{
+    margin-bottom:18px;
+    color:#111;
+    font-size:1.55rem;
+}
+
+.community-card p{
+    color:#666;
+    line-height:1.85;
+    margin-bottom:28px;
+}
+
+.community-card button{
+    border:none;
+    background:none;
+    color:#7fa91d;
+    font-weight:700;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+.community-card button:hover{
+    color:#111;
+}
+
+@media(max-width:768px){
+
+.community-programs{
+padding:90px 25px;
+}
+
+.community-card{
+padding:30px;
+}
+
+}

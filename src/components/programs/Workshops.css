@@ -1,0 +1,138 @@
+.workshops{
+    padding:120px 8%;
+    background:#fafdf7;
+}
+
+.workshops-heading{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.workshops-heading span{
+    color:#81aa20;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.workshops-heading h2{
+    margin:18px 0;
+    font-size:clamp(2.5rem,5vw,4rem);
+    color:#111;
+}
+
+.workshops-heading p{
+    color:#666;
+    line-height:1.8;
+}
+
+.workshop-grid{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:30px;
+}
+
+.workshop-card{
+    position:relative;
+    overflow:hidden;
+    padding:38px;
+    border-radius:28px;
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.8);
+    transition:.4s;
+    box-shadow:0 20px 40px rgba(0,0,0,.07);
+}
+
+.workshop-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,
+        rgba(182,214,62,.18),
+        transparent 60%);
+    opacity:0;
+    transition:.4s;
+}
+
+.workshop-card:hover::before{
+    opacity:1;
+}
+
+.workshop-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.workshop-icon{
+    width:72px;
+    height:72px;
+    border-radius:18px;
+    background:#b6d63e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.8rem;
+    color:#111;
+    margin-bottom:25px;
+}
+
+.workshop-card h3{
+    font-size:1.5rem;
+    margin-bottom:20px;
+    color:#111;
+}
+
+.workshop-meta{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:22px;
+}
+
+.workshop-meta span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    border-radius:30px;
+    background:#eef7d0;
+    color:#5d8500;
+    font-size:.9rem;
+    font-weight:600;
+}
+
+.workshop-card p{
+    line-height:1.8;
+    color:#666;
+    margin-bottom:28px;
+}
+
+.workshop-card button{
+    border:none;
+    background:#b6d63e;
+    color:#111;
+    font-weight:700;
+    border-radius:40px;
+    padding:14px 28px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.workshop-card button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(182,214,62,.4);
+}
+
+@media(max-width:768px){
+
+.workshops{
+padding:90px 25px;
+}
+
+.workshop-card{
+padding:30px;
+}
+
+}

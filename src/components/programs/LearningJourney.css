@@ -1,0 +1,126 @@
+.learning-journey{
+    padding:120px 8%;
+    background:#fff;
+}
+
+.journey-heading{
+    text-align:center;
+    max-width:750px;
+    margin:auto;
+}
+
+.journey-heading span{
+    color:#7fa91d;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.journey-heading h2{
+    margin:20px 0;
+    font-size:clamp(2.6rem,5vw,4rem);
+    color:#111;
+}
+
+.journey-heading p{
+    color:#666;
+    line-height:1.9;
+}
+
+.timeline{
+    position:relative;
+    margin-top:90px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:4px;
+    height:100%;
+    background:linear-gradient(#b6d63e,#78aa18);
+}
+
+.timeline-item{
+    width:50%;
+    display:flex;
+    align-items:center;
+    position:relative;
+    margin-bottom:70px;
+}
+
+.timeline-item:nth-child(odd){
+    padding-right:70px;
+}
+
+.timeline-item:nth-child(even){
+    margin-left:50%;
+    padding-left:70px;
+}
+
+.timeline-icon{
+    position:absolute;
+    right:-36px;
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:#b6d63e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#111;
+    font-size:1.7rem;
+    z-index:5;
+    box-shadow:0 15px 30px rgba(182,214,62,.45);
+}
+
+.timeline-item:nth-child(even) .timeline-icon{
+    left:-36px;
+}
+
+.timeline-card{
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.8);
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 20px 45px rgba(0,0,0,.06);
+    transition:.35s;
+}
+
+.timeline-card:hover{
+    transform:translateY(-8px);
+}
+
+.timeline-card h3{
+    margin-bottom:15px;
+    color:#111;
+    font-size:1.5rem;
+}
+
+.timeline-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+@media(max-width:900px){
+
+.timeline::before{
+left:32px;
+}
+
+.timeline-item,
+.timeline-item:nth-child(even){
+width:100%;
+margin-left:0;
+padding-left:90px;
+padding-right:0;
+}
+
+.timeline-icon,
+.timeline-item:nth-child(even) .timeline-icon{
+left:0;
+right:auto;
+}
+
+}

@@ -1,0 +1,154 @@
+.innovation-labs{
+    padding:120px 8%;
+    background:#fff;
+}
+
+.labs-heading{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+    margin-bottom:90px;
+}
+
+.labs-heading span{
+    color:#7fa91d;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.labs-heading h2{
+    margin:20px 0;
+    font-size:clamp(2.7rem,5vw,4.3rem);
+    color:#111;
+    line-height:1.15;
+}
+
+.labs-heading p{
+    color:#666;
+    line-height:1.9;
+}
+
+.lab-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+    margin-bottom:110px;
+}
+
+.lab-row.reverse .lab-image{
+    order:2;
+}
+
+.lab-row.reverse .lab-content{
+    order:1;
+}
+
+.lab-image img{
+    width:100%;
+    height:470px;
+    object-fit:cover;
+    border-radius:30px;
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.lab-image img:hover{
+    transform:scale(1.03);
+}
+
+.lab-content{
+    padding:45px;
+    border-radius:30px;
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,.7);
+    border:1px solid rgba(255,255,255,.8);
+    box-shadow:0 20px 50px rgba(0,0,0,.06);
+}
+
+.lab-icon{
+    width:75px;
+    height:75px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#b6d63e;
+    color:#111;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.lab-content h3{
+    font-size:2rem;
+    margin-bottom:20px;
+    color:#111;
+}
+
+.lab-content p{
+    line-height:1.9;
+    color:#666;
+    margin-bottom:28px;
+}
+
+.feature-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-bottom:35px;
+}
+
+.feature-list span{
+    padding:10px 18px;
+    border-radius:999px;
+    background:#eef7d0;
+    color:#6c9800;
+    font-weight:600;
+    font-size:.9rem;
+}
+
+.lab-content button{
+    border:none;
+    background:#b6d63e;
+    color:#111;
+    font-weight:700;
+    padding:15px 34px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.lab-content button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(182,214,62,.4);
+}
+
+@media(max-width:992px){
+
+.lab-row,
+.lab-row.reverse{
+grid-template-columns:1fr;
+}
+
+.lab-row.reverse .lab-image,
+.lab-row.reverse .lab-content{
+order:unset;
+}
+
+.lab-image img{
+height:320px;
+}
+
+}
+
+@media(max-width:768px){
+
+.innovation-labs{
+padding:90px 25px;
+}
+
+.lab-content{
+padding:30px;
+}
+
+}

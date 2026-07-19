@@ -1,0 +1,177 @@
+.impact-counter{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 8%;
+
+    background:
+    linear-gradient(135deg,#b6d63e 0%,#7cab1c 100%);
+
+}
+
+.impact-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,.18),
+    transparent 45%);
+
+}
+
+.impact-heading{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.impact-heading span{
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+}
+
+.impact-heading h2{
+
+    margin:20px 0;
+
+    font-size:clamp(2.8rem,5vw,4.5rem);
+
+    line-height:1.15;
+
+}
+
+.impact-heading p{
+
+    color:rgba(255,255,255,.9);
+
+    line-height:1.9;
+
+}
+
+.impact-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.impact-card{
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.14);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.22);
+
+    transition:.35s;
+
+}
+
+.impact-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.2);
+
+}
+
+.impact-icon{
+
+    width:82px;
+
+    height:82px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#fff;
+
+    color:#84af22;
+
+    font-size:2rem;
+
+    margin-bottom:28px;
+
+}
+
+.impact-card h3{
+
+    font-size:3rem;
+
+    color:#fff;
+
+    margin-bottom:10px;
+
+}
+
+.impact-card p{
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1.05rem;
+
+}
+
+@media(max-width:768px){
+
+.impact-counter{
+
+padding:90px 25px;
+
+}
+
+.impact-card{
+
+padding:30px;
+
+}
+
+.impact-card h3{
+
+font-size:2.3rem;
+
+}
+
+}

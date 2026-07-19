@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/Profile/Profile";
 import Gallery from "./pages/Gallery/Gallery";
 import About from "./pages/About/About";
+import Programs from "./pages/Programs/Programs";
 // Admin
 import MediaCenter from "./pages/Admin/MediaCenter";
 
@@ -45,6 +46,8 @@ function App() {
             path="/about"
             element={<About />}
           />
+
+          <Route path="/programs" element={<Programs />} />
 
           <Route
             path="/gallery"
