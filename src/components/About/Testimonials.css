@@ -1,0 +1,381 @@
+/* ===========================================
+   TESTIMONIALS
+=========================================== */
+
+.testimonials{
+    position:relative;
+    overflow:hidden;
+    padding:120px 6%;
+    background:
+        linear-gradient(
+            180deg,
+            #f8fff3 0%,
+            #ffffff 100%
+        );
+}
+
+.testimonials::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(rgba(0,0,0,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,0,0,.03) 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    mask-image:
+        radial-gradient(circle,#000 35%,transparent 90%);
+
+    pointer-events:none;
+}
+
+.testimonialBlur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:0;
+}
+
+.blurLeft{
+    width:380px;
+    height:380px;
+    left:-140px;
+    top:60px;
+    background:#b6d63e45;
+}
+
+.blurRight{
+    width:420px;
+    height:420px;
+    right:-170px;
+    bottom:-100px;
+    background:#89db6540;
+}
+
+.testimonialContainer{
+    position:relative;
+    z-index:2;
+
+    width:min(1350px,100%);
+    margin:auto;
+}
+
+/* ===========================================
+   HEADING
+=========================================== */
+
+.testimonialHeading{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.testimonialBadge{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(182,214,62,.15);
+
+    border:1px solid rgba(182,214,62,.25);
+
+    color:#607d18;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.testimonialHeading h2{
+
+    margin-top:28px;
+
+    font-size:clamp(2.8rem,5vw,4.8rem);
+
+    line-height:1.08;
+
+    letter-spacing:-2px;
+
+    color:#111;
+
+}
+
+.testimonialHeading h2 span{
+
+    color:var(--primary);
+
+}
+
+.testimonialHeading p{
+
+    max-width:650px;
+
+    margin:24px auto 0;
+
+    line-height:1.9;
+
+    color:#666;
+
+}
+
+/* ===========================================
+   GRID
+=========================================== */
+
+.testimonialGrid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* ===========================================
+   CARD
+=========================================== */
+
+.testimonialCard{
+
+    position:relative;
+
+    padding:38px 34px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.06);
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.testimonialCard:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 30px 70px rgba(182,214,62,.18);
+
+}
+
+.testimonialCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.45),
+            transparent 35%,
+            transparent 70%,
+            rgba(255,255,255,.12)
+        );
+
+    pointer-events:none;
+
+}
+
+.testimonialCard::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    border:1px solid transparent;
+
+    transition:.35s;
+
+}
+
+.testimonialCard:hover::after{
+
+    border-color:rgba(182,214,62,.35);
+
+}
+
+/* ===========================================
+   QUOTE ICON
+=========================================== */
+
+.quoteIcon{
+
+    font-size:2.8rem;
+
+    color:rgba(182,214,62,.25);
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================================
+   STARS
+=========================================== */
+
+.stars{
+
+    display:flex;
+
+    gap:6px;
+
+    margin-bottom:22px;
+
+    color:#f7b500;
+
+    font-size:.95rem;
+
+}
+
+/* ===========================================
+   REVIEW
+=========================================== */
+
+.review{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+    margin-bottom:34px;
+
+    min-height:150px;
+
+}
+
+/* ===========================================
+   USER
+=========================================== */
+
+.user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:26px;
+
+}
+
+.user img{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid rgba(182,214,62,.3);
+
+}
+
+.user h3{
+
+    margin:0;
+
+    color:#111;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+}
+
+.user span{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:#777;
+
+    font-size:.92rem;
+
+}
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.testimonialCard button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    font-size:.95rem;
+
+    transition:.35s;
+
+}
+
+.testimonialCard button svg{
+
+    transition:.35s;
+
+}
+
+.testimonialCard:hover button{
+
+    letter-spacing:.4px;
+
+}
+
+.testimonialCard:hover button svg{
+
+    transform:translateX(6px);
+
+}

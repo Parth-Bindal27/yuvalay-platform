@@ -1,0 +1,656 @@
+/* ===========================================
+   OUR VALUES
+=========================================== */
+
+.ourValues{
+    position:relative;
+    overflow:hidden;
+    padding:120px 6%;
+    background:
+        linear-gradient(
+            180deg,
+            #f8fff3 0%,
+            #ffffff 100%
+        );
+}
+
+.ourValues::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(rgba(0,0,0,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,0,0,.03) 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    mask-image:
+        radial-gradient(circle,#000 35%,transparent 90%);
+
+    pointer-events:none;
+}
+
+/* ===========================================
+   BLUR EFFECTS
+=========================================== */
+
+.valuesBlur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:0;
+}
+
+.leftBlur{
+    width:380px;
+    height:380px;
+    left:-150px;
+    top:80px;
+    background:#b6d63e45;
+}
+
+.rightBlur{
+    width:420px;
+    height:420px;
+    right:-180px;
+    bottom:-120px;
+    background:#89db6540;
+}
+
+/* ===========================================
+   CONTAINER
+=========================================== */
+
+.valuesContainer{
+    position:relative;
+    z-index:2;
+
+    width:min(1350px,100%);
+    margin:auto;
+}
+
+/* ===========================================
+   HEADING
+=========================================== */
+
+.valuesHeading{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.valuesBadge{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(182,214,62,.15);
+
+    border:1px solid rgba(182,214,62,.25);
+
+    color:#607d18;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.valuesHeading h2{
+
+    margin-top:28px;
+
+    font-size:clamp(2.8rem,5vw,4.8rem);
+
+    line-height:1.08;
+
+    letter-spacing:-2px;
+
+    color:#111;
+
+}
+
+.valuesHeading h2 span{
+
+    color:var(--primary);
+
+}
+
+.valuesHeading p{
+
+    max-width:670px;
+
+    margin:24px auto 0;
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+/* ===========================================
+   GRID
+=========================================== */
+
+.valuesGrid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* ===========================================
+   VALUE CARD
+=========================================== */
+
+.valueCard{
+
+    position:relative;
+
+    padding:40px 34px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.06);
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.valueCard:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 30px 70px rgba(182,214,62,.18);
+
+}
+
+.valueCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.45),
+            transparent 35%,
+            transparent 70%,
+            rgba(255,255,255,.12)
+        );
+
+    pointer-events:none;
+
+}
+
+.valueCard::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    border:1px solid transparent;
+
+    transition:.35s;
+
+}
+
+.valueCard:hover::after{
+
+    border-color:rgba(182,214,62,.35);
+
+}
+
+/* ===========================================
+   ICON
+=========================================== */
+
+.valueIcon{
+
+    width:78px;
+
+    height:78px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:22px;
+
+    background:rgba(182,214,62,.15);
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    margin-bottom:28px;
+
+    transition:.35s;
+
+}
+
+.valueCard:hover .valueIcon{
+
+    transform:
+        rotate(-8deg)
+        scale(1.08);
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ===========================================
+   CONTENT
+=========================================== */
+
+.valueCard h3{
+
+    color:#111;
+
+    font-size:1.45rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.valueCard p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:.97rem;
+
+}
+
+/* ===========================================
+   HOVER GLOW
+=========================================== */
+
+.valueCard:hover{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.82),
+            rgba(248,255,243,.92)
+        );
+
+}
+
+/* ===========================================
+   SHINE EFFECT
+=========================================== */
+
+.valueCard{
+
+    overflow:hidden;
+
+}
+
+.valueCard .valueIcon::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-130%;
+
+    width:45%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.55),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    transition:.8s;
+
+}
+
+.valueCard:hover .valueIcon::after{
+
+    left:160%;
+
+}
+
+/* ===========================================
+   RESPONSIVE - 1200px
+=========================================== */
+
+@media (max-width:1200px){
+
+.valuesGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:28px;
+
+}
+
+.valuesContainer{
+
+max-width:950px;
+
+}
+
+}
+
+/* ===========================================
+   RESPONSIVE - 992px
+=========================================== */
+
+@media (max-width:992px){
+
+.ourValues{
+
+padding:100px 30px;
+
+}
+
+.valuesHeading h2{
+
+font-size:3rem;
+
+}
+
+.valueCard{
+
+padding:36px 30px;
+
+}
+
+}
+
+/* ===========================================
+   RESPONSIVE - 768px
+=========================================== */
+
+@media (max-width:768px){
+
+.ourValues{
+
+padding:80px 20px;
+
+}
+
+.valuesGrid{
+
+grid-template-columns:1fr;
+
+gap:24px;
+
+}
+
+.valueCard{
+
+max-width:560px;
+
+margin:auto;
+
+}
+
+.valuesHeading h2{
+
+font-size:2.5rem;
+
+}
+
+}
+
+/* ===========================================
+   RESPONSIVE - 576px
+=========================================== */
+
+@media (max-width:576px){
+
+.ourValues{
+
+padding:70px 18px;
+
+}
+
+.valuesBadge{
+
+padding:8px 14px;
+
+font-size:.72rem;
+
+}
+
+.valuesHeading h2{
+
+font-size:2rem;
+
+letter-spacing:-1px;
+
+}
+
+.valuesHeading p{
+
+font-size:.95rem;
+
+line-height:1.8;
+
+}
+
+.valueCard{
+
+padding:28px 22px;
+
+}
+
+.valueIcon{
+
+width:68px;
+
+height:68px;
+
+font-size:1.7rem;
+
+border-radius:18px;
+
+margin-bottom:22px;
+
+}
+
+.valueCard h3{
+
+font-size:1.2rem;
+
+}
+
+.valueCard p{
+
+font-size:.9rem;
+
+}
+
+}
+
+/* ===========================================
+   420px
+=========================================== */
+
+@media (max-width:420px){
+
+.valuesHeading h2{
+
+font-size:1.75rem;
+
+}
+
+.valueCard{
+
+padding:22px 18px;
+
+}
+
+.valueIcon{
+
+width:60px;
+
+height:60px;
+
+font-size:1.45rem;
+
+}
+
+}
+
+/* ===========================================
+   FLOATING ANIMATION
+=========================================== */
+
+@keyframes valueFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.valueCard:nth-child(1){
+
+animation:valueFloat 5.2s ease-in-out infinite;
+
+}
+
+.valueCard:nth-child(2){
+
+animation:valueFloat 6.3s ease-in-out infinite;
+
+}
+
+.valueCard:nth-child(3){
+
+animation:valueFloat 5.8s ease-in-out infinite;
+
+}
+
+.valueCard:nth-child(4){
+
+animation:valueFloat 6.6s ease-in-out infinite;
+
+}
+
+.valueCard:nth-child(5){
+
+animation:valueFloat 5.5s ease-in-out infinite;
+
+}
+
+.valueCard:nth-child(6){
+
+animation:valueFloat 6.1s ease-in-out infinite;
+
+}
+
+/* ===========================================
+   ACCESSIBILITY
+=========================================== */
+
+.valueCard:focus-within{
+
+outline:none;
+
+box-shadow:
+
+0 0 0 4px rgba(182,214,62,.35);
+
+}
+
+/* ===========================================
+   REDUCED MOTION
+=========================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
+
+}
+
+}
+
+/* ===========================================
+   PERFORMANCE
+=========================================== */
+
+.valueCard,
+.valueIcon{
+
+will-change:transform;
+
+}

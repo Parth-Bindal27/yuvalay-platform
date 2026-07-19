@@ -1,0 +1,739 @@
+/* ===========================================
+   PARTNERS & SUPPORTERS
+=========================================== */
+
+.partners{
+    position:relative;
+    overflow:hidden;
+    padding:120px 6%;
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fff3 100%
+        );
+}
+
+.partners::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(rgba(0,0,0,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,0,0,.03) 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    mask-image:
+        radial-gradient(circle,#000 35%,transparent 90%);
+
+    pointer-events:none;
+}
+
+/* ===========================================
+   BLUR EFFECTS
+=========================================== */
+
+.partnerBlur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:0;
+}
+
+.leftBlur{
+    width:380px;
+    height:380px;
+    left:-150px;
+    top:70px;
+    background:#b6d63e45;
+}
+
+.rightBlur{
+    width:420px;
+    height:420px;
+    right:-170px;
+    bottom:-120px;
+    background:#89db6540;
+}
+
+/* ===========================================
+   CONTAINER
+=========================================== */
+
+.partnersContainer{
+    position:relative;
+    z-index:2;
+    width:min(1350px,100%);
+    margin:auto;
+}
+
+/* ===========================================
+   HEADING
+=========================================== */
+
+.partnersHeading{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.partnersBadge{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(182,214,62,.15);
+
+    border:1px solid rgba(182,214,62,.25);
+
+    color:#607d18;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.partnersHeading h2{
+
+    margin-top:28px;
+
+    font-size:clamp(2.8rem,5vw,4.8rem);
+
+    line-height:1.08;
+
+    letter-spacing:-2px;
+
+    color:#111;
+
+}
+
+.partnersHeading h2 span{
+
+    color:var(--primary);
+
+}
+
+.partnersHeading p{
+
+    margin:24px auto 0;
+
+    max-width:650px;
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+/* ===========================================
+   GRID
+=========================================== */
+
+.partnersGrid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* ===========================================
+   CARD
+=========================================== */
+
+.partnerCard{
+
+    position:relative;
+
+    padding:40px 30px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.06);
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    text-align:center;
+
+}
+
+.partnerCard:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 30px 70px rgba(182,214,62,.18);
+
+}
+
+.partnerCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.45),
+            transparent 35%,
+            transparent 70%,
+            rgba(255,255,255,.12)
+        );
+
+    pointer-events:none;
+
+}
+
+.partnerCard::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    border:1px solid transparent;
+
+    transition:.35s;
+
+}
+
+.partnerCard:hover::after{
+
+    border-color:rgba(182,214,62,.35);
+
+}
+
+/* ===========================================
+   LOGO
+=========================================== */
+
+.partnerLogo{
+
+    width:120px;
+
+    height:120px;
+
+    margin:0 auto 24px;
+
+    border-radius:24px;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid rgba(182,214,62,.18);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.partnerLogo img{
+
+    max-width:70%;
+
+    max-height:70%;
+
+    object-fit:contain;
+
+    transition:transform .4s ease;
+
+}
+
+.partnerCard:hover .partnerLogo img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================================
+   ICON
+=========================================== */
+
+.partnerIcon{
+
+    width:54px;
+
+    height:54px;
+
+    margin:0 auto 18px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(182,214,62,.15);
+
+    color:var(--primary);
+
+    font-size:1.2rem;
+
+}
+
+/* ===========================================
+   CONTENT
+=========================================== */
+
+.partnerCard h3{
+
+    color:#111;
+
+    font-size:1.35rem;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+.partnerCard p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+    font-size:.96rem;
+
+}
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.partnerCard button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:none;
+
+    border:none;
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.partnerCard button svg{
+
+    transition:.35s;
+
+}
+
+.partnerCard:hover button{
+
+    letter-spacing:.4px;
+
+}
+
+.partnerCard:hover button svg{
+
+    transform:translateX(6px);
+
+}
+
+/* ===========================================
+   RESPONSIVE - 1200px
+=========================================== */
+
+@media (max-width:1200px){
+
+.partnersGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:28px;
+
+}
+
+.partnersContainer{
+
+max-width:950px;
+
+}
+
+}
+
+/* ===========================================
+   RESPONSIVE - 992px
+=========================================== */
+
+@media (max-width:992px){
+
+.partners{
+
+padding:100px 30px;
+
+}
+
+.partnersHeading h2{
+
+font-size:3rem;
+
+}
+
+.partnerLogo{
+
+width:110px;
+
+height:110px;
+
+}
+
+}
+
+/* ===========================================
+   RESPONSIVE - 768px
+=========================================== */
+
+@media (max-width:768px){
+
+.partners{
+
+padding:80px 20px;
+
+}
+
+.partnersGrid{
+
+grid-template-columns:1fr;
+
+gap:24px;
+
+}
+
+.partnerCard{
+
+max-width:560px;
+
+margin:auto;
+
+}
+
+.partnersHeading h2{
+
+font-size:2.5rem;
+
+}
+
+}
+
+/* ===========================================
+   RESPONSIVE - 576px
+=========================================== */
+
+@media (max-width:576px){
+
+.partners{
+
+padding:70px 18px;
+
+}
+
+.partnersBadge{
+
+padding:8px 14px;
+
+font-size:.72rem;
+
+}
+
+.partnersHeading h2{
+
+font-size:2rem;
+
+letter-spacing:-1px;
+
+}
+
+.partnersHeading p{
+
+font-size:.95rem;
+
+line-height:1.8;
+
+}
+
+.partnerCard{
+
+padding:28px 22px;
+
+}
+
+.partnerLogo{
+
+width:90px;
+
+height:90px;
+
+border-radius:20px;
+
+}
+
+.partnerIcon{
+
+width:46px;
+
+height:46px;
+
+font-size:1rem;
+
+}
+
+.partnerCard h3{
+
+font-size:1.15rem;
+
+}
+
+.partnerCard p{
+
+font-size:.9rem;
+
+}
+
+}
+
+/* ===========================================
+   420px
+=========================================== */
+
+@media (max-width:420px){
+
+.partnersHeading h2{
+
+font-size:1.75rem;
+
+}
+
+.partnerCard{
+
+padding:22px 18px;
+
+}
+
+.partnerLogo{
+
+width:80px;
+
+height:80px;
+
+}
+
+.partnerCard button{
+
+font-size:.85rem;
+
+}
+
+}
+
+/* ===========================================
+   FLOAT ANIMATION
+=========================================== */
+
+@keyframes partnerFloat{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.partnerCard:nth-child(1){
+
+animation:partnerFloat 5.5s ease-in-out infinite;
+
+}
+
+.partnerCard:nth-child(2){
+
+animation:partnerFloat 6.2s ease-in-out infinite;
+
+}
+
+.partnerCard:nth-child(3){
+
+animation:partnerFloat 5.8s ease-in-out infinite;
+
+}
+
+.partnerCard:nth-child(4){
+
+animation:partnerFloat 6.8s ease-in-out infinite;
+
+}
+
+.partnerCard:nth-child(5){
+
+animation:partnerFloat 5.4s ease-in-out infinite;
+
+}
+
+.partnerCard:nth-child(6){
+
+animation:partnerFloat 6.5s ease-in-out infinite;
+
+}
+
+/* ===========================================
+   PREMIUM SHINE
+=========================================== */
+
+.partnerCard{
+
+overflow:hidden;
+
+}
+
+.partnerLogo::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-130%;
+
+width:45%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.55),
+transparent
+);
+
+transform:skewX(-20deg);
+
+transition:.8s;
+
+}
+
+.partnerCard:hover .partnerLogo::after{
+
+left:160%;
+
+}
+
+/* ===========================================
+   ACCESSIBILITY
+=========================================== */
+
+.partnerCard button:focus{
+
+outline:none;
+
+box-shadow:
+
+0 0 0 4px rgba(182,214,62,.35);
+
+border-radius:50px;
+
+}
+
+/* ===========================================
+   REDUCED MOTION
+=========================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
+
+}
+
+}
+
+/* ===========================================
+   PERFORMANCE
+=========================================== */
+
+.partnerCard,
+.partnerLogo,
+.partnerLogo img,
+.partnerCard button{
+
+will-change:transform;
+
+}

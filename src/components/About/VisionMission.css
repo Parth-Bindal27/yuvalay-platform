@@ -1,0 +1,247 @@
+.visionMission {
+  --purpose-primary: #b6d63e;
+  --purpose-deep: #608515;
+  --purpose-ink: #152211;
+  --purpose-muted: #63715d;
+
+  position: relative;
+  overflow: hidden;
+  padding: clamp(5rem, 9vw, 8.5rem) clamp(1.25rem, 5vw, 5rem);
+  background:
+    radial-gradient(circle at 7% 32%, rgba(185, 221, 75, 0.13), transparent 23rem),
+    linear-gradient(180deg, #f9fdf5 0%, #ffffff 100%);
+  color: var(--purpose-ink);
+}
+
+.visionContainer {
+  width: min(100%, 85rem);
+  margin: 0 auto;
+}
+
+.visionHeading {
+  max-width: 46rem;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.visionHeading > span,
+.purposeLabel {
+  display: inline-flex;
+  padding: 0.68rem 0.9rem;
+  border: 1px solid rgba(104, 143, 20, 0.19);
+  border-radius: 999px;
+  background: rgba(243, 251, 220, 0.82);
+  color: #608018;
+  font-size: 0.71rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.visionHeading h2 {
+  margin: 1.1rem 0 0;
+  font-size: clamp(2.35rem, 5vw, 4.45rem);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 1;
+}
+
+.purposeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.3vw, 1.65rem);
+}
+
+.purposeCard {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 27rem;
+  padding: clamp(1.7rem, 4vw, 3rem);
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  border-radius: clamp(1.6rem, 3vw, 2.4rem);
+  box-shadow: 0 1.6rem 4.2rem rgba(34, 67, 24, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+.purposeCard::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.68;
+  background-image: radial-gradient(rgba(92, 126, 25, 0.15) 1px, transparent 1px);
+  background-size: 1.25rem 1.25rem;
+  -webkit-mask-image: linear-gradient(140deg, #000, transparent 75%);
+  mask-image: linear-gradient(140deg, #000, transparent 75%);
+}
+
+.visionCard {
+  background:
+    radial-gradient(circle at 86% 16%, rgba(213, 240, 120, 0.94), transparent 31%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(235, 248, 198, 0.76));
+}
+
+.missionCard {
+  background:
+    radial-gradient(circle at 88% 16%, rgba(181, 227, 173, 0.72), transparent 31%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(220, 244, 225, 0.8));
+}
+
+.purposeIcon {
+  display: grid;
+  width: 4rem;
+  height: 4rem;
+  place-items: center;
+  margin-bottom: 2.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.56);
+  box-shadow: 0 0.85rem 1.9rem rgba(70, 109, 24, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  color: var(--purpose-deep);
+  font-size: 1.45rem;
+}
+
+.missionCard .purposeIcon { color: #3f8b4d; }
+
+.purposeCard h3 {
+  max-width: 12ch;
+  margin: 1rem 0 0;
+  font-size: clamp(1.9rem, 3.4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.02;
+}
+
+.purposeCard p {
+  max-width: 33rem;
+  margin: 1.3rem 0 0;
+  color: var(--purpose-muted);
+  font-size: 0.98rem;
+  line-height: 1.78;
+}
+
+.purposeAccent {
+  position: absolute;
+  right: clamp(1.5rem, 3vw, 2.5rem);
+  bottom: 1rem;
+  color: rgba(73, 108, 17, 0.12);
+  font-size: clamp(5.5rem, 12vw, 10rem);
+  font-weight: 800;
+  letter-spacing: -0.1em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.missionCard .purposeAccent { color: rgba(43, 126, 64, 0.1); }
+
+.principlesBar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+  padding: 1rem 1.2rem 1rem 1.35rem;
+  border: 1px solid rgba(41, 70, 31, 0.08);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 0.85rem 2.5rem rgba(36, 67, 25, 0.07), inset 0 1px 0 #ffffff;
+  -webkit-backdrop-filter: blur(0.9rem);
+  backdrop-filter: blur(0.9rem);
+}
+
+.principlesBar > p {
+  margin: 0;
+  color: #52614d;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.principleList {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.principle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
+  padding: 0.54rem 0.72rem;
+  border-radius: 0.75rem;
+  background: #f3fae4;
+  color: #547516;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.principle svg { font-size: 0.82rem; }
+
+.principlesLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.52rem;
+  white-space: nowrap;
+  color: #416410;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: gap 180ms ease, color 180ms ease;
+}
+
+.principlesLink:hover {
+  gap: 0.78rem;
+  color: #779b20;
+}
+
+.principlesLink:focus-visible {
+  outline: 3px solid rgba(118, 157, 28, 0.35);
+  outline-offset: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 760px) {
+  .purposeGrid { grid-template-columns: 1fr; }
+
+  .purposeCard { min-height: 23rem; }
+
+  .principlesBar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .visionMission { padding-inline: 1rem; }
+
+  .visionHeading { text-align: left; }
+
+  .purposeCard {
+    min-height: 24rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .purposeIcon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1.05rem;
+  }
+
+  .purposeCard h3 { font-size: 2.15rem; }
+
+  .principleList { width: 100%; }
+
+  .principlesLink { margin-top: 0.2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visionMission *,
+  .visionMission *::before,
+  .visionMission *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

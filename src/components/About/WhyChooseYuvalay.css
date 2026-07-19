@@ -1,0 +1,952 @@
+/* ======================================================
+   WHY CHOOSE YUVALAY
+====================================================== */
+
+.whyChoose{
+    position:relative;
+    overflow:hidden;
+    padding:120px 6%;
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fff4 100%
+        );
+}
+
+.whyChoose::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(rgba(0,0,0,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,0,0,.03) 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    mask-image:
+        radial-gradient(circle,#000 35%,transparent 90%);
+
+    pointer-events:none;
+}
+
+.whyBlur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:0;
+}
+
+.blurLeft{
+
+    width:380px;
+    height:380px;
+
+    left:-120px;
+    top:120px;
+
+    background:#b6d63e45;
+
+}
+
+.blurRight{
+
+    width:420px;
+    height:420px;
+
+    right:-150px;
+    bottom:-120px;
+
+    background:#7ddf7840;
+
+}
+
+.whyContainer{
+
+    position:relative;
+    z-index:2;
+
+    width:min(1400px,100%);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+
+}
+
+/* ======================================================
+   IMAGE
+====================================================== */
+
+.whyImage{
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+
+}
+
+.imageWrapper{
+
+    position:relative;
+
+    width:100%;
+    max-width:620px;
+
+    border-radius:34px;
+    overflow:hidden;
+
+    background:#fff;
+
+    box-shadow:
+        0 35px 70px rgba(0,0,0,.08);
+
+}
+
+.imageWrapper img{
+
+    width:100%;
+    height:720px;
+
+    object-fit:cover;
+    display:block;
+
+    transition:.6s;
+
+}
+
+.imageWrapper:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.glassOverlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(0,0,0,.05),
+
+        transparent 35%,
+
+        transparent 60%,
+
+        rgba(0,0,0,.25)
+
+    );
+
+}
+
+/* ======================================================
+   FLOATING BADGES
+====================================================== */
+
+.floatingBadge{
+
+    position:absolute;
+
+    background:
+        rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid
+        rgba(255,255,255,.4);
+
+    border-radius:22px;
+
+    padding:18px 22px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.10);
+
+    min-width:190px;
+
+}
+
+.floatingBadge h3{
+
+    margin:0;
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    font-weight:800;
+
+}
+
+.floatingBadge span{
+
+    color:#666;
+
+    font-size:.92rem;
+
+}
+
+.badgeOne{
+
+    left:-45px;
+    top:45px;
+
+}
+
+.badgeTwo{
+
+    right:-45px;
+    bottom:45px;
+
+}
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+.whyContent{
+
+    width:100%;
+
+}
+
+.whyBadge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:
+        rgba(182,214,62,.15);
+
+    color:#607d18;
+
+    border:
+        1px solid rgba(182,214,62,.25);
+
+    font-weight:700;
+
+    font-size:.82rem;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.whyContent h2{
+
+    margin-top:26px;
+
+    font-size:
+        clamp(2.8rem,5vw,4.6rem);
+
+    line-height:1.08;
+
+    color:#111;
+
+    letter-spacing:-2px;
+
+}
+
+.whyContent h2 span{
+
+    color:var(--primary);
+
+}
+
+.whyDesc{
+
+    margin-top:28px;
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:1.05rem;
+
+    max-width:620px;
+
+}
+
+/* ======================================================
+   FEATURES GRID
+====================================================== */
+
+.featuresGrid{
+
+    margin-top:50px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+.featureCard{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:28px;
+
+    border-radius:26px;
+
+    background:
+        rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid
+        rgba(255,255,255,.45);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.06);
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+.featureCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(182,214,62,.18),
+            transparent 45%
+        );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.featureCard:hover{
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(182,214,62,.45);
+
+    box-shadow:
+        0 25px 55px rgba(182,214,62,.18);
+
+}
+
+.featureCard:hover::before{
+
+    opacity:1;
+
+}
+
+/* ======================================================
+   ICON
+====================================================== */
+
+.featureIcon{
+
+    flex-shrink:0;
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        rgba(182,214,62,.12);
+
+    color:var(--primary);
+
+    font-size:1.8rem;
+
+    transition:
+        transform .4s ease,
+        background .4s ease,
+        color .4s ease;
+
+}
+
+.featureCard:hover .featureIcon{
+
+    transform:
+        rotate(-8deg)
+        scale(1.08);
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ======================================================
+   TEXT
+====================================================== */
+
+.featureCard h3{
+
+    margin:0 0 12px;
+
+    color:#111;
+
+    font-size:1.28rem;
+
+    font-weight:700;
+
+}
+
+.featureCard p{
+
+    margin:0;
+
+    color:#666;
+
+    line-height:1.75;
+
+    font-size:.97rem;
+
+}
+
+/* ======================================================
+   LEARN MORE
+====================================================== */
+
+.learnMore{
+
+    margin-top:18px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    font-size:.92rem;
+
+    transition:.35s;
+
+}
+
+.learnMore svg{
+
+    transition:.35s;
+
+}
+
+.featureCard:hover .learnMore{
+
+    letter-spacing:.3px;
+
+}
+
+.featureCard:hover .learnMore svg{
+
+    transform:
+        translateX(6px)
+        rotate(8deg);
+
+}
+
+/* ======================================================
+   PREMIUM EFFECT
+====================================================== */
+
+.featureCard::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.35),
+            transparent 45%,
+            transparent 65%,
+            rgba(255,255,255,.08)
+        );
+
+}
+
+/* ======================================================
+   IMAGE SHADOW
+====================================================== */
+
+.imageWrapper{
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+.imageWrapper:hover{
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 45px 90px rgba(0,0,0,.12);
+
+}
+
+/* ======================================================
+   FLOATING BADGE HOVER
+====================================================== */
+
+.floatingBadge{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.floatingBadge:hover{
+
+    transform:
+        scale(1.05);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.15);
+
+}
+
+/* ======================================================
+   RESPONSIVE - 1200px
+====================================================== */
+
+@media (max-width:1200px){
+
+.whyContainer{
+
+grid-template-columns:1fr;
+gap:80px;
+
+}
+
+.whyImage{
+
+order:-1;
+
+}
+
+.whyContent{
+
+text-align:center;
+
+}
+
+.whyDesc{
+
+margin-inline:auto;
+
+}
+
+.featuresGrid{
+
+max-width:900px;
+margin:60px auto 0;
+
+}
+
+.badgeOne{
+
+left:20px;
+top:20px;
+
+}
+
+.badgeTwo{
+
+right:20px;
+bottom:20px;
+
+}
+
+.imageWrapper{
+
+max-width:760px;
+
+}
+
+}
+
+/* ======================================================
+   RESPONSIVE - 992px
+====================================================== */
+
+@media (max-width:992px){
+
+.whyChoose{
+
+padding:100px 30px;
+
+}
+
+.whyContent h2{
+
+font-size:3rem;
+
+}
+
+.featuresGrid{
+
+grid-template-columns:1fr 1fr;
+gap:20px;
+
+}
+
+.imageWrapper img{
+
+height:600px;
+
+}
+
+.floatingBadge{
+
+min-width:170px;
+padding:16px;
+
+}
+
+.floatingBadge h3{
+
+font-size:1.7rem;
+
+}
+
+}
+
+/* ======================================================
+   RESPONSIVE - 768px
+====================================================== */
+
+@media (max-width:768px){
+
+.whyChoose{
+
+padding:80px 20px;
+
+}
+
+.whyContainer{
+
+gap:60px;
+
+}
+
+.featuresGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.whyContent h2{
+
+font-size:2.5rem;
+line-height:1.15;
+
+}
+
+.whyDesc{
+
+font-size:1rem;
+
+}
+
+.imageWrapper{
+
+border-radius:28px;
+
+}
+
+.imageWrapper img{
+
+height:480px;
+
+}
+
+.featureCard{
+
+padding:24px;
+
+}
+
+.featureIcon{
+
+width:64px;
+height:64px;
+font-size:1.6rem;
+
+}
+
+.badgeOne{
+
+left:15px;
+top:15px;
+
+}
+
+.badgeTwo{
+
+right:15px;
+bottom:15px;
+
+}
+
+}
+
+/* ======================================================
+   RESPONSIVE - 576px
+====================================================== */
+
+@media (max-width:576px){
+
+.whyChoose{
+
+padding:70px 18px;
+
+}
+
+.whyBadge{
+
+font-size:.72rem;
+padding:8px 14px;
+
+}
+
+.whyContent h2{
+
+font-size:2rem;
+letter-spacing:-1px;
+
+}
+
+.whyDesc{
+
+line-height:1.8;
+
+}
+
+.imageWrapper{
+
+border-radius:24px;
+
+}
+
+.imageWrapper img{
+
+height:360px;
+
+}
+
+.featureCard{
+
+padding:22px;
+gap:16px;
+
+}
+
+.featureCard h3{
+
+font-size:1.1rem;
+
+}
+
+.featureCard p{
+
+font-size:.92rem;
+
+}
+
+.featureIcon{
+
+width:56px;
+height:56px;
+font-size:1.4rem;
+border-radius:16px;
+
+}
+
+/* Floating badges become compact */
+
+.floatingBadge{
+
+min-width:140px;
+padding:12px 14px;
+
+}
+
+.floatingBadge h3{
+
+font-size:1.25rem;
+
+}
+
+.floatingBadge span{
+
+font-size:.8rem;
+
+}
+
+}
+
+/* ======================================================
+   RESPONSIVE - 420px
+====================================================== */
+
+@media (max-width:420px){
+
+.imageWrapper img{
+
+height:300px;
+
+}
+
+.floatingBadge{
+
+display:none;
+
+}
+
+.whyContent h2{
+
+font-size:1.75rem;
+
+}
+
+.featureCard{
+
+padding:18px;
+
+}
+
+.featureIcon{
+
+width:50px;
+height:50px;
+font-size:1.2rem;
+
+}
+
+.learnMore{
+
+font-size:.82rem;
+
+}
+
+}
+
+/* ======================================================
+   ANIMATIONS
+====================================================== */
+
+@keyframes floatBadge{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.badgeOne{
+
+animation:floatBadge 4s ease-in-out infinite;
+
+}
+
+.badgeTwo{
+
+animation:floatBadge 5s ease-in-out infinite;
+
+}
+
+.whyContent,
+.imageWrapper,
+.featureCard{
+
+will-change:transform;
+
+}
+
+/* ======================================================
+   ACCESSIBILITY
+====================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none !important;
+transition:none !important;
+scroll-behavior:auto !important;
+
+}
+
+}
