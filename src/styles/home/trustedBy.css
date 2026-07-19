@@ -1,0 +1,158 @@
+/* src/styles/home/trustedBy.css */
+
+.trusted{
+    width:min(1400px,95%);
+    margin:120px auto;
+    overflow:hidden;
+}
+
+.trusted-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.trusted-heading span{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 18px;
+    border-radius:999px;
+    background:rgba(182,214,62,.12);
+    border:1px solid rgba(182,214,62,.25);
+    color:var(--primary);
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.trusted-heading h2{
+    font-size:clamp(2.3rem,4vw,3.5rem);
+    line-height:1.2;
+    letter-spacing:-1px;
+}
+
+.logo-slider{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    mask-image:linear-gradient(
+        to right,
+        transparent,
+        black 8%,
+        black 92%,
+        transparent
+    );
+}
+
+.logo-track{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    width:max-content;
+    animation:logoScroll 28s linear infinite;
+}
+
+.logo-slider:hover .logo-track{
+    animation-play-state:paused;
+}
+
+.logo-card{
+
+    flex:0 0 auto;
+
+    width:180px;
+    height:110px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    0 18px 40px rgba(0,0,0,.06);
+
+    transition:.35s ease;
+
+}
+
+.logo-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.14);
+
+    box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.25),
+    0 25px 45px rgba(0,0,0,.12);
+
+}
+
+.logo-card img{
+
+    width:110px;
+    max-height:55px;
+
+    object-fit:contain;
+
+    filter:grayscale(100%) opacity(.65);
+
+    transition:.35s ease;
+
+}
+
+.logo-card:hover img{
+
+    filter:grayscale(0%) opacity(1);
+
+    transform:scale(1.08);
+
+}
+
+@keyframes logoScroll{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+@media(max-width:768px){
+
+.logo-card{
+
+width:140px;
+height:90px;
+
+}
+
+.logo-card img{
+
+width:90px;
+
+}
+
+.logo-track{
+
+gap:18px;
+
+}
+
+.trusted{
+
+margin:90px auto;
+
+}
+
+}

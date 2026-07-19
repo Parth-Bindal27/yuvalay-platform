@@ -1,0 +1,399 @@
+/* src/styles/home/finalCTA.css */
+
+.final-cta{
+    width:min(1400px,95%);
+    margin:140px auto;
+    position:relative;
+    overflow:hidden;
+}
+
+/* ==========================
+BACKGROUND
+========================== */
+
+.cta-bg{
+    position:absolute;
+    inset:0;
+    z-index:-1;
+}
+
+.cta-grid{
+    position:absolute;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size:42px 42px;
+    opacity:.35;
+}
+
+.cta-blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+}
+
+.blob1{
+    width:460px;
+    height:460px;
+    background:rgba(182,214,62,.12);
+    top:-180px;
+    left:-120px;
+}
+
+.blob2{
+    width:400px;
+    height:400px;
+    background:rgba(70,130,255,.10);
+    bottom:-140px;
+    right:-120px;
+}
+
+/* ==========================
+CONTAINER
+========================== */
+
+.cta-container{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    padding:90px 80px;
+
+    border-radius:42px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(30px);
+    -webkit-backdrop-filter:blur(30px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+    0 35px 80px rgba(0,0,0,.08);
+
+}
+
+/* ==========================
+LEFT
+========================== */
+
+.cta-left .section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(182,214,62,.12);
+
+    border:1px solid rgba(182,214,62,.25);
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+
+.cta-left h2{
+
+    font-size:clamp(3rem,5vw,5rem);
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+    margin-bottom:24px;
+
+}
+
+.cta-left h2 span{
+
+    color:var(--primary);
+
+}
+
+.cta-left p{
+
+    max-width:620px;
+
+    color:var(--text-secondary);
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================
+BUTTONS
+========================== */
+
+.cta-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.primary-btn,
+.secondary-btn,
+.glass-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    padding:16px 30px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.primary-btn{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 40px rgba(182,214,62,.35);
+
+}
+
+.secondary-btn{
+
+    background:#fff;
+
+    color:#111;
+
+}
+
+.secondary-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.glass-btn{
+
+    background:rgba(255,255,255,.08);
+
+    color:inherit;
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.16);
+
+}
+
+.glass-btn:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+/* ==========================
+RIGHT
+========================== */
+
+.cta-right{
+
+    position:relative;
+
+    height:500px;
+
+}
+
+.floating-card{
+
+    position:absolute;
+
+    width:240px;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.top-card{
+
+    top:0;
+
+    right:30px;
+
+}
+
+.middle-card{
+
+    left:10px;
+
+    top:170px;
+
+}
+
+.bottom-card{
+
+    right:0;
+
+    bottom:0;
+
+}
+
+.floating-card h3{
+
+    font-size:2.8rem;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.floating-card span{
+
+    color:var(--text-secondary);
+
+    line-height:1.6;
+
+}
+
+/* ==========================
+HOVER EFFECT
+========================== */
+
+.floating-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.15);
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:1100px){
+
+.cta-container{
+
+grid-template-columns:1fr;
+
+padding:60px 45px;
+
+}
+
+.cta-right{
+
+height:350px;
+
+margin-top:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.final-cta{
+
+margin:90px auto;
+
+}
+
+.cta-container{
+
+padding:40px 24px;
+
+border-radius:28px;
+
+}
+
+.cta-left h2{
+
+font-size:2.5rem;
+
+}
+
+.cta-buttons{
+
+flex-direction:column;
+
+}
+
+.primary-btn,
+.secondary-btn,
+.glass-btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.cta-right{
+
+height:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.floating-card{
+
+position:relative;
+
+width:100%;
+
+top:auto;
+left:auto;
+right:auto;
+bottom:auto;
+
+}
+
+}
