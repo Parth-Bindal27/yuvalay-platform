@@ -1,0 +1,392 @@
+/*=========================================
+PAST EVENTS TIMELINE
+=========================================*/
+
+.pastEvents{
+
+    width:min(1200px,92%);
+
+    margin:150px auto;
+
+}
+
+
+/*==========================
+HEADING
+==========================*/
+
+.pastHeading{
+
+    max-width:760px;
+
+    margin:auto;
+
+    text-align:center;
+
+    margin-bottom:90px;
+
+}
+
+
+.pastHeading h2{
+
+    margin:20px 0;
+
+    font-size:clamp(2.8rem,5vw,4.6rem);
+
+    line-height:1.05;
+
+    color:#111;
+
+}
+
+
+.pastHeading p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+
+
+/*==========================
+TIMELINE
+==========================*/
+
+.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    height:100%;
+
+    width:4px;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    #B6D63E,
+
+    #8fc42b
+
+    );
+
+    transform:translateX(-50%);
+
+    border-radius:999px;
+
+}
+
+
+
+/*==========================
+ITEM
+==========================*/
+
+.timelineItem{
+
+    width:50%;
+
+    position:relative;
+
+    margin-bottom:80px;
+
+}
+
+
+
+.timelineItem:nth-child(odd){
+
+    padding-right:70px;
+
+    text-align:right;
+
+}
+
+
+
+.timelineItem:nth-child(even){
+
+    margin-left:50%;
+
+    padding-left:70px;
+
+}
+
+
+
+/*==========================
+ICON
+==========================*/
+
+.timelineIcon{
+
+    position:absolute;
+
+    top:35px;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#B6D63E;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#111;
+
+    font-size:1.8rem;
+
+    box-shadow:
+
+    0 20px 45px rgba(182,214,62,.35);
+
+    z-index:2;
+
+}
+
+
+
+.timelineItem:nth-child(odd) .timelineIcon{
+
+    right:-35px;
+
+}
+
+
+
+.timelineItem:nth-child(even) .timelineIcon{
+
+    left:-35px;
+
+}
+
+
+
+/*==========================
+CARD
+==========================*/
+
+.timelineCard{
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+
+    rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    border:
+
+    1px solid rgba(255,255,255,.7);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+
+
+.timelineCard:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.12);
+
+}
+
+
+
+.timelineCard span{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#B6D63E;
+
+    color:#111;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.timelineCard h3{
+
+    font-size:1.8rem;
+
+    color:#111;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.timelineCard ul{
+
+    padding:0;
+
+    margin:0;
+
+    list-style:none;
+
+}
+
+
+
+.timelineCard li{
+
+    color:#666;
+
+    margin-bottom:12px;
+
+    position:relative;
+
+}
+
+
+
+.timelineCard li::before{
+
+    content:"•";
+
+    color:#B6D63E;
+
+    font-size:1.3rem;
+
+    margin-right:10px;
+
+}
+
+
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+
+.timeline::before{
+
+left:35px;
+
+}
+
+
+.timelineItem,
+.timelineItem:nth-child(even){
+
+width:100%;
+
+margin-left:0;
+
+padding-left:90px;
+
+padding-right:0;
+
+text-align:left;
+
+}
+
+
+
+.timelineItem:nth-child(odd) .timelineIcon,
+.timelineItem:nth-child(even) .timelineIcon{
+
+left:0;
+
+right:auto;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:768px){
+
+.pastEvents{
+
+margin:110px auto;
+
+}
+
+
+.pastHeading{
+
+margin-bottom:60px;
+
+}
+
+
+.timelineCard{
+
+padding:28px 22px;
+
+}
+
+
+.timelineCard h3{
+
+font-size:1.5rem;
+
+}
+
+
+.timelineIcon{
+
+width:60px;
+
+height:60px;
+
+font-size:1.4rem;
+
+}
+
+}

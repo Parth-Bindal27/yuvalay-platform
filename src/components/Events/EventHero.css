@@ -1,0 +1,578 @@
+/*=========================================
+EVENT HERO
+=========================================*/
+
+.eventHero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:170px 6% 120px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff,
+        #f8fff1
+    );
+
+}
+
+
+/*==========================
+BACKGROUND GLOW
+==========================*/
+
+.eventHeroGlow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+}
+
+
+.glow1{
+
+    width:450px;
+
+    height:450px;
+
+    background:
+    rgba(182,214,62,.25);
+
+    top:-150px;
+
+    right:-120px;
+
+}
+
+
+.glow2{
+
+    width:350px;
+
+    height:350px;
+
+    background:
+    rgba(70,160,255,.15);
+
+    bottom:-100px;
+
+    left:-100px;
+
+}
+
+
+
+/*==========================
+CONTAINER
+==========================*/
+
+.eventHeroContainer{
+
+    width:min(1400px,100%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+/*==========================
+CONTENT
+==========================*/
+
+.eventBadge{
+
+    display:inline-flex;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:
+
+    rgba(182,214,62,.15);
+
+    color:#617d1b;
+
+    border:
+
+    1px solid rgba(182,214,62,.25);
+
+    font-weight:700;
+
+    font-size:.85rem;
+
+}
+
+
+
+.eventHeroContent h1{
+
+    margin-top:30px;
+
+    font-size:
+
+    clamp(3.5rem,6vw,6rem);
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+    color:#111;
+
+}
+
+
+.eventHeroContent h1 span{
+
+    color:#B6D63E;
+
+}
+
+
+
+.eventHeroContent p{
+
+    margin-top:30px;
+
+    max-width:600px;
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:1.1rem;
+
+}
+
+
+
+/*==========================
+EVENT DETAILS
+==========================*/
+
+.eventInfo{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:40px;
+
+}
+
+
+.eventInfo div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 18px;
+
+    border-radius:16px;
+
+    background:
+
+    rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+
+    0 12px 35px rgba(0,0,0,.06);
+
+    color:#555;
+
+}
+
+
+
+.eventInfo svg{
+
+    color:#B6D63E;
+
+}
+
+
+
+/*==========================
+BUTTONS
+==========================*/
+
+.eventButtons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:45px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.eventPrimary,
+.eventSecondary{
+
+    height:58px;
+
+    padding:0 30px;
+
+    border-radius:999px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+
+.eventPrimary{
+
+    background:#111;
+
+    color:white;
+
+}
+
+
+.eventPrimary:hover{
+
+    background:#B6D63E;
+
+    color:#111;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.eventSecondary{
+
+    background:white;
+
+    color:#111;
+
+    border:
+
+    1px solid rgba(0,0,0,.12);
+
+}
+
+
+
+.eventSecondary:hover{
+
+    background:#111;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*==========================
+IMAGE
+==========================*/
+
+.eventVisual{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.eventImageCard{
+
+    width:100%;
+
+    max-width:600px;
+
+    height:620px;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 40px 100px rgba(0,0,0,.12);
+
+}
+
+
+
+.eventImageCard img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.7s;
+
+}
+
+
+.eventImageCard:hover img{
+
+    transform:scale(1.06);
+
+}
+
+
+
+/*==========================
+FLOATING CARDS
+==========================*/
+
+.floatingEventCard{
+
+    position:absolute;
+
+    background:
+
+    rgba(255,255,255,.85);
+
+    backdrop-filter:blur(20px);
+
+    padding:18px 25px;
+
+    border-radius:22px;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.1);
+
+    display:flex;
+
+    flex-direction:column;
+
+    animation:eventFloat 5s infinite ease-in-out;
+
+}
+
+
+
+.floatingEventCard strong{
+
+    font-size:1.7rem;
+
+    color:#111;
+
+}
+
+
+
+.floatingEventCard span{
+
+    color:#666;
+
+    font-size:.9rem;
+
+}
+
+
+
+.cardOne{
+
+    top:50px;
+
+    left:-40px;
+
+}
+
+
+.cardTwo{
+
+    right:-40px;
+
+    top:220px;
+
+}
+
+
+.cardThree{
+
+    bottom:60px;
+
+    left:-30px;
+
+}
+
+
+
+@keyframes eventFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:1100px){
+
+.eventHeroContainer{
+
+grid-template-columns:1fr;
+
+gap:70px;
+
+}
+
+
+.eventHeroContent{
+
+text-align:center;
+
+}
+
+
+.eventHeroContent p{
+
+margin:auto;
+
+}
+
+
+.eventInfo,
+.eventButtons{
+
+justify-content:center;
+
+}
+
+
+.eventVisual{
+
+order:-1;
+
+}
+
+
+.cardOne{
+
+left:20px;
+
+}
+
+
+.cardTwo{
+
+right:20px;
+
+}
+
+
+.cardThree{
+
+left:20px;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.eventHero{
+
+padding:130px 20px 90px;
+
+}
+
+
+.eventHeroContent h1{
+
+font-size:3.2rem;
+
+}
+
+
+.eventImageCard{
+
+height:420px;
+
+}
+
+
+.floatingEventCard{
+
+display:none;
+
+}
+
+
+.eventButtons{
+
+flex-direction:column;
+
+}
+
+
+.eventPrimary,
+.eventSecondary{
+
+width:100%;
+
+}
+
+}

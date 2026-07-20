@@ -1,0 +1,231 @@
+/*=========================================
+MAKERSPACE FAQ
+=========================================*/
+
+.makersFAQ{
+
+    width:min(1100px,92%);
+
+    margin:150px auto;
+
+}
+
+
+
+/*==========================
+HEADING
+==========================*/
+
+.faqHeading{
+
+    text-align:center;
+
+    max-width:750px;
+
+    margin:0 auto 70px;
+
+}
+
+
+.faqHeading h2{
+
+    margin:20px 0;
+
+    font-size:clamp(2.8rem,5vw,4.6rem);
+
+    line-height:1.05;
+
+    color:#111;
+
+}
+
+
+.faqHeading p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+}
+
+
+
+/*==========================
+CONTAINER
+==========================*/
+
+.faqContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+/*==========================
+ITEM
+==========================*/
+
+.faqItem{
+
+    background:
+
+    rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:24px;
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+
+    0 15px 45px rgba(0,0,0,.07);
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+
+.faqItem:hover{
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.1);
+
+}
+
+
+
+/*==========================
+QUESTION
+==========================*/
+
+.faqItem button{
+
+    width:100%;
+
+    padding:28px 32px;
+
+    border:none;
+
+    background:transparent;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    color:#111;
+
+    text-align:left;
+
+}
+
+
+.faqItem button svg{
+
+    color:#7da51d;
+
+    font-size:1rem;
+
+    flex-shrink:0;
+
+}
+
+
+
+/*==========================
+ANSWER
+==========================*/
+
+.faqAnswer{
+
+    overflow:hidden;
+
+}
+
+
+.faqAnswer p{
+
+    padding:
+
+    0 32px 30px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+}
+
+
+
+/*==========================
+ACTIVE EFFECT
+==========================*/
+
+.faqItem:has(.faqAnswer){
+
+    border-color:
+
+    rgba(182,214,62,.4);
+
+}
+
+
+
+/*==========================
+MOBILE
+==========================*/
+
+@media(max-width:768px){
+
+    .makersFAQ{
+
+        margin:110px auto;
+
+    }
+
+
+    .faqHeading h2{
+
+        font-size:2.4rem;
+
+    }
+
+
+    .faqItem button{
+
+        padding:22px 20px;
+
+        font-size:1rem;
+
+    }
+
+
+    .faqAnswer p{
+
+        padding:
+
+        0 20px 25px;
+
+    }
+
+}

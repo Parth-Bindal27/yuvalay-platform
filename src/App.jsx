@@ -15,6 +15,8 @@ import Profile from "./pages/Profile/Profile";
 import Gallery from "./pages/Gallery/Gallery";
 import About from "./pages/About/About";
 import Programs from "./pages/Programs/Programs";
+import Makerspace from "./pages/Makerspace/Makerspace";
+import Events from "./pages/Events/Events";
 import Contact from "./pages/Contact/Contact";
 import Donate from "./pages/Donate/Donate";
 
@@ -52,7 +54,8 @@ function App() {
           />
 
           <Route path="/programs" element={<Programs />} />
-
+          <Route path="/makerspace" element={<Makerspace />} />
+          <Route path="/events" element={<Events />} />
           <Route
             path="/gallery"
             element={<Gallery />}

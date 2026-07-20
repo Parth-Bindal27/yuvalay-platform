@@ -1,0 +1,430 @@
+/*=========================================
+EQUIPMENT SHOWCASE
+=========================================*/
+
+.equipmentSection{
+    width:min(1500px,94%);
+    margin:150px auto;
+}
+
+.equipmentHeading{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.equipmentHeading h2{
+    margin:20px 0;
+    font-size:clamp(2.8rem,5vw,4.8rem);
+    line-height:1.05;
+    color:#111;
+}
+
+.equipmentHeading p{
+    color:#666;
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+/*==========================
+HORIZONTAL SCROLL
+==========================*/
+
+.equipmentSlider{
+
+    display:flex;
+
+    gap:30px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    padding:10px 5px 25px;
+
+    scroll-snap-type:x proximity;
+
+    scroll-behavior:smooth;
+
+    -webkit-overflow-scrolling:touch;
+
+    touch-action:pan-x;
+
+    cursor:grab;
+
+}
+
+.equipmentSlider:active{
+
+    cursor:grabbing;
+
+}
+
+/*==========================
+PREMIUM SCROLLBAR
+==========================*/
+
+.equipmentSlider::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+.equipmentSlider::-webkit-scrollbar-track{
+
+    background:#eef2e5;
+
+    border-radius:999px;
+
+}
+
+.equipmentSlider::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        90deg,
+        #B6D63E,
+        #97C93C
+    );
+
+    border-radius:999px;
+
+}
+
+.equipmentSlider::-webkit-scrollbar-thumb:hover{
+
+    background:#8ab82f;
+
+}
+
+/* Firefox */
+
+.equipmentSlider{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#B6D63E #eef2e5;
+
+}
+
+/*==========================
+CARD
+==========================*/
+
+.equipmentCard{
+
+    flex:0 0 360px;
+
+    background:white;
+
+    border-radius:34px;
+
+    overflow:hidden;
+
+    scroll-snap-align:start;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.08);
+
+    transition:.45s;
+
+    position:relative;
+
+}
+
+.equipmentCard:hover{
+
+    transform:
+        translateY(-12px);
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.12);
+
+}
+
+/*==========================
+IMAGE
+==========================*/
+
+.equipmentImage{
+
+    height:330px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.equipmentImage img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.8s;
+
+}
+
+.equipmentCard:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.equipmentImage::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    to top,
+
+    rgba(0,0,0,.18),
+
+    transparent 60%
+
+    );
+
+}
+
+/*==========================
+CONTENT
+==========================*/
+
+.equipmentContent{
+
+    padding:30px;
+
+}
+
+.equipmentContent span{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(182,214,62,.12);
+
+    color:#607d18;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.equipmentContent h3{
+
+    font-size:2rem;
+
+    color:#111;
+
+    margin-bottom:28px;
+
+}
+
+.equipmentContent button{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.equipmentContent button:hover{
+
+    background:#B6D63E;
+
+    color:#111;
+
+}
+
+/*==========================
+APPLE SHINE
+==========================*/
+
+.equipmentCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:45%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.45),
+
+    transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:1s;
+
+    z-index:10;
+
+}
+
+.equipmentCard:hover::before{
+
+    left:160%;
+
+}
+
+/*==========================
+GLASS BORDER
+==========================*/
+
+.equipmentCard::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    pointer-events:none;
+
+    border:1px solid rgba(255,255,255,.4);
+
+}
+
+
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+.equipmentCard{
+
+flex:0 0 320px;
+
+}
+
+.equipmentImage{
+
+height:280px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.equipmentSection{
+
+margin:110px auto;
+
+}
+
+.equipmentHeading{
+
+margin-bottom:50px;
+
+}
+
+.equipmentHeading h2{
+
+font-size:2.4rem;
+
+}
+
+.equipmentCard{
+
+flex:0 0 280px;
+
+border-radius:28px;
+
+}
+
+.equipmentImage{
+
+height:220px;
+
+}
+
+.equipmentContent{
+
+padding:22px;
+
+}
+
+.equipmentContent h3{
+
+font-size:1.5rem;
+
+margin-bottom:22px;
+
+}
+
+.equipmentContent button{
+
+height:50px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.equipmentCard{
+
+flex:0 0 90%;
+
+}
+
+}

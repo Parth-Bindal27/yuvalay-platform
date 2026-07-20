@@ -1,0 +1,387 @@
+/*=========================================
+INNOVATION JOURNEY
+=========================================*/
+
+.journeySection{
+
+    width:min(1300px,92%);
+
+    margin:150px auto;
+
+}
+
+.journeyHeading{
+
+    max-width:760px;
+
+    margin:auto;
+
+    text-align:center;
+
+    margin-bottom:90px;
+
+}
+
+.journeyHeading h2{
+
+    margin:20px 0;
+
+    font-size:clamp(2.8rem,5vw,4.8rem);
+
+    color:#111;
+
+    line-height:1.05;
+
+}
+
+.journeyHeading p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:1.05rem;
+
+}
+
+/*==========================
+TIMELINE
+==========================*/
+
+.journeyTimeline{
+
+    position:relative;
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+.journeyTimeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    transform:translateX(-50%);
+
+    border-radius:999px;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    #B6D63E,
+
+    #7FC241
+
+    );
+
+}
+
+/*==========================
+ITEM
+==========================*/
+
+.journeyItem{
+
+    position:relative;
+
+    width:50%;
+
+    margin-bottom:80px;
+
+}
+
+.journeyItem:nth-child(odd){
+
+    padding-right:80px;
+
+    text-align:right;
+
+}
+
+.journeyItem:nth-child(even){
+
+    margin-left:auto;
+
+    padding-left:80px;
+
+}
+
+/*==========================
+ICON
+==========================*/
+
+.journeyIcon{
+
+    position:absolute;
+
+    top:30px;
+
+    width:74px;
+
+    height:74px;
+
+    border-radius:50%;
+
+    background:#B6D63E;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#111;
+
+    font-size:1.8rem;
+
+    box-shadow:
+
+    0 20px 45px rgba(182,214,62,.35);
+
+    z-index:5;
+
+}
+
+.journeyItem:nth-child(odd) .journeyIcon{
+
+    right:-37px;
+
+}
+
+.journeyItem:nth-child(even) .journeyIcon{
+
+    left:-37px;
+
+}
+
+/*==========================
+CARD
+==========================*/
+
+.journeyCard{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+
+    0 20px 55px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.journeyCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.journeyCard span{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(182,214,62,.12);
+
+    color:#607d18;
+
+    font-weight:700;
+
+    font-size:.82rem;
+
+    margin-bottom:18px;
+
+}
+
+.journeyCard h3{
+
+    font-size:2rem;
+
+    color:#111;
+
+    margin-bottom:15px;
+
+}
+
+.journeyCard p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/*==========================
+SHINE
+==========================*/
+
+.journeyCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:45%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.45),
+
+    transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:1s;
+
+}
+
+.journeyCard:hover::before{
+
+    left:170%;
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+.journeyTimeline::before{
+
+left:35px;
+
+}
+
+.journeyItem{
+
+width:100%;
+
+margin-left:0;
+
+padding-left:95px !important;
+
+padding-right:0 !important;
+
+text-align:left !important;
+
+}
+
+.journeyIcon{
+
+left:0 !important;
+
+right:auto !important;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.journeySection{
+
+margin:110px auto;
+
+}
+
+.journeyHeading{
+
+margin-bottom:60px;
+
+}
+
+.journeyHeading h2{
+
+font-size:2.4rem;
+
+}
+
+.journeyCard{
+
+padding:28px;
+
+}
+
+.journeyCard h3{
+
+font-size:1.6rem;
+
+}
+
+.journeyIcon{
+
+width:62px;
+
+height:62px;
+
+font-size:1.5rem;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.journeyItem{
+
+padding-left:80px !important;
+
+}
+
+.journeyIcon{
+
+width:54px;
+
+height:54px;
+
+font-size:1.3rem;
+
+}
+
+.journeyCard{
+
+padding:22px;
+
+}
+
+}

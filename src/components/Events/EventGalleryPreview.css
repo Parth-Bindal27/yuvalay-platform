@@ -1,0 +1,355 @@
+/*=========================================
+EVENT GALLERY PREVIEW
+=========================================*/
+
+.eventGalleryPreview{
+
+    width:min(1400px,92%);
+
+    margin:150px auto;
+
+}
+
+
+
+/*==========================
+HEADING
+==========================*/
+
+.galleryPreviewHeading{
+
+    max-width:760px;
+
+    margin:auto;
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+
+.galleryPreviewHeading h2{
+
+    margin:20px 0;
+
+    font-size:clamp(2.8rem,5vw,4.5rem);
+
+    line-height:1.05;
+
+    color:#111;
+
+}
+
+
+.galleryPreviewHeading p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==========================
+MASONRY GRID
+==========================*/
+
+.eventGalleryGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    grid-auto-rows:220px;
+
+    gap:25px;
+
+}
+
+
+
+/*==========================
+CARDS
+==========================*/
+
+.eventGalleryCard{
+
+    position:relative;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+
+
+.eventGalleryCard img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.7s;
+
+}
+
+
+
+.eventGalleryCard:hover img{
+
+    transform:scale(1.1);
+
+}
+
+
+
+/* Different sizes */
+
+.card0{
+
+    grid-row:span 2;
+
+}
+
+
+
+.card1{
+
+    grid-column:span 2;
+
+}
+
+
+
+.card3{
+
+    grid-row:span 2;
+
+}
+
+
+
+/*==========================
+OVERLAY
+==========================*/
+
+.galleryOverlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:30px;
+
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    transparent,
+
+    rgba(0,0,0,.75)
+
+    );
+
+
+    color:white;
+
+}
+
+
+
+.galleryOverlay span{
+
+    width:max-content;
+
+    padding:7px 15px;
+
+    border-radius:999px;
+
+    background:#B6D63E;
+
+    color:#111;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.galleryOverlay h3{
+
+    font-size:1.5rem;
+
+    margin:0;
+
+}
+
+
+
+/*==========================
+BUTTON
+==========================*/
+
+.galleryViewButton{
+
+    margin:50px auto 0;
+
+    width:max-content;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+
+    padding:16px 32px;
+
+
+    border-radius:999px;
+
+
+    background:#111;
+
+    color:white;
+
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+
+
+.galleryViewButton:hover{
+
+    background:#B6D63E;
+
+    color:#111;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+
+@media(max-width:1100px){
+
+.eventGalleryGrid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.eventGalleryPreview{
+
+margin:110px auto;
+
+}
+
+
+
+.eventGalleryGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+grid-auto-rows:180px;
+
+gap:15px;
+
+}
+
+
+
+.card1{
+
+grid-column:span 1;
+
+}
+
+
+
+.galleryOverlay{
+
+padding:20px;
+
+}
+
+
+
+.galleryOverlay h3{
+
+font-size:1.1rem;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+.eventGalleryGrid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.card0,
+.card3{
+
+grid-row:span 1;
+
+}
+
+
+
+.eventGalleryCard{
+
+height:280px;
+
+}
+
+
+
+}

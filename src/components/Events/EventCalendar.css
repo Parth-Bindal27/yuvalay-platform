@@ -1,0 +1,571 @@
+/* =====================================
+   EVENT CALENDAR PREMIUM UI
+===================================== */
+
+.eventCalendar{
+
+    width:min(1350px,92%);
+
+    margin:150px auto;
+
+}
+
+
+.eventCalendar > h2{
+
+    text-align:center;
+
+    font-size:4rem;
+
+    margin-bottom:70px;
+
+    color:#111;
+
+}
+
+
+/* MAIN CARD */
+
+.calendarLayout{
+
+    display:grid;
+
+    grid-template-columns:280px 1fr;
+
+    background:white;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+
+
+/* =====================================
+   YEAR SIDEBAR
+===================================== */
+
+
+.yearPanel{
+
+    padding:35px 25px;
+
+    border-right:
+
+    1px solid #eee;
+
+}
+
+
+
+.yearPanel h3{
+
+    font-size:2rem;
+
+    margin-bottom:30px;
+
+    text-align:center;
+
+}
+
+
+
+.yearList{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:10px;
+
+    max-height:250px;
+
+    overflow-y:auto;
+
+}
+
+
+.yearList button{
+
+    min-width:auto;
+
+    padding:0;
+
+    text-align:center;
+
+}
+
+
+.yearList::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+
+.yearList::-webkit-scrollbar-thumb{
+
+    background:#B6D63E;
+
+    border-radius:20px;
+
+}
+
+
+
+.yearList button{
+
+    height:52px;
+
+    border:none;
+
+    background:#fafafa;
+
+    border-radius:16px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    text-align:left;
+
+    padding-left:25px;
+
+}
+
+
+
+.yearList button:hover{
+
+    background:#f0f8d8;
+
+}
+
+
+
+.yearList .activeYear{
+
+    background:#B6D63E;
+
+    color:#111;
+
+}
+
+
+
+/* =====================================
+   CALENDAR AREA
+===================================== */
+
+
+.calendarMain{
+
+    padding:45px;
+
+}
+
+
+
+/* MONTH HEADER */
+
+
+.monthHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.monthHeader h3{
+
+    font-size:2.3rem;
+
+    color:#111;
+
+}
+
+
+
+.monthHeader button{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#eff7d4;
+
+    cursor:pointer;
+
+    font-size:1.2rem;
+
+}
+
+
+
+/* WEEK */
+
+
+.weekHeader{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    margin-bottom:15px;
+
+}
+
+
+.weekHeader span{
+
+    text-align:center;
+
+    font-weight:700;
+
+    color:#777;
+
+}
+
+
+
+/* DAYS */
+
+
+.calendarGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:15px;
+
+}
+
+
+
+.calendarGrid button{
+
+    height:70px;
+
+    border:none;
+
+    background:#fafafa;
+
+    border-radius:18px;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.calendarGrid button:hover{
+
+    transform:translateY(-4px);
+
+    background:#f1f8d8;
+
+}
+
+
+
+.calendarGrid .eventDay{
+
+    background:#B6D63E;
+
+    color:#111;
+
+    font-weight:800;
+
+}
+
+
+
+.calendarGrid .eventDay::after{
+
+    content:"";
+
+    display:block;
+
+    width:7px;
+
+    height:7px;
+
+    background:#111;
+
+    border-radius:50%;
+
+    margin:5px auto 0;
+
+}
+
+
+
+/* =====================================
+ EVENT DETAILS
+===================================== */
+
+
+.eventInfoBox{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:70px 1fr 220px;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    background:#fff;
+
+    border:1px solid #eee;
+
+}
+
+
+
+.eventInfoBox svg{
+
+    font-size:3rem;
+
+    color:#8db528;
+
+}
+
+
+
+.eventInfoBox h3{
+
+    margin:0;
+
+    font-size:1.7rem;
+
+}
+
+
+
+.eventInfoBox p{
+
+    color:#777;
+
+}
+
+
+.eventInfoBox div{
+
+    color:#555;
+
+}
+
+
+.eventInfoBox span{
+
+    background:#B6D63E;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+
+
+/* =====================================
+ RESPONSIVE
+===================================== */
+
+
+@media(max-width:1000px){
+
+
+.calendarLayout{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.yearPanel{
+
+    border-right:none;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+.yearList{
+
+    flex-direction:row;
+
+    overflow-x:auto;
+
+    max-height:none;
+
+}
+
+
+.yearList button{
+
+    min-width:90px;
+
+}
+
+
+}
+
+
+
+/* =====================================
+   MOBILE CALENDAR FIX
+===================================== */
+
+
+@media(max-width:700px){
+
+
+.eventCalendar{
+
+    width:95%;
+
+}
+
+
+
+.calendarMain{
+
+    padding:18px;
+
+    overflow:hidden;
+
+}
+
+
+
+.monthHeader h3{
+
+    font-size:1.3rem;
+
+}
+
+
+
+.monthHeader button{
+
+    width:38px;
+
+    height:38px;
+
+}
+
+
+
+
+
+.weekHeader span{
+
+    font-size:.75rem;
+
+}
+
+
+
+.calendarGrid{
+
+    gap:5px;
+
+}
+
+
+
+.calendarGrid button{
+
+    width:100%;
+
+    height:38px;
+
+    border-radius:10px;
+
+    font-size:.75rem;
+
+}
+
+
+
+
+.calendarGrid .eventDay::after{
+
+    width:5px;
+
+    height:5px;
+
+    margin-top:2px;
+
+}
+
+
+
+/* Event Details */
+
+.eventInfoBox{
+
+    margin-top:25px;
+
+    padding:20px;
+
+}
+
+
+.eventInfoBox h3{
+
+    font-size:1.3rem;
+
+}
+
+
+
+.eventInfoBox span{
+
+    font-size:.8rem;
+
+}
+
+
+
+
+}

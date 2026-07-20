@@ -1,0 +1,417 @@
+/*=========================================
+MAKERSPACE CTA
+=========================================*/
+
+.makersCTA{
+
+    width:min(1400px,92%);
+
+    margin:150px auto;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/*==========================
+BACKGROUND GLOW
+==========================*/
+
+.ctaGlow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(100px);
+
+    z-index:0;
+
+}
+
+
+.glowOne{
+
+    width:400px;
+
+    height:400px;
+
+    background:rgba(182,214,62,.35);
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+
+
+.glowTwo{
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(70,170,255,.18);
+
+    bottom:-100px;
+
+    right:-100px;
+
+}
+
+
+
+/*==========================
+CTA BOX
+==========================*/
+
+.makersCTABox{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:90px 70px;
+
+    text-align:center;
+
+    border-radius:45px;
+
+
+    background:
+
+    rgba(255,255,255,.75);
+
+
+    backdrop-filter:blur(30px);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.8);
+
+
+    box-shadow:
+
+    0 40px 100px rgba(0,0,0,.1);
+
+
+    overflow:hidden;
+
+}
+
+
+
+/*==========================
+ICON
+==========================*/
+
+.ctaRocket{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #B6D63E,
+
+    #93C122
+
+    );
+
+
+    color:#111;
+
+    font-size:2.2rem;
+
+
+    box-shadow:
+
+    0 20px 45px rgba(182,214,62,.4);
+
+}
+
+
+
+/*==========================
+TEXT
+==========================*/
+
+.makersCTABox h2{
+
+    margin:25px auto;
+
+    max-width:850px;
+
+
+    font-size:
+
+    clamp(3rem,6vw,5rem);
+
+
+    line-height:1.05;
+
+
+    letter-spacing:-2px;
+
+
+    color:#111;
+
+}
+
+
+
+.makersCTABox p{
+
+    max-width:750px;
+
+    margin:auto;
+
+
+    color:#666;
+
+
+    line-height:1.9;
+
+    font-size:1.1rem;
+
+
+    margin-bottom:45px;
+
+}
+
+
+
+/*==========================
+BUTTONS
+==========================*/
+
+.ctaActions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.ctaPrimary,
+.ctaSecondary{
+
+    height:60px;
+
+    padding:0 35px;
+
+    border-radius:999px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    gap:12px;
+
+
+    text-decoration:none;
+
+
+    font-weight:700;
+
+
+    transition:.35s;
+
+}
+
+
+
+.ctaPrimary{
+
+    background:#111;
+
+    color:white;
+
+}
+
+
+
+.ctaPrimary:hover{
+
+    background:#B6D63E;
+
+    color:#111;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.ctaSecondary{
+
+    background:white;
+
+    color:#111;
+
+    border:1px solid rgba(0,0,0,.12);
+
+}
+
+
+
+.ctaSecondary:hover{
+
+    background:#111;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/*==========================
+SHINE EFFECT
+==========================*/
+
+.makersCTABox::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:40%;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.5),
+
+    transparent
+
+    );
+
+
+    transform:skewX(-25deg);
+
+
+    transition:1s;
+
+}
+
+
+
+.makersCTABox:hover::before{
+
+    left:160%;
+
+}
+
+
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+    .makersCTA{
+
+        margin:110px auto;
+
+    }
+
+
+    .makersCTABox{
+
+        padding:60px 25px;
+
+        border-radius:32px;
+
+    }
+
+
+    .makersCTABox h2{
+
+        font-size:2.5rem;
+
+        letter-spacing:-1px;
+
+    }
+
+
+    .makersCTABox p{
+
+        font-size:1rem;
+
+    }
+
+
+    .ctaActions{
+
+        flex-direction:column;
+
+    }
+
+
+    .ctaPrimary,
+    .ctaSecondary{
+
+        width:100%;
+
+    }
+
+
+    .ctaRocket{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:1.8rem;
+
+    }
+
+}

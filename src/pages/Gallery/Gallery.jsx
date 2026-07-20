@@ -1,6 +1,3 @@
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
-
 import GalleryHero from "../../components/Gallery/GalleryHero";
 import FeaturedGallery from "../../components/Gallery/FeaturedGallery";
 import EventGallery from "../../components/Gallery/EventGallery";
@@ -12,7 +9,6 @@ import GalleryCTA from "../../components/Gallery/GalleryCTA";
 export default function Gallery() {
   return (
     <>
-      <Navbar />
 
       <GalleryHero />
 
@@ -28,7 +24,6 @@ export default function Gallery() {
 
       <GalleryCTA />
 
-      <Footer />
     </>
   );
 }
