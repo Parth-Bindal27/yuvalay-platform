@@ -737,3 +737,175 @@ scroll-behavior:auto !important;
 will-change:transform;
 
 }
+
+/* ===========================================
+   MOBILE FINAL FIX
+=========================================== */
+
+@media(max-width:768px){
+
+.partners{
+
+    width:100%;
+
+    overflow:hidden;
+
+    padding:70px 18px;
+
+}
+
+
+
+.partnersContainer{
+
+    width:100%;
+
+    max-width:100%;
+
+}
+
+
+
+.partnersGrid{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+
+
+/* CARD FIX */
+
+.partnerCard{
+
+    width:100%;
+
+    max-width:none;
+
+    min-height:280px;
+
+    margin:0;
+
+    padding:35px 25px;
+
+    border-radius:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+
+/* LOGO */
+
+.partnerLogo{
+
+    width:90px;
+
+    height:90px;
+
+    flex-shrink:0;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* ICON */
+
+.partnerIcon{
+
+    width:50px;
+
+    height:50px;
+
+    margin:15px auto;
+
+}
+
+
+
+/* TITLE */
+
+.partnerCard h3{
+
+    font-size:1.25rem;
+
+    margin:12px 0;
+
+}
+
+
+
+/* DESCRIPTION */
+
+.partnerCard p{
+
+    font-size:.9rem;
+
+    line-height:1.6;
+
+    max-width:260px;
+
+}
+
+
+
+/* BUTTON */
+
+.partnerCard button{
+
+    margin-top:auto;
+
+}
+
+
+}
+
+
+
+/* SMALL MOBILE */
+
+@media(max-width:420px){
+
+
+.partnerCard{
+
+    min-height:250px;
+
+    padding:28px 20px;
+
+}
+
+
+
+.partnerLogo{
+
+    width:75px;
+
+    height:75px;
+
+}
+
+
+.partnersHeading h2{
+
+    font-size:2rem;
+
+}
+
+
+}

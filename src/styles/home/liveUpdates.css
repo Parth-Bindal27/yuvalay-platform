@@ -1,3 +1,8 @@
+/* =====================================
+   LIVE UPDATES BAR
+===================================== */
+
+
 .live-updates{
 
     width:100%;
@@ -6,171 +11,438 @@
 
     justify-content:center;
 
-    margin-top:92px;
+    padding:10px 20px;
 
-    padding:14px 20px;
+    margin-top:75px;
 
-    z-index:90;
+    position:relative;
+
+    z-index:50;
 
 }
 
+
+
 .live-container{
 
-    width:min(1400px,95%);
+
+    width:min(1300px,94%);
+
 
     display:flex;
 
     align-items:center;
 
-    gap:20px;
 
-    padding:14px 22px;
+    gap:18px;
 
-    border-radius:20px;
 
-    backdrop-filter:blur(24px);
+    padding:12px 18px;
 
-    -webkit-backdrop-filter:blur(24px);
 
-    background:rgba(255,255,255,.08);
 
-    border:1px solid rgba(255,255,255,.14);
+    border-radius:22px;
+
+
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    rgba(182,214,62,.18),
+
+    rgba(255,255,255,.75)
+
+    );
+
+
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+
+
+    border:
+
+    1px solid rgba(182,214,62,.35);
+
+
 
     box-shadow:
-    0 10px 35px rgba(0,0,0,.08);
+
+    0 15px 45px rgba(0,0,0,.08);
 
 }
+
+
+
+
+
+/* LIVE BADGE */
+
 
 .live-badge{
 
+
     display:flex;
+
 
     align-items:center;
 
-    gap:8px;
 
-    white-space:nowrap;
+    gap:9px;
 
-    padding:8px 14px;
+
+    padding:8px 16px;
+
 
     border-radius:999px;
 
-    background:rgba(255,255,255,.08);
 
-    border:1px solid rgba(255,255,255,.12);
+    background:#111;
+
+
+    color:white;
+
+
+    font-size:.85rem;
+
 
     font-weight:700;
 
-    color:#fff;
+
+    flex-shrink:0;
+
 
 }
+
+
 
 .pulse{
 
-    width:10px;
 
-    height:10px;
+    width:9px;
+
+    height:9px;
+
 
     border-radius:50%;
 
+
     background:#ff3b30;
 
-    animation:pulse 1.3s infinite;
+
+    animation:pulse 1.4s infinite;
 
 }
+
+
 
 @keyframes pulse{
 
+
 0%{
 
-transform:scale(.9);
-
-box-shadow:0 0 0 0 rgba(255,59,48,.6);
+box-shadow:0 0 0 0 rgba(255,59,48,.7);
 
 }
+
 
 70%{
 
-transform:scale(1);
-
-box-shadow:0 0 0 10px rgba(255,59,48,0);
+box-shadow:0 0 0 12px rgba(255,59,48,0);
 
 }
+
 
 100%{
 
-transform:scale(.9);
+box-shadow:0 0 0 0 rgba(255,59,48,0);
 
 }
 
+
 }
+
+
+
+
+/* TEXT */
+
 
 .live-text{
+
 
     flex:1;
 
+
     overflow:hidden;
 
-    min-height:28px;
 
-    display:flex;
+    white-space:nowrap;
 
-    align-items:center;
 
 }
+
+
 
 .live-text p{
 
-    color:var(--foreground);
 
-    font-size:15px;
+    margin:0;
 
-    font-weight:500;
 
-}
+    font-size:.95rem;
 
-.view-all{
-
-    text-decoration:none;
 
     font-weight:600;
 
-    color:var(--primary);
 
-    transition:.3s;
+    color:#222;
 
-}
 
-.view-all:hover{
 
-    opacity:.8;
+    animation:slideText 12s linear infinite;
+
 
 }
 
-@media(max-width:768px){
 
-.live-container{
 
-flex-wrap:wrap;
+@keyframes slideText{
 
-gap:12px;
 
-padding:16px;
+0%{
+
+transform:translateX(100%);
+
+}
+
+
+100%{
+
+transform:translateX(-100%);
 
 }
 
-.live-text{
-
-order:3;
-
-width:100%;
 
 }
+
+
+
+
+
+/* VIEW BUTTON */
+
 
 .view-all{
 
-margin-left:auto;
+
+    padding:8px 18px;
+
+
+    border-radius:999px;
+
+
+    background:#B6D63E;
+
+
+    color:#111;
+
+
+    text-decoration:none;
+
+
+    font-size:.85rem;
+
+
+    font-weight:800;
+
+
+    flex-shrink:0;
+
+
+    transition:.3s;
+
 
 }
+
+
+
+.view-all:hover{
+
+
+    transform:translateY(-2px);
+
+
+    background:#a8cc32;
+
+
+}
+
+
+
+
+
+/* =====================================
+ MOBILE
+===================================== */
+
+
+@media(max-width:768px){
+
+
+
+.live-updates{
+
+
+    padding:8px 12px;
+
+
+    margin-top:70px;
+
+
+}
+
+
+
+
+.live-container{
+
+
+    width:100%;
+
+
+    padding:10px 12px;
+
+
+    gap:10px;
+
+
+    border-radius:18px;
+
+
+}
+
+
+
+
+
+.live-badge{
+
+
+    padding:7px 12px;
+
+
+    font-size:.75rem;
+
+
+}
+
+
+
+
+
+.live-text{
+
+
+    order:initial;
+
+
+    min-width:0;
+
+
+}
+
+
+
+.live-text p{
+
+
+    font-size:.78rem;
+
+
+    animation:none;
+
+
+    overflow:hidden;
+
+
+    text-overflow:ellipsis;
+
+
+}
+
+
+
+
+.view-all{
+
+
+    padding:7px 12px;
+
+
+    font-size:.75rem;
+
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:420px){
+
+
+.live-container{
+
+
+    display:grid;
+
+
+    grid-template-columns:auto 1fr;
+
+
+}
+
+
+
+.live-text{
+
+
+    grid-column:1 / -1;
+
+
+    order:3;
+
+
+    background:rgba(255,255,255,.4);
+
+
+    padding:6px 10px;
+
+
+    border-radius:12px;
+
+
+}
+
+
+
+.view-all{
+
+
+    margin-left:auto;
+
+
+}
+
+
 
 }

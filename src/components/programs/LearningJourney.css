@@ -103,24 +103,300 @@
     line-height:1.8;
 }
 
+/* ===========================================
+   MOBILE RESPONSIVE - LEARNING JOURNEY
+=========================================== */
+
+
 @media(max-width:900px){
 
-.timeline::before{
-left:32px;
+
+.learning-journey{
+
+    padding:80px 18px;
+
+    overflow:hidden;
+
 }
 
-.timeline-item,
-.timeline-item:nth-child(even){
-width:100%;
-margin-left:0;
-padding-left:90px;
-padding-right:0;
+
+
+
+/* Heading */
+
+.journey-heading{
+
+    width:100%;
+
+    padding:0 10px;
+
 }
+
+
+
+.journey-heading h2{
+
+    font-size:2.4rem;
+
+    line-height:1.1;
+
+    letter-spacing:-1px;
+
+}
+
+
+
+.journey-heading p{
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+
+/* Timeline */
+
+.timeline{
+
+    margin-top:60px;
+
+}
+
+
+
+.timeline::before{
+
+    left:26px;
+
+    transform:none;
+
+    width:3px;
+
+    height:100%;
+
+}
+
+
+
+
+
+
+/* Timeline item */
+
+.timeline-item,
+.timeline-item:nth-child(even),
+.timeline-item:nth-child(odd){
+
+
+    width:100%;
+
+
+    margin:0 0 55px 0;
+
+
+    padding-left:80px;
+
+
+    padding-right:0;
+
+
+    display:block;
+
+
+}
+
+
+
+
+
+/* Icon */
+
 
 .timeline-icon,
 .timeline-item:nth-child(even) .timeline-icon{
-left:0;
-right:auto;
+
+
+    left:0;
+
+    right:auto;
+
+
+    width:54px;
+
+
+    height:54px;
+
+
+    font-size:1.25rem;
+
+
+    box-shadow:
+
+    0 12px 25px rgba(182,214,62,.35);
+
+
 }
+
+
+
+
+
+
+/* Card */
+
+
+.timeline-card{
+
+
+    width:100%;
+
+
+    padding:28px 22px;
+
+
+    border-radius:26px;
+
+
+    margin:0;
+
+
+}
+
+
+
+
+.timeline-card h3{
+
+
+    margin:0 0 14px;
+
+
+    font-size:1.35rem;
+
+
+    color:#111;
+
+
+}
+
+
+
+.timeline-card p{
+
+
+    margin:0;
+
+
+    color:#666;
+
+
+    font-size:.95rem;
+
+
+    line-height:1.7;
+
+
+}
+
+
+
+
+
+
+/* REMOVE EXTRA DOT */
+
+.timeline-card::before,
+
+.timeline-card h3::before,
+
+.timeline-card span{
+
+
+    display:none !important;
+
+
+}
+
+
+
+
+}
+
+
+
+
+
+
+@media(max-width:480px){
+
+
+
+.learning-journey{
+
+    padding:70px 15px;
+
+}
+
+
+
+.timeline::before{
+
+    left:22px;
+
+}
+
+
+
+.timeline-item,
+.timeline-item:nth-child(even),
+.timeline-item:nth-child(odd){
+
+    padding-left:70px;
+
+}
+
+
+
+.timeline-icon,
+.timeline-item:nth-child(even) .timeline-icon{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:1.1rem;
+
+}
+
+
+
+.timeline-card{
+
+    padding:24px 18px;
+
+}
+
+
+
+.timeline-card h3{
+
+    font-size:1.2rem;
+
+}
+
+
+
+.timeline-card p{
+
+    font-size:.9rem;
+
+}
+
+
 
 }
