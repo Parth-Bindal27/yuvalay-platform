@@ -28,9 +28,10 @@ export default function Navbar() {
   const [profileOpen, setProfileOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [programOpen, setProgramOpen] = useState(false);  
   const profileRef = useRef(null);
-
+  
   useEffect(() => {
     const handleClick = (e) => {
       if (
@@ -92,6 +93,56 @@ export default function Navbar() {
 
     navigate("/");
   };
+  const aboutDropdown = [
+  {
+      name: "Discover Yuvalay",
+      path: "/about",
+    },
+    {
+      name: "Inside The Lab",
+      path: "/about/inside-lab",
+    },
+    {
+      name: "Maker Journey",
+      path: "/about/maker-journey",
+    },
+    {
+      name: "People Who Build",
+      path: "/about/people",
+    },
+    {
+      name: "Impact Stories",
+      path: "/about/impact-stories",
+    },
+    {
+      name: "Innovation Network",
+      path: "/about/network",
+    },
+    {
+      name: "Visit Official Website",
+      path: "https://www.yuvalay.org/",
+      external: true,
+    },
+  ];
+
+  const programDropdown = [
+    {
+      name: "School Programs",
+      path: "/programs/schools",
+    },
+    {
+      name: "College Programs",
+      path: "/programs/college",
+    },
+    {
+      name: "Startup Programs",
+      path: "/programs/startups",
+    },
+    {
+      name: "Workshops",
+      path: "/programs/workshops",
+    },
+  ];
 
   const navLinks = [
     {
@@ -101,12 +152,12 @@ export default function Navbar() {
     {
       name: "About",
       path: "/about",
-      dropdown: true,
+      dropdown: aboutDropdown,
     },
     {
       name: "Programs",
       path: "/programs",
-      dropdown: true,
+      dropdown: programDropdown,
     },
     {
       name: "Makerspace",
@@ -161,20 +212,135 @@ export default function Navbar() {
             : "nav-menu"
         }
       >
-        {navLinks.map((item) => (
+        
+      {navLinks.map((item) => {
+  const isOpen =
+    item.name === "About"
+      ? aboutOpen
+      : item.name === "Programs"
+      ? programOpen
+      : false;
+
+  // ================= MOBILE =================
+  if (mobileOpen) {
+    return (
+      <div key={item.name} className="mobile-nav-item">
+
+        {!item.dropdown ? (
           <NavLink
-            key={item.name}
             to={item.path}
             className="nav-link"
             onClick={() => setMobileOpen(false)}
           >
             {item.name}
-
-            {item.dropdown && (
-              <FiChevronDown className="arrow" />
-            )}
           </NavLink>
-        ))}
+        ) : (
+          <>
+            <button
+              className="mobile-dropdown-btn"
+              onClick={() => {
+
+                if (item.name === "About") {
+                  setAboutOpen(!aboutOpen);
+                  setProgramOpen(false);
+                }
+
+                if (item.name === "Programs") {
+                  setProgramOpen(!programOpen);
+                  setAboutOpen(false);
+                }
+
+              }}
+            >
+              <span>{item.name}</span>
+
+              <FiChevronDown
+                className={isOpen ? "arrow rotate" : "arrow"}
+              />
+            </button>
+
+            <div
+              className={
+                isOpen
+                  ? "mobile-dropdown open"
+                  : "mobile-dropdown"
+              }
+            >
+              {item.dropdown.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.name}
+                    href={link.path}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <NavLink
+                    key={link.name}
+                    to={link.path}
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setAboutOpen(false);
+                      setProgramOpen(false);
+                    }}
+                  >
+                    {link.name}
+                  </NavLink>
+                )
+              )}
+            </div>
+          </>
+        )}
+
+      </div>
+    );
+  }
+
+  // ================= DESKTOP =================
+
+  return (
+    <div key={item.name} className="nav-item">
+
+      <NavLink
+        to={item.path}
+        className="nav-link"
+      >
+        {item.name}
+        {item.dropdown && <FiChevronDown className="arrow" />}
+      </NavLink>
+
+      {item.dropdown && (
+        <div className="dropdown-menu">
+
+          {item.dropdown.map((link) =>
+            link.external ? (
+              <a
+                key={link.name}
+                href={link.path}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <NavLink
+                key={link.name}
+                to={link.path}
+              >
+                {link.name}
+              </NavLink>
+            )
+          )}
+
+        </div>
+      )}
+
+    </div>
+  );
+})}
+
 
         <div className="mobile-auth">
           <Link

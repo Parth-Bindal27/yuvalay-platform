@@ -14,7 +14,22 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/Profile/Profile";
 import Gallery from "./pages/Gallery/Gallery";
 import About from "./pages/About/About";
+import InsideLab from "./pages/About/InsideLab";
+import MakerJourney from "./pages/About/MakerJourney";
+import People from "./pages/About/People";
+import ImpactStories from "./pages/About/ImpactStories";
+import InnovationNetwork from "./pages/About/InnovationNetwork";
+
 import Programs from "./pages/Programs/Programs";
+
+import Schools from "./pages/Programs/Schools";
+import College from "./pages/Programs/College";
+import Startups from "./pages/Programs/Startups";
+import Workshops from "./pages/Programs/Workshops";
+import Challenges from "./pages/Programs/Challenges";
+import Bootcamps from "./pages/Programs/Bootcamps";
+
+
 import Makerspace from "./pages/Makerspace/Makerspace";
 import Events from "./pages/Events/Events";
 import Contact from "./pages/Contact/Contact";
@@ -53,7 +68,43 @@ function App() {
             element={<About />}
           />
 
+          <Route 
+            path="/about/inside-lab" 
+            element={<InsideLab/>}
+            />
+
+
+            <Route 
+            path="/about/maker-journey" 
+            element={<MakerJourney/>}
+            />
+
+
+            <Route 
+            path="/about/people" 
+            element={<People/>}
+            />
+
+
+            <Route 
+            path="/about/impact-stories" 
+            element={<ImpactStories/>}
+            />
+
+
+            <Route 
+            path="/about/network" 
+            element={<InnovationNetwork/>}
+            />
+
           <Route path="/programs" element={<Programs />} />
+          <Route path="/programs/schools" element={<Schools />} />
+          <Route path="/programs/college" element={<College />} />
+          <Route path="/programs/startups" element={<Startups />} />
+          <Route path="/programs/workshops" element={<Workshops />} />
+          <Route path="/programs/challenges" element={<Challenges />} />
+          <Route path="/programs/bootcamps" element={<Bootcamps />} />
+
           <Route path="/makerspace" element={<Makerspace />} />
           <Route path="/events" element={<Events />} />
           <Route
