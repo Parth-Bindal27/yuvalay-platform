@@ -1,0 +1,15 @@
+.home{
+
+    width:100%;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+.home > *{
+
+    max-width:100%;
+
+}
