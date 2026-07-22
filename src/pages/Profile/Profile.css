@@ -1,0 +1,285 @@
+/* =========================================
+   PROFILE PAGE
+========================================= */
+
+.profile-page {
+  width: min(1400px, 92%);
+  margin: 60px auto 100px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.profile-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  background: rgba(255,255,255,.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,.75);
+  box-shadow: 0 20px 50px rgba(0,0,0,.08);
+}
+
+.profile-cover {
+  height: 230px;
+  background:
+      linear-gradient(
+      135deg,
+      #b6d63e,
+      #d9f99d,
+      #ffffff);
+}
+
+.profile-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 40px 35px;
+  margin-top: -70px;
+}
+
+.profile-left {
+  display: flex;
+  align-items: flex-end;
+  gap: 25px;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid white;
+  background: white;
+  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.profile-left h1 {
+  font-size: 2.3rem;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.profile-role {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.edit-btn {
+  border: none;
+  background: #111;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: .35s;
+}
+
+.edit-btn:hover {
+  background: #b6d63e;
+  color: #111;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.profile-card {
+  background: rgba(255,255,255,.72);
+  backdrop-filter: blur(22px);
+  border-radius: 28px;
+  padding: 35px;
+  border: 1px solid rgba(255,255,255,.75);
+  box-shadow: 0 20px 45px rgba(0,0,0,.06);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.card-header button {
+  border: none;
+  background: #eef8d6;
+  color: #7ea11f;
+  width: 45px;
+  height: 45px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.card-header button:hover {
+  transform: rotate(-10deg);
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 22px;
+}
+
+.info-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 22px;
+  border-radius: 18px;
+  background: #fafafa;
+}
+
+.info-item svg {
+  font-size: 1.3rem;
+  color: #8ab120;
+  margin-top: 4px;
+}
+
+.info-item span {
+  display: block;
+  color: #888;
+  font-size: .9rem;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  color: #111;
+  font-weight: 600;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-text {
+  color: #666;
+  line-height: 1.9;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:900px){
+
+.profile-content{
+
+flex-direction:column;
+align-items:flex-start;
+gap:30px;
+
+}
+
+.edit-btn{
+
+width:100%;
+justify-content:center;
+
+}
+
+.profile-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.profile-cover{
+
+height:180px;
+
+}
+
+.profile-content{
+
+padding:0 25px 25px;
+margin-top:-55px;
+
+}
+
+.profile-left{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+.profile-avatar{
+
+width:120px;
+height:120px;
+
+}
+
+.profile-left h1{
+
+font-size:1.8rem;
+
+}
+
+.profile-card{
+
+padding:25px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.profile-page{
+
+width:94%;
+
+}
+
+.profile-card{
+
+padding:20px;
+
+}
+
+.info-item{
+
+padding:18px;
+
+}
+
+.profile-avatar{
+
+width:105px;
+height:105px;
+
+}
+
+}

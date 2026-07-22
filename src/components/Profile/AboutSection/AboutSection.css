@@ -1,0 +1,19 @@
+.aboutSection{
+    max-width:1280px;
+    margin:2rem auto;
+}
+
+.aboutCard{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.7);
+    border-radius:24px;
+    padding:2rem;
+    box-shadow:0 12px 30px rgba(0,0,0,.05);
+}
+
+.aboutCard p{
+    color:#555;
+    line-height:1.9;
+    font-size:1rem;
+}

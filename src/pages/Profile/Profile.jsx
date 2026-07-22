@@ -1,32 +1,21 @@
-import { useAuth } from "../../context/AuthContext";
+import ProfileHero from "../../components/profile/ProfileHero/ProfileHero";
+import QuickOverview from "../../components/profile/QuickOverview/QuickOverview";
+import PersonalInfo from "../../components/profile/PersonalInfo/PersonalInfo";
+import AcademicInfo from "../../components/profile/AcademicInfo/AcademicInfo";
+import AboutSection from "../../components/profile/AboutSection/AboutSection";
+import SkillsSection from "../../components/profile/SkillsSection/SkillsSection";
+import SocialLinks from "../../components/profile/SocialLinks/SocialLinks";
 
 export default function Profile() {
-
-  const { currentUser } = useAuth();
-
   return (
-    <div
-      style={{
-        minHeight: "80vh",
-        display: "grid",
-        placeItems: "center",
-      }}
-    >
-      <div>
-        <img
-          src={
-            currentUser?.photoURL ||
-            `https://ui-avatars.com/api/?name=${currentUser?.displayName || "User"}`
-          }
-          width="120"
-          height="120"
-          alt="Profile"
-          style={{ borderRadius: "50%" }}
-        />
-
-        <h2>{currentUser?.displayName}</h2>
-        <p>{currentUser?.email}</p>
-      </div>
-    </div>
+    <main className="profile-page">
+      <ProfileHero />
+      <QuickOverview />
+      <PersonalInfo />
+      <AcademicInfo />
+      <AboutSection />
+      <SkillsSection />
+      <SocialLinks />
+    </main>
   );
 }
