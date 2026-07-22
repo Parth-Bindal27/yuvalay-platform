@@ -1,0 +1,7 @@
+.dashboard {
+  width: min(1400px, 92%);
+  margin: 40px auto 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
