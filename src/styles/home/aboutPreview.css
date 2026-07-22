@@ -405,162 +405,6 @@
 }
 
 /* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media(max-width:1200px){
-
-.about{
-
-padding:90px 5%;
-
-}
-
-.about-container{
-
-grid-template-columns:1fr;
-
-gap:70px;
-
-}
-
-.about-left{
-
-text-align:center;
-
-align-items:center;
-
-}
-
-.about-left p{
-
-max-width:700px;
-
-}
-
-.about-right{
-
-order:-1;
-
-}
-
-.about-image-box{
-
-max-width:650px;
-
-}
-
-.floating-card{
-
-left:20px;
-
-bottom:20px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.about{
-
-padding:80px 20px;
-
-}
-
-.about-left h2{
-
-font-size:3rem;
-
-letter-spacing:-1px;
-
-}
-
-.about-left p{
-
-font-size:1rem;
-
-}
-
-.about-stats{
-
-grid-template-columns:1fr;
-
-}
-
-.about-button{
-
-width:100%;
-
-justify-content:center;
-
-}
-
-.about-image-box img{
-
-height:460px;
-
-border-radius:26px;
-
-}
-
-.floating-card{
-
-position:relative;
-
-left:auto;
-
-bottom:auto;
-
-margin-top:20px;
-
-width:100%;
-
-}
-
-}
-
-@media(max-width:480px){
-
-.about-left h2{
-
-font-size:2.5rem;
-
-}
-
-.about-tag{
-
-font-size:.8rem;
-
-}
-
-.about-image-box img{
-
-height:340px;
-
-}
-
-.stat-card{
-
-padding:22px;
-
-}
-
-.floating-card{
-
-padding:22px;
-
-}
-
-.floating-card h4{
-
-font-size:1.3rem;
-
-}
-
-}
-
-/* =========================================================
    HOVER EFFECTS
 ========================================================= */
 
@@ -578,5 +422,319 @@ transform:translateY(-8px);
 
 box-shadow:
 0 40px 90px rgba(0,0,0,.18);
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1200px){
+
+    .about{
+
+        padding:100px 5%;
+
+    }
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+        gap:70px;
+
+    }
+
+    .about-right{
+
+        order:-1;
+
+    }
+
+    .about-left{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .about-left p{
+
+        max-width:760px;
+
+    }
+
+    .about-image-box{
+
+        max-width:700px;
+
+        margin:auto;
+
+    }
+
+    .floating-card{
+
+        left:30px;
+
+        bottom:30px;
+
+        width:320px;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .about{
+
+        padding:90px 30px;
+
+    }
+
+    .about-container{
+
+        gap:60px;
+
+    }
+
+    .about-left h2{
+
+        font-size:3.4rem;
+
+        letter-spacing:-1.5px;
+
+    }
+
+    .about-left p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+    .about-image-box img{
+
+        height:560px;
+
+    }
+
+    .about-stats{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .about{
+
+        padding:80px 20px;
+
+    }
+
+    .about-container{
+
+        gap:45px;
+
+    }
+
+    .about-left h2{
+
+        font-size:2.8rem;
+
+        line-height:1.05;
+
+        letter-spacing:-1px;
+
+    }
+
+    .about-left p{
+
+        font-size:.98rem;
+
+        margin-bottom:30px;
+
+    }
+
+    .about-button{
+
+        width:100%;
+
+        justify-content:center;
+
+        padding:16px;
+
+    }
+
+    .about-stats{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .stat-card{
+
+        padding:24px;
+
+    }
+
+    .stat-icon{
+
+        width:56px;
+
+        height:56px;
+
+        font-size:1.5rem;
+
+    }
+
+    .stat-card h3{
+
+        font-size:2rem;
+
+    }
+
+    .about-image-box{
+
+        max-width:100%;
+
+    }
+
+    .about-image-box img{
+
+        height:460px;
+
+        border-radius:24px;
+
+    }
+
+    .floating-card{
+
+        position:relative;
+
+        left:auto;
+
+        bottom:auto;
+
+        width:100%;
+
+        margin-top:20px;
+
+        padding:22px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .about{
+
+        padding:70px 16px;
+
+    }
+
+    .about-tag{
+
+        font-size:.75rem;
+
+        padding:8px 16px;
+
+    }
+
+    .about-left h2{
+
+        font-size:2.25rem;
+
+        line-height:1.1;
+
+    }
+
+    .about-left p{
+
+        font-size:.92rem;
+
+    }
+
+    .about-image-box img{
+
+        height:320px;
+
+        border-radius:20px;
+
+    }
+
+    .stat-card{
+
+        padding:20px;
+
+        border-radius:22px;
+
+    }
+
+    .stat-icon{
+
+        width:50px;
+
+        height:50px;
+
+        font-size:1.3rem;
+
+        border-radius:16px;
+
+    }
+
+    .stat-card h3{
+
+        font-size:1.7rem;
+
+    }
+
+    .floating-card{
+
+        padding:18px;
+
+        border-radius:20px;
+
+    }
+
+    .floating-card h4{
+
+        font-size:1.2rem;
+
+        line-height:1.4;
+
+    }
+
+}
+
+@media (max-width:360px){
+
+    .about-left h2{
+
+        font-size:2rem;
+
+    }
+
+    .about-button{
+
+        font-size:.95rem;
+
+        padding:14px;
+
+    }
+
+    .about-image-box img{
+
+        height:280px;
+
+    }
 
 }
