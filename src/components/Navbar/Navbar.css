@@ -1363,7 +1363,7 @@ a{
     display:none;
 }
 
-@media (max-width:1450px){
+@media(max-width:1024px){
 
 .desktop-link,
 .dropdown-menu{
@@ -1401,4 +1401,236 @@ a{
     text-decoration:none;
     color:#555;
 }
+}
+
+/* ==========================================
+        TABLET
+========================================== */
+
+@media (max-width:820px){
+
+    .navbar{
+
+        width:96%;
+
+        height:72px;
+
+        padding:0 18px;
+
+        top:12px;
+
+    }
+
+    .logo{
+
+        gap:10px;
+
+    }
+
+    .logo img{
+
+        width:46px;
+        height:46px;
+
+    }
+
+    .logo-text h2{
+
+        font-size:18px;
+
+    }
+
+    .profile-btn{
+
+        padding:4px;
+
+    }
+
+    .profile-btn img{
+
+        width:42px;
+        height:42px;
+
+    }
+
+    .profile-btn span{
+
+        display:none;
+
+    }
+
+    .nav-menu{
+
+        width:320px;
+
+    }
+
+}
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media (max-width:600px){
+
+    .navbar{
+
+        top:8px;
+
+        width:96%;
+
+        height:66px;
+
+        padding:0 14px;
+
+        border-radius:18px;
+
+    }
+
+    .logo{
+
+        gap:8px;
+
+    }
+
+    .logo img{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+    .logo-text h2{
+
+        font-size:17px;
+
+    }
+
+    .logo-text span{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:22px;
+
+    }
+
+    .profile-btn{
+
+        padding:0;
+
+    }
+
+    .profile-btn img{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+    .profile-btn span{
+
+        display:none;
+
+    }
+
+    .nav-menu{
+
+        top:76px;
+
+        right:-110%;
+
+        width:100%;
+
+        height:calc(100vh - 82px);
+
+        padding:24px;
+
+        border-radius:18px 18px 0 0;
+
+    }
+
+    .nav-menu.active{
+
+        right:0;
+
+    }
+
+    .profile-dropdown{
+
+        width:220px;
+
+        right:-8px;
+
+    }
+
+}
+
+/* ==========================================
+        SMALL PHONES
+========================================== */
+
+@media (max-width:420px){
+
+    .navbar{
+
+        height:62px;
+
+        padding:0 12px;
+
+    }
+
+    .logo img{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+    .logo-text h2{
+
+        font-size:16px;
+
+    }
+
+    .menu-btn{
+
+        width:38px;
+
+        height:38px;
+
+        font-size:20px;
+
+    }
+
+    .profile-btn img{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+    .nav-menu{
+
+        padding:20px;
+
+    }
+
+    .nav-link{
+
+        font-size:15px;
+
+    }
+
 }
