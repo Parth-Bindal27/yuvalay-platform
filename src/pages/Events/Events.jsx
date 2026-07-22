@@ -19,9 +19,7 @@ export default function Events(){
       <PastEvents />
       <EventGalleryPreview />
       <EventCTA />
+    </div>
 
-
-
-    </>
   );
 }
