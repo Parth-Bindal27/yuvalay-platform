@@ -30,6 +30,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [programOpen, setProgramOpen] = useState(false);  
+  const [projectsOpen, setProjectsOpen] = useState(false);  
   const profileRef = useRef(null);
   
   useEffect(() => {
@@ -257,6 +258,8 @@ export default function Navbar() {
       ? aboutOpen
       : item.name === "Programs"
       ? programOpen
+      : item.name === "Projects"
+      ? projectsOpen
       : false;
 
   // ================= MOBILE =================
@@ -281,11 +284,19 @@ export default function Navbar() {
                 if (item.name === "About") {
                   setAboutOpen(!aboutOpen);
                   setProgramOpen(false);
+                  setProjectsOpen(false);
                 }
 
                 if (item.name === "Programs") {
                   setProgramOpen(!programOpen);
                   setAboutOpen(false);
+                  setProjectsOpen(false);
+                }
+
+                if (item.name === "Projects") {
+                  setProjectsOpen(!projectsOpen);
+                  setAboutOpen(false);
+                  setProgramOpen(false);
                 }
 
               }}
@@ -322,6 +333,7 @@ export default function Navbar() {
                       setMobileOpen(false);
                       setAboutOpen(false);
                       setProgramOpen(false);
+                      setProjectOpen(false);
                     }}
                   >
                     {link.name}
