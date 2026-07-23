@@ -144,6 +144,33 @@ export default function Navbar() {
     },
   ];
 
+  const projectDropdown = [
+    {
+      name: "Research",
+      path: "/programs/schools",
+    },
+    {
+      name: "Student Projects",
+      path: "/programs/college",
+    },
+    {
+      name: "Community Projects",
+      path: "/programs/startups",
+    },
+    {
+      name: "Open Source Projects",
+      path: "/programs/workshops",
+    },
+    {
+      name: "Innovation Showcase",
+      path: "/programs/workshops",
+    },
+    {
+      name: "Success Stories",
+      path: "/programs/workshops",
+    },
+  ];
+
   const navLinks = [
     {
       name: "Home",
@@ -168,9 +195,20 @@ export default function Navbar() {
       path: "/events",
     },
     {
-  name: "Gallery",
-  path: "/gallery",
-},
+      name: "Gallery",
+      path: "/gallery",
+    },
+
+    {
+      name: "Projects",
+      path: "/Projects",
+      dropdown: projectDropdown,
+    },
+
+    {
+      name: "FAQs",
+      path: "/FAQs",
+    },
 
 ...(isAdmin
   ? [

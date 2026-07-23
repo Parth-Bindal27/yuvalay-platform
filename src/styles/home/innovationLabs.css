@@ -77,25 +77,56 @@ HORIZONTAL SCROLLER
 ========================== */
 
 .labs-scroll{
-
     display:flex;
-
     gap:28px;
 
     overflow-x:auto;
+    overflow-y:hidden;
 
     scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
 
-    scrollbar-width:none;
+    padding:10px 8px 18px;
+    scroll-padding-left:8px;
 
-    padding-bottom:10px;
-
+    scrollbar-width:thin;
+    scrollbar-color:var(--primary) rgba(0,0,0,.08);
 }
 
+.labs-scroll::after{
+    content:"→";
+    position:sticky;
+    right:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:white;
+    color:#111;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+/* Chrome / Edge */
 .labs-scroll::-webkit-scrollbar{
-    display:none;
+    height:8px;
 }
 
+.labs-scroll::-webkit-scrollbar-track{
+    background:rgba(0,0,0,.08);
+    border-radius:20px;
+}
+
+.labs-scroll::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+.labs-scroll::-webkit-scrollbar-thumb:hover{
+    background:#98c42f;
+}
 /* ==========================
 CARD
 ========================== */
@@ -109,6 +140,8 @@ CARD
     position:relative;
 
     overflow:hidden;
+
+    min-width:420px;
 
     border-radius:34px;
 
@@ -298,30 +331,59 @@ STATS
 }
 
 .stat-box{
+    position:relative;
+    overflow:hidden;
 
     padding:40px;
-
     text-align:center;
 
     border-radius:28px;
 
     background:rgba(255,255,255,.08);
-
     backdrop-filter:blur(24px);
 
-    border:1px solid rgba(255,255,255,.12);
+    border:1px solid rgba(182,214,62,.18);
 
-    transition:.35s;
+    transition:all .45s ease;
 
+    box-shadow:
+        0 10px 30px rgba(182,214,62,.08),
+        inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+.stat-box::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:inherit;
+
+    background:
+        radial-gradient(circle at top,
+        rgba(182,214,62,.45),
+        transparent 65%);
+
+    opacity:0;
+    transition:.45s;
+    z-index:-1;
 }
 
 .stat-box:hover{
 
+    transform:translateY(-10px) scale(1.03);
+
+    border-color:rgba(182,214,62,.7);
+
     background:rgba(255,255,255,.14);
 
     box-shadow:
-    0 25px 50px rgba(0,0,0,.08);
+        0 0 25px rgba(182,214,62,.35),
+        0 0 60px rgba(182,214,62,.25),
+        0 25px 60px rgba(0,0,0,.12);
 
+}
+
+.stat-box:hover::before{
+    opacity:1;
 }
 
 .stat-box h2{
@@ -354,44 +416,45 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-.innovation-labs{
-
-margin:90px auto;
-
+.labs-scroll{
+    display:flex;
+    flex-direction:column;
+    overflow:visible;
+    gap:24px;
 }
 
 .lab-card{
+    width:100%;
+    min-width:100%;
+    flex:none;
+    height:450px;
+}
 
-flex:0 0 88%;
-
-height:500px;
-
+.innovation-labs{
+    width:100%;
+    padding:0 16px;
+    box-sizing:border-box;
 }
 
 .labs-stats{
-
-grid-template-columns:1fr;
-
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
 }
 
 .stat-box{
-
-padding:30px;
-
+    padding:18px;
+    min-width:0;
 }
 
-.lab-overlay{
-
-padding:28px;
-
+.stat-box h2{
+    font-size:2.2rem;
 }
 
-.lab-overlay h3{
 
-font-size:1.7rem;
-
+.labs-scroll::after{
+    display:none;
 }
 
 }

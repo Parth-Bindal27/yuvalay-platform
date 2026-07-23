@@ -9,9 +9,9 @@ import {
 
 const team = [
   {
-    name: "Nilesh Patel",
-    role: "Founder & Innovation Mentor",
-    image: "/images/team/nilesh.jpg",
+    name: "H. T. Patel",
+    role: "Founder & Managing Trustee",
+    image: "/images/team/H.T.png",
     description:
       "Leading Yuvalay with a vision to empower students through innovation, creativity and hands-on learning.",
     linkedin: "#",
@@ -19,31 +19,61 @@ const team = [
   },
 
   {
-    name: "Team Member",
-    role: "Innovation Lead",
-    image: "/images/team/member1.jpg",
+    name: "Hemangini Patel",
+    role: "Founding Trustee",
+    image: "/images/team/Hemangini.jpg",
     description:
-      "Mentoring students through emerging technologies, workshops and practical innovation projects.",
+      "Founding Trustee dedicated to educational excellence and community development.",
     linkedin: "#",
     email: "#",
   },
 
   {
-    name: "Team Member",
-    role: "Technology Mentor",
-    image: "/images/team/member2.jpg",
+    name: "Suresh Purohit",
+    role: "Innovation Mentor",
+    image: "/images/team/Suresh.jpg",
     description:
-      "Helping learners explore AI, Robotics, IoT and future-ready technologies through experiential learning.",
+      "Innovation mentor inspiring creativity through makerspaces, design thinking, and hands-on learning.",
     linkedin: "#",
     email: "#",
   },
 
   {
-    name: "Team Member",
-    role: "Program Coordinator",
-    image: "/images/team/member3.jpg",
+    name: "Moksha Udani",
+    role: "Entrepreneur and Trustee",
+    image: "/images/team/Moksha.jpg",
     description:
-      "Managing events, innovation programs and community engagement initiatives across institutions.",
+      "Entrepreneur and Trustee mentoring young innovators in business and leadership.",
+    linkedin: "#",
+    email: "#",
+  },
+
+  {
+    name: "Nirmal Parekh",
+    role: "Leadership Coach",
+    image: "/images/team/Nirmal.jpg",
+    description:
+      "Leadership coach helping youth develop confidence, communication, and professional skills.",
+    linkedin: "#",
+    email: "#",
+  },
+
+  {
+    name: "Kamlesh Udani",
+    role: "Corporate Leader",
+    image: "/images/team/Kamlesh.jpg",
+    description:
+      "Corporate leader supporting Yuvalay's growth through strategic guidance and governance.",
+    linkedin: "#",
+    email: "#",
+  },
+
+  {
+    name: "Snehal Sheth",
+    role: "Industry Expert",
+    image: "/images/team/Snehal.jpg",
+    description:
+      "Industry expert connecting education with real-world innovation and practical learning.",
     linkedin: "#",
     email: "#",
   },

@@ -10,7 +10,7 @@ import "../../styles/home/galleryPreview.css";
 
 const gallery = [
   {
-    image: "/images/gallery/gallery1.jpg",
+    image: "/images/gallery/hackathon.jpg",
     title: "Hackathons",
     span: "large",
   },

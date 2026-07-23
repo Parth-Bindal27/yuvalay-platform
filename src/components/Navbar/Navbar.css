@@ -22,7 +22,7 @@
 
     transform:translateX(-50%);
 
-    width:min(96%,1400px);
+    width:min(100%,1500px);
 
     height:82px;
 
@@ -142,7 +142,7 @@
 
     justify-content:center;
 
-    gap:36px;
+    gap:19px;
 
     flex:1;
 

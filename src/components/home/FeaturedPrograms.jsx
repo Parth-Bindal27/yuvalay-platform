@@ -7,8 +7,10 @@ import {
   RiBuilding2Line,
   RiPrinterCloudLine,
   RiLightbulbFlashLine,
+  RiWifiLine,
   RiArrowRightUpLine,
 } from "react-icons/ri";
+
 import { Link } from "react-router-dom";
 import "../../styles/home/featuredPrograms.css";
 
@@ -17,37 +19,38 @@ const programs = [
     title: "Artificial Intelligence",
     icon: <RiRobot2Line />,
     image: "/images/programs/ai.jpg",
-    desc: "Build intelligent systems with Machine Learning, Computer Vision and Generative AI.",
-    size: "large",
+    desc: "Machine Learning, Computer Vision and Generative AI.",
   },
   {
     title: "Robotics",
     icon: <RiCpuLine />,
     image: "/images/programs/robotics.jpg",
     desc: "Hands-on robotics, embedded systems and automation.",
-    size: "small",
   },
   {
     title: "Startup Incubation",
     icon: <RiBuilding2Line />,
     image: "/images/programs/startup.jpg",
     desc: "Mentorship, pitching and funding support.",
-    size: "small",
   },
   {
     title: "3D Printing",
     icon: <RiPrinterCloudLine />,
     image: "/images/programs/printing.jpg",
     desc: "Prototype your ideas with modern fabrication tools.",
-    size: "medium",
   },
   {
     title: "Innovation Lab",
     icon: <RiLightbulbFlashLine />,
     image: "/images/programs/lab.jpg",
     desc: "A collaborative space where ideas become reality.",
-    size: "medium",
   },
+  {
+  title: "IoT & Embedded Systems",
+  icon: <RiWifiLine />,
+  image: "/images/programs/iot.jpg",
+  desc: "Arduino, ESP32 and sensors."
+}
 ];
 
 export default function FeaturedPrograms() {
