@@ -653,8 +653,61 @@ display:none;
 /* ==========================================
         TABLET
 ========================================== */
+@media (max-width:1450px) and (min-width:1025px){
 
-@media(max-width:1450px){
+    .navbar{
+        padding:0 22px;
+    }
+
+    .nav-menu{
+        gap:12px;
+        margin:0 20px;
+
+        position:static;
+        width:auto;
+        height:auto;
+        padding:0;
+        background:transparent;
+        box-shadow:none;
+        border-radius:0;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        overflow:visible;
+    }
+
+    .nav-link{
+        width:auto;
+        font-size:14px;
+        padding:0;
+    }
+
+    .menu-btn{
+        display:none;
+    }
+
+    .desktop-auth{
+        display:flex;
+    }
+
+    .desktop-donate{
+        display:flex;
+    }
+
+    .search-btn{
+        display:flex;
+    }
+
+    .mobile-auth{
+        display:none;
+    }
+
+    .mobile-donate{
+        display:none;
+    }
+}
+
+@media(max-width:1100px){
 
 .desktop-auth{
 
@@ -1217,8 +1270,8 @@ a{
     position:absolute;
     top: 100%;
     margin-top: 2px;    
-    left:50%;
-    transform:translateX(-50%) translateY(8px);
+    left:0;
+    transform:translateY(8px);
 
     width:300px;
 
@@ -1253,7 +1306,7 @@ a{
 
     pointer-events:auto;
 
-    transform:translateX(-50%) translateY(0);
+    transform:translateY(0);
 
 
 }
@@ -1271,7 +1324,7 @@ a{
     opacity:1;
     visibility:visible;
     pointer-events:auto;
-    transform:translateX(-50%) translateY(0);
+    transform:translateY(0);
 }
 
 .dropdown-menu a{
@@ -1631,6 +1684,42 @@ a{
 
         font-size:15px;
 
+    }
+
+}
+
+/* Full desktop */
+@media (min-width: 1401px) {
+
+    .navLinks{
+        gap:32px;
+    }
+
+}
+
+/* Medium desktop / zoomed desktop */
+@media (max-width:1400px) and (min-width:1101px){
+
+    .navbar{
+        padding:0 35px;
+    }
+
+    .navLinks{
+        gap:18px;
+        font-size:.95rem;
+    }
+
+}
+
+/* Mobile menu */
+@media (max-width:1100px){
+
+    .navLinks{
+        display:none;
+    }
+
+    .hamburger{
+        display:flex;
     }
 
 }
