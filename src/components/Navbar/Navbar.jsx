@@ -128,6 +128,10 @@ export default function Navbar() {
 
   const programDropdown = [
     {
+      name: "Discover Programs",
+      path: "/programs",
+    },
+    {
       name: "School Programs",
       path: "/programs/schools",
     },
