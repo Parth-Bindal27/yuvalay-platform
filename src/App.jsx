@@ -4,6 +4,8 @@ import {
   Route,
 } from "react-router-dom";
 
+import AIYuva from "./components/AIYuva/AIYuva";
+
 import ScrollToTop from "./components/ScrollToTop";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -60,6 +62,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <AIYuva />
       <Navbar />
 
       <main
@@ -76,6 +79,12 @@ function App() {
             path="/"
             element={<Home />}
           />
+
+          <Route
+          path="/ai-yuva"
+          element={<AIYuva />}
+          />
+  
 
           <Route
             path="/about"
