@@ -4,6 +4,8 @@ import {
   Route,
 } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
@@ -57,6 +59,7 @@ import AdminRoute from "./routes/AdminRoute";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
 
       <main
@@ -129,7 +132,7 @@ function App() {
         <Route path="/projects/success-stories" element={<SuccessStories />} />
         <Route path="/projects/innovation-showcase" element={<InnovationShowcase />} />
         <Route path="/projects/awards-recognition" element={<AwardsRecognition />} />
-        
+
           <Route path="/faqs" element={<FAQs />} />
 
           <Route path="/contact" element={<Contact />} />

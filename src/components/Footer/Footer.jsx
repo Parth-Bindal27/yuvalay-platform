@@ -1,63 +1,197 @@
 import "./Footer.css";
-import logo from "./logo.png";
+
+import { Link } from "react-router-dom";
 
 import {
   FaInstagram,
-  FaFacebook,
-  FaLinkedin,
+  FaFacebookF,
+  FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
 
+import {
+  FiMapPin,
+  FiMail,
+  FiPhone,
+} from "react-icons/fi";
+
 export default function Footer() {
+
   return (
+
     <footer className="footer">
 
-      <div className="footer-wrapper">
+      <div className="footerGlow"></div>
 
-        <div className="footer-about">
+      <div className="footerGlass">
 
-          <img src={logo} alt="Yuvalay" />
+        {/* ================= BRAND ================= */}
+
+        <div className="footerBrand">
+
+          <img
+            src="/images/logo.png"
+            alt="Yuvalay"
+          />
+
+          <h2>Yuvalay Makerspace</h2>
 
           <p>
-            Empowering innovators through education,
-            creativity, technology and community-driven
-            initiatives to build a better tomorrow.
+
+            Empowering innovators through creativity,
+            technology, engineering and community driven
+            learning experiences that inspire tomorrow's
+            changemakers.
+
           </p>
 
+          <div className="footerSocial">
+
+            <a href="https://www.instagram.com/yuvalaymakerspace?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <FaInstagram />
+            </a>
+
+            <a href="https://www.facebook.com/YuvalayElab/">
+              <FaFacebookF />
+            </a>
+
+            <a href="https://www.linkedin.com/company/yuvalaymakerspace">
+              <FaLinkedinIn />
+            </a>
+
+            <a href="https://www.youtube.com/@YUVALAY">
+              <FaYoutube />
+            </a>
+
+          </div>
+
         </div>
 
-        <div className="footer-links">
+        {/* ================= ABOUT ================= */}
 
-          <h3>Quick Links</h3>
+        <div className="footerColumn">
 
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Events</a>
-          <a href="/">Gallery</a>
-          <a href="/">Contact</a>
+          <h3>About</h3>
+
+          <Link to="/about/why-yuvalay">
+            Why Yuvalay
+          </Link>
+
+          <Link to="/about/vision-mission">
+            Vision & Mission
+          </Link>
+
+          <Link to="/about/our-story">
+            Our Story
+          </Link>
+
+          <Link to="/about/maker-journey">
+            Maker Journey
+          </Link>
+
+          <Link to="/about/people-who-build">
+            People Who Build
+          </Link>
+
+          <Link to="/about/innovation-network">
+            Innovation Network
+          </Link>
 
         </div>
 
-        <div className="footer-contact">
+        {/* ================= PROGRAMS ================= */}
+
+        <div className="footerColumn">
+
+          <h3>Programs</h3>
+
+          <Link to="/programs/school">
+            School Programs
+          </Link>
+
+          <Link to="/programs/college">
+            College Programs
+          </Link>
+
+          <Link to="/programs/startup">
+            Startup Programs
+          </Link>
+
+          <Link to="/programs/workshops">
+            Workshops
+          </Link>
+
+          <Link to="/makerspace">
+            Makerspace
+          </Link>
+
+        </div>
+
+        {/* ================= EXPLORE ================= */}
+
+        <div className="footerColumn">
+
+          <h3>Explore</h3>
+
+          <Link to="/projects">
+            Projects
+          </Link>
+
+          <Link to="/events">
+            Events
+          </Link>
+
+          <Link to="/gallery">
+            Gallery
+          </Link>
+
+          <Link to="/faqs">
+            FAQs
+          </Link>
+
+          <Link to="/contact">
+            Contact
+          </Link>
+
+          <Link to="/donate">
+            Donate
+          </Link>
+
+        </div>
+
+        {/* ================= CONTACT ================= */}
+
+        <div className="footerColumn contactColumn">
 
           <h3>Contact</h3>
 
-          <p>Email : info@yuvalay.org</p>
-          <p>Phone : +91 98765 43210</p>
-          <p>Vadodara, Gujarat</p>
+          <div className="contactItem">
 
-        </div>
+            <FiMapPin />
 
-        <div className="footer-social">
+            <span>
+              Vadodara, Gujarat
+            </span>
 
-          <h3>Follow Us</h3>
+          </div>
 
-          <div className="social-icons">
+          <div className="contactItem">
 
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaFacebook /></a>
-            <a href="#"><FaLinkedin /></a>
-            <a href="#"><FaYoutube /></a>
+            <FiMail />
+
+            <span>
+              info@yuvalay.org
+            </span>
+
+          </div>
+
+          <div className="contactItem">
+
+            <FiPhone />
+
+            <span>
+              +91 98765 43210
+            </span>
 
           </div>
 
@@ -65,12 +199,28 @@ export default function Footer() {
 
       </div>
 
-      <div className="copyright">
+      <div className="footerBottom">
 
-        © 2026 Yuvalay. All Rights Reserved.
+        <p>
+          © 2026 Yuvalay Makerspace. All Rights Reserved.
+        </p>
+
+        <div>
+
+          <Link to="/">
+            Privacy Policy
+          </Link>
+
+          <Link to="/">
+            Terms & Conditions
+          </Link>
+
+        </div>
 
       </div>
 
     </footer>
+
   );
+
 }
