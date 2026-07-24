@@ -665,13 +665,13 @@ width:44px;
 
     }
 
-    .h2{
+    .faqAccordionHeader h2{
 
         font-size:2.4rem;
 
     }
 
-    .p{
+    .faqAccordionHeader p{
 
         font-size:1rem;
 
@@ -804,7 +804,7 @@ width:44px;
 
     }
 
-    .{
+    .faqAccordionHeader{
 
         margin-bottom:40px;
 
@@ -818,7 +818,7 @@ width:44px;
 
     }
 
-    .h2{
+    .faqAccordionHeader h2{
 
         font-size:2rem;
 
