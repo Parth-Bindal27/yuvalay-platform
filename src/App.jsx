@@ -4,6 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -58,6 +59,7 @@ import AdminRoute from "./routes/AdminRoute";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
 
       <main
