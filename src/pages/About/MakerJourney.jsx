@@ -1,17 +1,17 @@
+import Hero from "../../components/makerJourney/Hero";
+import JourneyTimeline from "../../components/makerJourney/JourneyTimeline";
+import LearningExperience from "../../components/makerJourney/LearningExperience";
+import Technologies from "../../components/makerJourney/Technologies";
+import CTA from "../../components/makerJourney/CTA";
+
 export default function MakerJourney() {
-  return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "grid",
-        placeItems: "center",
-        fontFamily: "Inter",
-      }}
-    >
-      <div style={{ textAlign: "center" }}>
-        <h1>🚀 Maker Journey</h1>
-        <p>This page is under development.</p>
-      </div>
-    </div>
-  );
+    return (
+        <>
+            <Hero />
+            <JourneyTimeline />
+            <LearningExperience />
+            <Technologies />
+            <CTA />
+        </>
+    );
 }

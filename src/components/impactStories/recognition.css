@@ -1,0 +1,153 @@
+.recognition{
+
+    padding:120px 0;
+    background:#fff;
+
+}
+
+.recognition-container{
+
+    width:min(1350px,92%);
+    margin:auto;
+
+}
+
+.recognition h2{
+
+    margin-top:20px;
+    text-align:center;
+    font-size:54px;
+    color:#111;
+
+}
+
+.recognition-subtitle{
+
+    max-width:700px;
+    margin:20px auto 70px;
+    text-align:center;
+    color:#666;
+    line-height:1.8;
+    font-size:18px;
+
+}
+
+.recognition-grid{
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:24px;
+
+}
+
+.recognition-card{
+
+    padding:35px 25px;
+    text-align:center;
+    border-radius:28px;
+    background:#fff;
+    border:1px solid rgba(182,214,62,.18);
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+
+}
+
+.recognition-card::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(182,214,62,.15),
+        transparent 70%
+    );
+    opacity:0;
+    transition:.35s;
+
+}
+
+.recognition-card:hover::before{
+
+    opacity:1;
+
+}
+
+.recognition-card:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.recognition-icon{
+
+    width:72px;
+    height:72px;
+    margin:auto;
+    border-radius:20px;
+    background:#f6faeb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#97B928;
+    font-size:30px;
+    margin-bottom:24px;
+
+}
+
+.recognition-card h3{
+
+    font-size:24px;
+    color:#111;
+    margin-bottom:15px;
+
+}
+
+.recognition-card p{
+
+    color:#666;
+    line-height:1.8;
+    font-size:15px;
+
+}
+
+@media(max-width:1100px){
+
+.recognition-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.recognition{
+
+    padding:90px 0;
+
+}
+
+.recognition h2{
+
+    font-size:38px;
+
+}
+
+.recognition-subtitle{
+
+    font-size:16px;
+    margin-bottom:45px;
+
+}
+
+.recognition-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}

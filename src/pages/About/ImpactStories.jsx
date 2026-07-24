@@ -1,17 +1,17 @@
+import Hero from "../../components/impactStories/Hero";
+import Stories from "../../components/impactStories/Stories";
+import JourneyHighlight from "../../components/impactStories/JourneyHighlight";
+import Recognition from "../../components/impactStories/Recognition";
+import CTA from "../../components/impactStories/CTA";
+
 export default function ImpactStories() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "grid",
-        placeItems: "center",
-        fontFamily: "Inter",
-      }}
-    >
-      <div style={{ textAlign: "center" }}>
-        <h1>🌱 Impact Stories</h1>
-        <p>This page is under development.</p>
-      </div>
-    </div>
+    <>
+      <Hero />
+      <Stories />
+      <JourneyHighlight />
+      <Recognition />
+      <CTA />
+    </>
   );
 }

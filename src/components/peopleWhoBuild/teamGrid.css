@@ -1,0 +1,184 @@
+.teamSection{
+
+    padding:120px 0;
+    background:#fff;
+
+}
+
+.teamContainer{
+
+    width:min(1350px,92%);
+    margin:auto;
+
+}
+
+.teamSection h2{
+
+    margin-top:20px;
+    text-align:center;
+    font-size:52px;
+    color:#111;
+
+}
+
+.teamSubtitle{
+
+    max-width:720px;
+    margin:18px auto 70px;
+    text-align:center;
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+
+}
+
+.teamGrid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+
+}
+
+.teamCard{
+
+    position:relative;
+    padding:40px;
+    text-align:center;
+    border-radius:30px;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(182,214,62,.18);
+    transition:.4s;
+    overflow:hidden;
+
+}
+
+.teamCard::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at top,
+    rgba(182,214,62,.18),
+    transparent 65%);
+    opacity:0;
+    transition:.4s;
+
+}
+
+.teamCard:hover::before{
+
+    opacity:1;
+
+}
+
+.teamCard:hover{
+
+    transform:translateY(-12px);
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.teamCard img{
+
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #f6faeb;
+    margin-bottom:25px;
+
+}
+
+.teamCard h3{
+
+    font-size:26px;
+    color:#111;
+    margin-bottom:8px;
+
+}
+
+.teamCard span{
+
+    color:#97B928;
+    font-weight:600;
+    display:block;
+    margin-bottom:18px;
+
+}
+
+.teamCard p{
+
+    color:#666;
+    line-height:1.8;
+    margin-bottom:30px;
+
+}
+
+.linkedinBtn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:50px;
+    background:#111;
+    color:#fff;
+    font-weight:600;
+    transition:.35s;
+
+}
+
+.linkedinBtn:hover{
+
+    background:#97B928;
+    color:#111;
+
+}
+
+@media(max-width:1100px){
+
+.teamGrid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.teamSection{
+
+    padding:90px 0;
+
+}
+
+.teamSection h2{
+
+    font-size:38px;
+
+}
+
+.teamSubtitle{
+
+    font-size:16px;
+    margin-bottom:45px;
+
+}
+
+.teamGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.teamCard{
+
+    padding:35px;
+
+}
+
+}

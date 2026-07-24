@@ -1,0 +1,102 @@
+.faqCategories{
+
+    padding:100px 0;
+
+    background:#f9fbf4;
+
+}
+
+.faqCategoriesContainer{
+
+    width:min(1300px,92%);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+.faqCategoryCard{
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-radius:26px;
+
+    background:#fff;
+
+    border:1px solid rgba(151,185,40,.15);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.faqCategoryCard:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(151,185,40,.15);
+
+}
+
+.faqCategoryIcon{
+
+    width:70px;
+    height:70px;
+
+    margin:auto;
+
+    border-radius:20px;
+
+    background:#f6faeb;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#97B928;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.faqCategoryCard h3{
+
+    font-size:20px;
+
+    color:#111;
+
+}
+
+@media(max-width:992px){
+
+.faqCategoriesContainer{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.faqCategories{
+
+    padding:80px 0;
+
+}
+
+.faqCategoriesContainer{
+
+    grid-template-columns:1fr;
+
+}
+
+}

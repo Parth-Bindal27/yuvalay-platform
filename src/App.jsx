@@ -32,6 +32,8 @@ import Bootcamps from "./pages/Programs/Bootcamps";
 
 import Makerspace from "./pages/Makerspace/Makerspace";
 import Events from "./pages/Events/Events";
+import FAQs from "./pages/FAQs/FAQs";
+
 import Contact from "./pages/Contact/Contact";
 import Donate from "./pages/Donate/Donate";
 
@@ -104,13 +106,13 @@ function App() {
           <Route path="/programs/workshops" element={<Workshops />} />
           <Route path="/programs/challenges" element={<Challenges />} />
           <Route path="/programs/bootcamps" element={<Bootcamps />} />
-
           <Route path="/makerspace" element={<Makerspace />} />
           <Route path="/events" element={<Events />} />
           <Route
             path="/gallery"
             element={<Gallery />}
           />
+          <Route path="/faqs" element={<FAQs />} />
 
           <Route path="/contact" element={<Contact />} />
 

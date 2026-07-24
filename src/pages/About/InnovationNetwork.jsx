@@ -1,17 +1,17 @@
+import Hero from "../../components/innovationNetwork/Hero";
+import NetworkMap from "../../components/innovationNetwork/NetworkMap";
+import Partners from "../../components/innovationNetwork/Partners";
+import Community from "../../components/innovationNetwork/Community";
+import JoinNetwork from "../../components/innovationNetwork/JoinNetwork";
+
 export default function InnovationNetwork() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "grid",
-        placeItems: "center",
-        fontFamily: "Inter",
-      }}
-    >
-      <div style={{ textAlign: "center" }}>
-        <h1>🌐 Innovation Network</h1>
-        <p>This page is under development.</p>
-      </div>
-    </div>
+    <>
+      <Hero />
+      <NetworkMap />
+      <Partners />
+      <Community />
+      <JoinNetwork />
+    </>
   );
 }

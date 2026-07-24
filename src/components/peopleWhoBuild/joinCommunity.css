@@ -1,0 +1,214 @@
+.joinCommunity{
+
+    position:relative;
+    overflow:hidden;
+    padding:130px 0;
+    background:#fff;
+
+}
+
+.joinCommunity-glow{
+
+    position:absolute;
+    width:700px;
+    height:700px;
+    left:-250px;
+    bottom:-250px;
+    border-radius:50%;
+    background:rgba(182,214,62,.22);
+    filter:blur(140px);
+
+}
+
+.joinCommunity-container{
+
+    position:relative;
+    z-index:2;
+    width:min(1200px,92%);
+    margin:auto;
+    padding:80px 60px;
+    border-radius:36px;
+    text-align:center;
+    background:linear-gradient(135deg,#ffffff,#f9fbf4);
+    border:1px solid rgba(182,214,62,.18);
+    box-shadow:0 25px 60px rgba(0,0,0,.06);
+
+}
+
+.joinCommunity h2{
+
+    margin-top:24px;
+    font-size:60px;
+    line-height:1.08;
+    color:#111;
+
+}
+
+.joinCommunity h2 span{
+
+    color:#97B928;
+
+}
+
+.joinCommunity p{
+
+    max-width:720px;
+    margin:30px auto;
+    color:#666;
+    font-size:18px;
+    line-height:1.9;
+
+}
+
+.joinCommunity-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin-top:40px;
+
+}
+
+.join-btn{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:18px 34px;
+    background:#97B928;
+    color:#111;
+    text-decoration:none;
+    border-radius:999px;
+    font-weight:700;
+    transition:.35s;
+
+}
+
+.join-btn:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 18px 40px rgba(151,185,40,.35);
+
+}
+
+.contact-btn{
+
+    padding:18px 34px;
+    border-radius:999px;
+    border:1px solid #ddd;
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+    transition:.35s;
+
+}
+
+.contact-btn:hover{
+
+    background:#fafafa;
+
+}
+
+.joinCommunity-stats{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+    margin-top:70px;
+
+}
+
+.joinStat{
+
+    padding:30px;
+    border-radius:24px;
+    background:#fff;
+    border:1px solid rgba(182,214,62,.15);
+    transition:.35s;
+
+}
+
+.joinStat:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.joinStat h3{
+
+    font-size:42px;
+    color:#97B928;
+    margin-bottom:8px;
+
+}
+
+.joinStat span{
+
+    color:#666;
+    font-weight:600;
+
+}
+
+@media(max-width:992px){
+
+.joinCommunity-stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.joinCommunity{
+
+    padding:90px 0;
+
+}
+
+.joinCommunity-container{
+
+    padding:55px 28px;
+
+}
+
+.joinCommunity h2{
+
+    font-size:38px;
+
+}
+
+.joinCommunity p{
+
+    font-size:16px;
+
+}
+
+.joinCommunity-buttons{
+
+    flex-direction:column;
+
+}
+
+.join-btn,
+.contact-btn{
+
+    justify-content:center;
+
+}
+
+.joinCommunity-stats{
+
+    grid-template-columns:1fr;
+    margin-top:50px;
+
+}
+
+.joinStat h3{
+
+    font-size:34px;
+
+}
+
+}

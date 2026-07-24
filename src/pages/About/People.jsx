@@ -1,17 +1,15 @@
-export default function People() {
+import Hero from "../../components/peopleWhoBuild/Hero";
+import TeamGrid from "../../components/peopleWhoBuild/TeamGrid";
+import Mentors from "../../components/peopleWhoBuild/Mentors";
+import JoinCommunity from "../../components/peopleWhoBuild/JoinCommunity";
+
+export default function PeopleWhoBuild() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "grid",
-        placeItems: "center",
-        fontFamily: "Inter",
-      }}
-    >
-      <div style={{ textAlign: "center" }}>
-        <h1>🤝 People Who Build</h1>
-        <p>This page is under development.</p>
-      </div>
-    </div>
+    <>
+      <Hero />
+      <TeamGrid />
+      <Mentors />
+      <JoinCommunity />
+    </>
   );
 }
