@@ -1,12 +1,9 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import AIYuva from "./components/AIYuva/AIYuva";
 
 import ScrollToTop from "./components/ScrollToTop";
+import OurStory from "./pages/OurStory/OurStory";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -53,148 +50,163 @@ import Donate from "./pages/Donate/Donate";
 
 // Admin
 import MediaCenter from "./pages/Admin/MediaCenter";
-
+import News from "./pages/News";
 // Routes
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AdminRoute from "./routes/AdminRoute";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <AIYuva />
-      <Navbar />
+function AppLayout() {
 
-      <main
-        style={{
-          minHeight: "100vh",
-          paddingTop: "90px",
-        }}
-      >
-        <Routes>
+    const location = useLocation();
 
-          {/* Public Routes */}
+    const storyRoutes = [
+      "/our-story"
+    ];
 
-          <Route
-            path="/"
-            element={<Home />}
-          />
+    const isStory = storyRoutes.some(route =>
+      location.pathname.startsWith(route)
+    );
 
-          <Route
-          path="/ai-yuva"
-          element={<AIYuva />}
-          />
-  
+    return (
+<>
 
-          <Route
-            path="/about"
-            element={<About />}
-          />
+            {!isStory && <ScrollToTop />}
+            {!isStory && <AIYuva />}
+            {!isStory && <Navbar />}
 
-          <Route 
-            path="/about/inside-lab" 
-            element={<InsideLab/>}
-            />
+            <main
+              style={{
+                minHeight: "100vh",
+                paddingTop: isStory ? "0" : "90px",
+                overflow: isStory ? "hidden" : "visible",
+              }}
+            >
+              <Routes>
 
+                {/* Public Routes */}
 
-            <Route 
-            path="/about/maker-journey" 
-            element={<MakerJourney/>}
-            />
+                <Route
+                  path="/"
+                  element={<Home />}
+                />
+        
 
+                <Route
+                  path="/about"
+                  element={<About />}
+                />
 
-            <Route 
-            path="/about/people" 
-            element={<People/>}
-            />
+                <Route 
+                  path="/about/inside-lab" 
+                  element={<InsideLab/>}
+                  />
 
 
-            <Route 
-            path="/about/impact-stories" 
-            element={<ImpactStories/>}
-            />
+                  <Route 
+                  path="/about/maker-journey" 
+                  element={<MakerJourney/>}
+                  />
 
 
-            <Route 
-            path="/about/network" 
-            element={<InnovationNetwork/>}
-            />
+                  <Route 
+                  path="/about/people" 
+                  element={<People/>}
+                  />
 
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/programs/schools" element={<Schools />} />
-          <Route path="/programs/college" element={<College />} />
-          <Route path="/programs/startups" element={<Startups />} />
-          <Route path="/programs/workshops" element={<Workshops />} />
-          <Route path="/programs/challenges" element={<Challenges />} />
-          <Route path="/programs/bootcamps" element={<Bootcamps />} />
-          <Route path="/makerspace" element={<Makerspace />} />
-          <Route path="/events" element={<Events />} />
-          <Route
-            path="/gallery"
-            element={<Gallery />}
-          />
+                  <Route path="/news" element={<News />} />
+                  <Route 
+                  path="/about/impact-stories" 
+                  element={<ImpactStories/>}
+                  />
 
-        {/* Projects */}
-        <Route path="/projects" element={<AllProjects />} />
-        <Route path="/projects/research-innovation" element={<ResearchInnovation />} />
-        <Route path="/projects/startup-showcase" element={<StartupShowcase />} />
-        <Route path="/projects/success-stories" element={<SuccessStories />} />
-        <Route path="/projects/innovation-showcase" element={<InnovationShowcase />} />
-        <Route path="/projects/awards-recognition" element={<AwardsRecognition />} />
+                  <Route path="/our-story" element={<OurStory />} />
+                  <Route 
+                  path="/about/network" 
+                  element={<InnovationNetwork/>}
+                  />
 
-          <Route path="/faqs" element={<FAQs />} />
+                <Route path="/programs" element={<Programs />} />
+                <Route path="/programs/schools" element={<Schools />} />
+                <Route path="/programs/college" element={<College />} />
+                <Route path="/programs/startups" element={<Startups />} />
+                <Route path="/programs/workshops" element={<Workshops />} />
+                <Route path="/programs/challenges" element={<Challenges />} />
+                <Route path="/programs/bootcamps" element={<Bootcamps />} />
+                <Route path="/makerspace" element={<Makerspace />} />
+                <Route path="/events" element={<Events />} />
+                <Route
+                  path="/gallery"
+                  element={<Gallery />}
+                />
 
-          <Route path="/contact" element={<Contact />} />
+              {/* Projects */}
+              <Route path="/projects" element={<AllProjects />} />
+              <Route path="/projects/research-innovation" element={<ResearchInnovation />} />
+              <Route path="/projects/startup-showcase" element={<StartupShowcase />} />
+              <Route path="/projects/success-stories" element={<SuccessStories />} />
+              <Route path="/projects/innovation-showcase" element={<InnovationShowcase />} />
+              <Route path="/projects/awards-recognition" element={<AwardsRecognition />} />
 
-          <Route
-            path="/login"
-            element={<Login />}
-          />
+                <Route path="/faqs" element={<FAQs />} />
 
-          <Route
-            path="/signup"
-            element={<Signup />}
-          />
+                <Route path="/contact" element={<Contact />} />
 
-          <Route path="/donate" element={<Donate />} />
+                <Route
+                  path="/login"
+                  element={<Login />}
+                />
 
-          {/* User Routes */}
+                <Route
+                  path="/signup"
+                  element={<Signup />}
+                />
 
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
+                <Route path="/donate" element={<Donate />} />
 
-          <Route
-            path="/profile"
-            element={
-              <ProtectedRoute>
-                <Profile />
-              </ProtectedRoute>
-            }
-          />
+                {/* User Routes */}
 
-          {/* Admin Routes */}
+                <Route
+                  path="/dashboard"
+                  element={
+                    <ProtectedRoute>
+                      <Dashboard />
+                    </ProtectedRoute>
+                  }
+                />
 
-          <Route
-            path="/admin"
-            element={
-              <AdminRoute>
-                <MediaCenter />
-              </AdminRoute>
-            }
-          />
+                <Route
+                  path="/profile"
+                  element={
+                    <ProtectedRoute>
+                      <Profile />
+                    </ProtectedRoute>
+                  }
+                />
 
-        </Routes>
-      </main>
+                {/* Admin Routes */}
 
-      <Footer />
-    </BrowserRouter>
+                <Route
+                  path="/admin"
+                  element={
+                    <AdminRoute>
+                      <MediaCenter />
+                    </AdminRoute>
+                  }
+                />
+
+              </Routes>
+            </main>
+
+      {!isStory && <Footer />}
+
+    </>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppLayout />
+    </BrowserRouter>
+  );
+}

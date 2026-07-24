@@ -1,0 +1,502 @@
+/* StoryProblem.css */
+
+.story-problem{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at center,#06110a 0%,#010301 35%,#000 100%);
+
+    perspective:1800px;
+
+    z-index:99999;
+}
+
+/* ---------------- Overlay ---------------- */
+
+.story-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    transparent 0%,
+    rgba(0,0,0,.15) 40%,
+    rgba(0,0,0,.92) 100%);
+
+    pointer-events:none;
+
+}
+
+/* ---------------- Titles ---------------- */
+
+.story-title{
+
+    position:absolute;
+
+    margin:0;
+
+    color:white;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:.12em;
+
+    font-size:clamp(90px,9vw,170px);
+
+    text-align:center;
+
+    opacity:0;
+
+    transform-style:preserve-3d;
+
+    line-height:1;
+
+    text-shadow:
+
+    0 0 20px rgba(255,255,255,.15),
+
+    0 0 50px rgba(255,255,255,.06);
+
+}
+
+/* ---------------- Final ---------------- */
+
+.story-main-title{
+
+    position:absolute;
+
+    margin:0;
+
+    color:#f7fff7;
+
+    font-size:clamp(80px,8vw,150px);
+
+    line-height:.95;
+
+    letter-spacing:.08em;
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+    font-weight:900;
+
+    opacity:0;
+
+    z-index:100;
+
+    text-shadow:
+
+    0 0 15px rgba(34,197,94,.25),
+
+    0 0 35px rgba(34,197,94,.4),
+
+    0 0 70px rgba(34,197,94,.55),
+
+    0 0 140px rgba(34,197,94,.35);
+
+}
+
+/* ---------------- Background Pulse ---------------- */
+
+.story-main-title::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:180%;
+height:220%;
+
+background:
+
+radial-gradient(circle,
+
+rgba(34,197,94,.14),
+
+transparent 70%);
+
+filter:blur(80px);
+
+z-index:-1;
+
+animation:storyPulse 3s ease-in-out infinite;
+
+}
+
+/* ---------------- Grain ---------------- */
+
+.story-problem::after{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background-image:
+
+radial-gradient(rgba(255,255,255,.05) .7px,transparent .7px);
+
+background-size:6px 6px;
+
+opacity:.03;
+
+pointer-events:none;
+
+animation:grainMove 6s linear infinite;
+
+}
+
+/* ---------------- Animations ---------------- */
+
+@keyframes storyPulse{
+
+0%{
+
+transform:translate(-50%,-50%) scale(.85);
+
+opacity:.25;
+
+}
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.12);
+
+opacity:.95;
+
+}
+
+100%{
+
+transform:translate(-50%,-50%) scale(.92);
+
+opacity:.35;
+
+}
+
+}
+
+@keyframes grainMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-120px);
+
+}
+
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media(max-width:768px){
+
+.story-title{
+
+font-size:56px;
+
+padding:0 24px;
+
+letter-spacing:3px;
+
+}
+
+.story-main-title{
+
+font-size:52px;
+
+padding:0 20px;
+
+}
+
+}
+
+/* ================= Floating Objects ================= */
+
+.floating-container{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    perspective:1800px;
+}
+
+.floating-object{
+
+    position:absolute;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#dfffe7;
+
+    opacity:.22;
+
+    filter:
+    drop-shadow(0 0 10px rgba(34,197,94,.55));
+
+    transform-style:preserve-3d;
+
+    animation:
+    floatObject ease-in-out infinite;
+
+    will-change:transform;
+
+}
+
+.floating-object span{
+
+    display:block;
+
+    animation:
+    spinObject linear infinite 30s;
+
+}
+
+@keyframes floatObject{
+
+0%{
+
+transform:
+translate3d(0,0,0)
+rotateX(0deg)
+rotateY(0deg)
+scale(.9);
+
+}
+
+25%{
+
+transform:
+translate3d(40px,-60px,120px)
+rotateX(20deg)
+rotateY(15deg)
+scale(1);
+
+}
+
+50%{
+
+transform:
+translate3d(-60px,-120px,-80px)
+rotateX(-15deg)
+rotateY(-20deg)
+scale(1.15);
+
+}
+
+75%{
+
+transform:
+translate3d(80px,40px,80px)
+rotateX(15deg)
+rotateY(25deg)
+scale(.95);
+
+}
+
+100%{
+
+transform:
+translate3d(0,0,0)
+rotateX(0deg)
+rotateY(0deg)
+scale(.9);
+
+}
+
+}
+
+@keyframes spinObject{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ================= ENERGY ================= */
+
+.energy-wrapper{
+
+position:absolute;
+left:50%;
+top:50%;
+
+width:900px;
+height:900px;
+
+transform:translate(-50%,-50%);
+
+pointer-events:none;
+
+}
+
+.energy-ring{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+border:1px solid rgba(34,197,94,.14);
+
+box-shadow:
+
+0 0 40px rgba(34,197,94,.18),
+
+inset 0 0 40px rgba(34,197,94,.15);
+
+backdrop-filter:blur(5px);
+
+}
+
+.ring-one{
+
+width:320px;
+height:320px;
+
+}
+
+.ring-two{
+
+width:520px;
+height:520px;
+
+border-style:dashed;
+
+}
+
+.ring-three{
+
+width:760px;
+height:760px;
+
+opacity:.35;
+
+}
+
+.energy-core{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+width:16px;
+height:16px;
+
+transform:translate(-50%,-50%);
+
+border-radius:50%;
+
+background:#22c55e;
+
+box-shadow:
+
+0 0 25px #22c55e,
+0 0 80px #22c55e,
+0 0 180px rgba(34,197,94,.8);
+
+animation:corePulse 2.5s ease-in-out infinite;
+
+}
+
+@keyframes corePulse{
+
+0%{
+
+transform:
+translate(-50%,-50%)
+scale(.8);
+
+opacity:.4;
+
+}
+
+50%{
+
+transform:
+translate(-50%,-50%)
+scale(1.8);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translate(-50%,-50%)
+scale(.8);
+
+opacity:.5;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.energy-wrapper{
+
+width:500px;
+height:500px;
+
+}
+
+.ring-one{
+
+width:180px;
+height:180px;
+
+}
+
+.ring-two{
+
+width:300px;
+height:300px;
+
+}
+
+.ring-three{
+
+width:430px;
+height:430px;
+
+}
+
+}

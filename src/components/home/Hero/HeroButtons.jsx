@@ -1,24 +1,19 @@
+import { Link } from "react-router-dom";
 import { FaArrowRight, FaPlay } from "react-icons/fa6";
 
 const HeroButtons = () => {
   return (
     <div className="hero-buttons">
 
-      <a href="/programs" className="hero-btn primary">
-
+      <Link to="/programs" className="hero-btn primary">
         Explore Programs
-
         <FaArrowRight />
+      </Link>
 
-      </a>
-
-      <button className="hero-btn secondary">
-
+      <Link to="/our-story" className="hero-btn secondary">
         <FaPlay />
-
         Watch Story
-
-      </button>
+      </Link>
 
     </div>
   );

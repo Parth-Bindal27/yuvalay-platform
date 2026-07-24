@@ -1,0 +1,365 @@
+/* ==========================================
+   STORY INTRO
+========================================== */
+
+.ys-story-intro{
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background:#000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    color:#fff;
+
+    z-index:999999;
+}
+
+/* ==========================================
+   Glow
+========================================== */
+
+.ys-story-glow{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:0;
+
+}
+
+.ys-story-glow::before{
+
+    content:"";
+
+    width:900px;
+    height:900px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(34,197,94,.25),
+    transparent 70%);
+
+    filter:blur(90px);
+
+    animation:glow 8s ease-in-out infinite alternate;
+
+}
+
+@keyframes glow{
+
+0%{
+
+transform:scale(.8);
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:scale(1.3);
+
+opacity:1;
+
+}
+
+}
+
+/* ==========================================
+   Particles
+========================================== */
+
+.ys-story-particles{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+.ys-particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:#6EE7B7;
+
+    box-shadow:
+        0 0 8px #22c55e,
+        0 0 18px #22c55e,
+        0 0 35px #22c55e;
+
+    animation:particleFloat linear infinite;
+
+}
+
+@keyframes particleFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-45px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+   Content
+========================================== */
+
+.ys-line{
+
+    position:absolute;
+
+    font-size:clamp(38px,5vw,78px);
+
+    font-weight:700;
+
+    text-align:center;
+
+    opacity:0;
+
+    z-index:5;
+
+    padding:0 20px;
+
+    line-height:1.3;
+
+}
+
+.ys-presents{
+
+    opacity:0;
+
+    color:#86efac;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:10px;
+
+    text-transform:uppercase;
+
+    margin-bottom:45px;
+
+    z-index:5;
+
+}
+
+.ys-title{
+
+    opacity:0;
+
+    margin:0;
+
+    font-size:clamp(80px,11vw,190px);
+
+    font-weight:900;
+
+    letter-spacing:8px;
+
+    line-height:1;
+
+    text-align:center;
+
+    z-index:5;
+
+}
+
+.ys-subtitle{
+
+    opacity:0;
+
+    margin-top:30px;
+
+    max-width:650px;
+
+    text-align:center;
+
+    color:#d1d5db;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+    padding:0 25px;
+
+    z-index:5;
+
+}
+
+/* ==========================================
+   Skip
+========================================== */
+
+.ys-story-skip{
+
+    position:absolute;
+
+    top:35px;
+
+    right:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    z-index:100;
+
+}
+
+.ys-story-skip:hover{
+
+    background:#22c55e;
+
+    color:#000;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   Flash
+========================================== */
+
+.ys-flash{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#fff;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:999;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:768px){
+
+.ys-line{
+
+font-size:34px;
+
+}
+
+.ys-title{
+
+font-size:72px;
+
+letter-spacing:4px;
+
+}
+
+.ys-subtitle{
+
+font-size:16px;
+
+}
+
+.ys-story-skip{
+
+top:18px;
+
+right:18px;
+
+padding:10px 18px;
+
+font-size:14px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.ys-title{
+
+font-size:56px;
+
+}
+
+.ys-line{
+
+font-size:28px;
+
+}
+
+.ys-presents{
+
+letter-spacing:5px;
+
+font-size:12px;
+
+}
+
+.ys-subtitle{
+
+font-size:15px;
+
+line-height:1.6;
+
+}
+
+}

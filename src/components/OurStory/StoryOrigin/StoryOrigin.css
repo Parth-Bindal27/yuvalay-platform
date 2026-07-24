@@ -1,0 +1,307 @@
+.story-origin{
+
+    position:fixed;
+    inset:0;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at center,
+    #07140c 0%,
+    #020502 45%,
+    #000 100%);
+
+    z-index:99999;
+
+}
+
+/* ----------------------------- */
+
+.story-origin::before{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background:
+
+linear-gradient(rgba(34,197,94,.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(34,197,94,.05) 1px,transparent 1px);
+
+background-size:80px 80px;
+
+opacity:.18;
+
+animation:gridMove 25s linear infinite;
+
+}
+
+/* ----------------------------- */
+
+.story-origin::after{
+
+content:"";
+
+position:absolute;
+left:50%;
+top:50%;
+
+width:1200px;
+height:1200px;
+
+transform:translate(-50%,-50%);
+
+background:
+
+radial-gradient(circle,
+rgba(34,197,94,.16),
+transparent 70%);
+
+filter:blur(120px);
+
+animation:ambientGlow 8s ease-in-out infinite alternate;
+
+}
+
+/* ----------------------------- */
+
+.story-origin-content{
+
+position:absolute;
+
+text-align:center;
+
+z-index:100;
+
+}
+
+/* ----------------------------- */
+
+.story-origin h1{
+
+margin:0;
+
+font-size:clamp(120px,12vw,240px);
+
+font-weight:900;
+
+letter-spacing:.12em;
+
+color:white;
+
+opacity:0;
+
+text-shadow:
+
+0 0 25px rgba(255,255,255,.2),
+
+0 0 70px rgba(34,197,94,.15);
+
+}
+
+/* ----------------------------- */
+
+.story-origin h3{
+
+margin-top:20px;
+
+font-size:clamp(26px,2vw,42px);
+
+font-weight:500;
+
+letter-spacing:.3em;
+
+text-transform:uppercase;
+
+color:#b8f8ca;
+
+opacity:0;
+
+}
+
+/* ----------------------------- */
+
+.blueprint-grid{
+
+position:absolute;
+inset:0;
+
+opacity:0;
+
+}
+
+/* ----------------------------- */
+
+.blueprint-svg{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+width:min(900px,88vw);
+
+transform:translate(-50%,-50%);
+
+overflow:visible;
+
+opacity:.95;
+
+}
+
+/* ----------------------------- */
+
+.blueprint-line{
+
+fill:none;
+
+stroke:#4ade80;
+
+stroke-width:2;
+
+stroke-linecap:round;
+
+stroke-linejoin:round;
+
+filter:
+
+drop-shadow(0 0 8px rgba(34,197,94,.7));
+
+}
+
+/* ----------------------------- */
+
+.building{
+
+position:absolute;
+
+left:50%;
+top:52%;
+
+transform:
+translate(-50%,-50%);
+
+width:min(900px,90vw);
+
+opacity:0;
+
+z-index:30;
+
+filter:
+
+drop-shadow(0 0 50px rgba(34,197,94,.18));
+
+}
+
+/* ----------------------------- */
+
+.window-light{
+
+opacity:0;
+
+fill:#7dffb2;
+
+filter:
+
+drop-shadow(0 0 12px #7dffb2);
+
+}
+
+/* ----------------------------- */
+
+.door-light{
+
+opacity:0;
+
+fill:#98ffd4;
+
+filter:
+
+drop-shadow(0 0 20px #98ffd4);
+
+}
+
+/* ----------------------------- */
+
+@keyframes ambientGlow{
+
+0%{
+
+transform:
+translate(-50%,-50%)
+scale(.85);
+
+opacity:.3;
+
+}
+
+100%{
+
+transform:
+translate(-50%,-50%)
+scale(1.2);
+
+opacity:.8;
+
+}
+
+}
+
+/* ----------------------------- */
+
+@keyframes gridMove{
+
+from{
+
+transform:
+translateY(0);
+
+}
+
+to{
+
+transform:
+translateY(-80px);
+
+}
+
+}
+
+/* ----------------------------- */
+
+@media(max-width:768px){
+
+.story-origin h1{
+
+font-size:72px;
+
+letter-spacing:8px;
+
+}
+
+.story-origin h3{
+
+font-size:18px;
+
+letter-spacing:5px;
+
+}
+
+.blueprint-svg{
+
+width:95vw;
+
+}
+
+.building{
+
+width:95vw;
+
+}
+
+}
