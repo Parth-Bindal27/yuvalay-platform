@@ -1,0 +1,67 @@
+.innovationProcess{
+    padding:20px 0 120px;
+    background:#fff;
+}
+
+.innovationProcessContainer{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+.processTimeline{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:24px;
+}
+
+.processCard{
+    background:#fff;
+    border:1px solid rgba(151,185,40,.15);
+    border-radius:28px;
+    padding:35px 25px;
+    text-align:center;
+    transition:.35s;
+}
+
+.processCard:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(151,185,40,.15);
+}
+
+.stepNumber{
+    width:60px;
+    height:60px;
+    margin:auto;
+    margin-bottom:20px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#97B928;
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+}
+
+.processCard h3{
+    color:#111;
+    font-size:20px;
+    line-height:1.4;
+}
+
+@media(max-width:1100px){
+
+.processTimeline{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.processTimeline{
+grid-template-columns:1fr;
+}
+
+}

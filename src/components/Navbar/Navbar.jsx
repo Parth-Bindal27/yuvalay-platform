@@ -150,31 +150,31 @@ export default function Navbar() {
   ];
 
   const projectDropdown = [
-    {
-      name: "Research",
-      path: "/programs/schools",
-    },
-    {
-      name: "Student Projects",
-      path: "/programs/college",
-    },
-    {
-      name: "Community Projects",
-      path: "/programs/startups",
-    },
-    {
-      name: "Open Source Projects",
-      path: "/programs/workshops",
-    },
-    {
-      name: "Innovation Showcase",
-      path: "/programs/workshops",
-    },
-    {
-      name: "Success Stories",
-      path: "/programs/workshops",
-    },
-  ];
+  {
+    name: "All Projects",
+    path: "/projects",
+  },
+  {
+    name: "Research & Innovation",
+    path: "/projects/research-innovation",
+  },
+  {
+    name: "Startup Showcase",
+    path: "/projects/startup-showcase",
+  },
+  {
+    name: "Success Stories",
+    path: "/projects/success-stories",
+  },
+  {
+    name: "Innovation Showcase",
+    path: "/projects/innovation-showcase",
+  },
+  {
+    name: "Awards & Recognition",
+    path: "/projects/awards-recognition",
+  },
+];
 
   const navLinks = [
     {

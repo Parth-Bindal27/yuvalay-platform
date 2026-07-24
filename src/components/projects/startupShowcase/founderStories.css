@@ -1,0 +1,40 @@
+.founderStories{
+    padding:20px 0 120px;
+    background:#f9fbf4;
+}
+
+.founderStoriesContainer{
+    width:min(1300px,92%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.founderImage img{
+    width:100%;
+    display:block;
+    border-radius:30px;
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+}
+
+.founderContent h2{
+    margin:22px 0;
+    font-size:46px;
+    color:#111;
+}
+
+.founderContent p{
+    color:#666;
+    line-height:1.9;
+    font-size:17px;
+}
+
+@media(max-width:992px){
+
+.founderStoriesContainer{
+grid-template-columns:1fr;
+}
+
+}

@@ -32,6 +32,15 @@ import Bootcamps from "./pages/Programs/Bootcamps";
 
 import Makerspace from "./pages/Makerspace/Makerspace";
 import Events from "./pages/Events/Events";
+
+/* Projects */
+import AllProjects from "./pages/projects/AllProjects";
+import ResearchInnovation from "./pages/projects/ResearchInnovation";
+import StartupShowcase from "./pages/projects/StartupShowcase";
+import SuccessStories from "./pages/projects/SuccessStories";
+import InnovationShowcase from "./pages/projects/InnovationShowcase";
+import AwardsRecognition from "./pages/projects/AwardsRecognition";
+
 import FAQs from "./pages/FAQs/FAQs";
 
 import Contact from "./pages/Contact/Contact";
@@ -112,6 +121,15 @@ function App() {
             path="/gallery"
             element={<Gallery />}
           />
+
+        {/* Projects */}
+        <Route path="/projects" element={<AllProjects />} />
+        <Route path="/projects/research-innovation" element={<ResearchInnovation />} />
+        <Route path="/projects/startup-showcase" element={<StartupShowcase />} />
+        <Route path="/projects/success-stories" element={<SuccessStories />} />
+        <Route path="/projects/innovation-showcase" element={<InnovationShowcase />} />
+        <Route path="/projects/awards-recognition" element={<AwardsRecognition />} />
+        
           <Route path="/faqs" element={<FAQs />} />
 
           <Route path="/contact" element={<Contact />} />
