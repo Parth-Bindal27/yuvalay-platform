@@ -1,0 +1,1012 @@
+.storyLocation {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    background: #000;
+
+    z-index: 999;
+
+}
+
+.storyLayer {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+/* --------------------------
+   COMMON LAYERS
+--------------------------- */
+
+.spaceCanvas,
+
+.earthCanvas,
+
+.indiaSVG,
+
+.gujaratSVG,
+
+.blueprintSVG,
+
+.droneHUD {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+/* --------------------------
+   GREEN ENERGY
+--------------------------- */
+
+.greenDotWrapper {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+
+    opacity: 0;
+
+}
+
+.greenDot {
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #4cff93;
+
+    box-shadow:
+        0 0 10px #4cff93,
+        0 0 25px #4cff93,
+        0 0 50px #4cff93,
+        0 0 90px #4cff93;
+}
+
+.energyGlow {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+            rgba(76, 255, 147, .28),
+            transparent 70%);
+
+    filter: blur(35px);
+
+    opacity: 0;
+
+}
+
+.energyRing {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(76, 255, 147, .75);
+
+    opacity: 0;
+
+}
+
+/* --------------------------
+   EARTH
+--------------------------- */
+
+.earthScene {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    z-index: 20;
+
+}
+
+/* --------------------------
+   INDIA
+--------------------------- */
+
+.indiaScene {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 0;
+
+    z-index: 30;
+
+}
+
+.indiaSVG {
+
+    width: min(420px, 70vw);
+
+    overflow: visible;
+
+}
+
+.indiaSVG path {
+
+    fill: rgba(70, 255, 145, .08);
+
+    stroke: #48ff96;
+
+    stroke-width: 2.5;
+
+    filter:
+        drop-shadow(0 0 8px #48ff96)
+        drop-shadow(0 0 20px #48ff96);
+}
+
+/* --------------------------
+   GUJARAT
+--------------------------- */
+
+.gujaratScene {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 0;
+
+    z-index: 40;
+
+}
+
+.gujaratSVG {
+
+    width: min(330px, 60vw);
+
+}
+
+.gujaratSVG path {
+
+    fill: rgba(70, 255, 145, .12);
+
+    stroke: #48ff96;
+
+    stroke-width: 3;
+
+}
+
+/* --------------------------
+   VADODARA
+--------------------------- */
+
+.vadodaraScene {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    z-index: 50;
+
+}
+
+/* --------------------------
+   BLUEPRINT
+--------------------------- */
+
+.blueprintScene {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    opacity: 0;
+
+    z-index: 60;
+
+}
+
+.blueprintSVG {
+
+    width: min(900px, 80vw);
+
+}
+
+.blueprintSVG path,
+.blueprintSVG rect,
+.blueprintSVG line,
+.blueprintSVG polyline {
+
+    fill: none;
+
+    stroke: #48ff96;
+
+    stroke-width: 2;
+
+    stroke-linejoin: round;
+
+    stroke-linecap: round;
+
+    filter:
+        drop-shadow(0 0 10px #48ff96)
+        drop-shadow(0 0 24px #48ff96);
+
+}
+
+/* --------------------------
+   DRONE HUD
+--------------------------- */
+
+.droneHUD {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 80;
+
+}
+
+/* --------------------------
+   RESPONSIVE
+--------------------------- */
+
+@media (max-width:768px) {
+
+    .indiaSVG {
+
+        width: 85vw;
+
+    }
+
+    .gujaratSVG {
+
+        width: 75vw;
+
+    }
+
+    .blueprintSVG {
+
+        width: 95vw;
+
+    }
+
+}
+
+/* ===========================
+   GREEN ENERGY CORE
+=========================== */
+
+.greenDotWrapper{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:30px;
+
+    height:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:15;
+
+}
+
+.greenDot{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#4cff93;
+
+    box-shadow:
+    0 0 10px #4cff93,
+    0 0 25px #4cff93,
+    0 0 45px #4cff93,
+    0 0 90px #4cff93,
+    0 0 160px #4cff93;
+
+}
+
+.energyGlow{
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(76,255,147,.28),
+    rgba(76,255,147,.12),
+    transparent 72%);
+
+    filter:blur(35px);
+
+}
+
+.energyRing{
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(76,255,147,.75);
+
+    opacity:0;
+
+}
+
+.ring1{}
+
+.ring2{}
+
+.ring3{}
+
+.earthScene{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    z-index:20;
+
+}
+
+.earthCanvas{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+/* ===========================
+   INDIA
+=========================== */
+
+.indiaScene{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:30;
+
+    opacity:0;
+
+}
+
+.indiaSVG{
+
+    width:min(430px,68vw);
+
+    overflow:visible;
+
+}
+
+.indiaSVG path{
+
+    fill:rgba(76,255,147,.08);
+
+    stroke:#4cff93;
+
+    stroke-width:3;
+
+    stroke-linejoin:round;
+
+    stroke-linecap:round;
+
+    filter:
+        drop-shadow(0 0 12px #4cff93)
+        drop-shadow(0 0 30px #4cff93);
+
+}
+
+.indiaSVG circle{
+
+    fill:#4cff93;
+
+    filter:
+        drop-shadow(0 0 10px #4cff93)
+        drop-shadow(0 0 20px #4cff93);
+
+}
+
+/* ===========================
+   GUJARAT
+=========================== */
+
+.gujaratScene{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:40;
+
+    opacity:0;
+
+}
+
+.gujaratSVG{
+
+    width:min(360px,55vw);
+
+    overflow:visible;
+
+}
+
+.gujaratSVG path{
+
+    fill:rgba(76,255,147,.12);
+
+    stroke:#4cff93;
+
+    stroke-width:3;
+
+    stroke-linejoin:round;
+
+    stroke-linecap:round;
+
+    filter:
+        drop-shadow(0 0 12px #4cff93)
+        drop-shadow(0 0 28px #4cff93);
+
+}
+
+.vadodaraMarker{
+
+    fill:#4cff93;
+
+    filter:
+        drop-shadow(0 0 10px #4cff93)
+        drop-shadow(0 0 25px #4cff93);
+
+}
+/* ===========================
+   VADODARA
+=========================== */
+
+.vadodaraScene{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:50;
+
+    opacity:0;
+
+}
+
+.vadodaraTarget{
+
+    position:relative;
+
+    width:24px;
+
+    height:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.pulseCore{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#4cff93;
+
+    box-shadow:
+    0 0 10px #4cff93,
+    0 0 25px #4cff93,
+    0 0 50px #4cff93,
+    0 0 120px #4cff93;
+
+}
+
+.pulseRing{
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(76,255,147,.75);
+
+    animation:pulse 2.8s linear infinite;
+
+}
+
+.ring2{
+
+    animation-delay:.7s;
+
+}
+
+.ring3{
+
+    animation-delay:1.4s;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(.2);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(8);
+
+        opacity:0;
+
+    }
+
+}
+
+.vadodaraLabel{
+
+    position:absolute;
+
+    margin-top:90px;
+
+    padding:8px 18px;
+
+    border:1px solid rgba(76,255,147,.35);
+
+    border-radius:40px;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(15px);
+
+    color:#4cff93;
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    letter-spacing:.28em;
+
+    text-transform:uppercase;
+
+    box-shadow:
+    0 0 20px rgba(76,255,147,.15);
+
+}
+
+/* ===========================
+   BLUEPRINT
+=========================== */
+
+.blueprintScene{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:60;
+
+    opacity:0;
+
+}
+
+.blueprintSVG{
+
+    width:min(900px,78vw);
+
+    overflow:visible;
+
+}
+
+.blueprintSVG rect,
+.blueprintSVG line,
+.blueprintSVG polyline{
+
+    fill:none;
+
+    stroke:#4cff93;
+
+    stroke-width:2.5;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+
+    filter:
+    drop-shadow(0 0 8px #4cff93)
+    drop-shadow(0 0 18px #4cff93)
+    drop-shadow(0 0 40px rgba(76,255,147,.45));
+
+}
+
+.blueprintScene::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(76,255,147,.08),
+    transparent 65%);
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   DRONE HUD
+=========================== */
+
+.droneHUD{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    z-index:80;
+
+    pointer-events:none;
+
+}
+
+.hudFrame{
+
+    position:absolute;
+
+    inset:40px;
+
+}
+
+.hudCorner{
+
+    position:absolute;
+
+    width:90px;
+
+    height:90px;
+
+    border-color:#4cff93;
+
+    filter:
+    drop-shadow(0 0 10px #4cff93);
+
+}
+
+.topLeft{
+
+    top:0;
+
+    left:0;
+
+    border-top:2px solid;
+
+    border-left:2px solid;
+
+}
+
+.topRight{
+
+    top:0;
+
+    right:0;
+
+    border-top:2px solid;
+
+    border-right:2px solid;
+
+}
+
+.bottomLeft{
+
+    left:0;
+
+    bottom:0;
+
+    border-left:2px solid;
+
+    border-bottom:2px solid;
+
+}
+
+.bottomRight{
+
+    right:0;
+
+    bottom:0;
+
+    border-right:2px solid;
+
+    border-bottom:2px solid;
+
+}
+
+.crosshair{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:160px;
+
+    height:160px;
+
+    transform:translate(-50%,-50%);
+
+}
+
+.crossVertical{
+
+    position:absolute;
+
+    left:50%;
+
+    width:2px;
+
+    height:100%;
+
+    transform:translateX(-50%);
+
+    background:#4cff93;
+
+}
+
+.crossHorizontal{
+
+    position:absolute;
+
+    top:50%;
+
+    width:100%;
+
+    height:2px;
+
+    transform:translateY(-50%);
+
+    background:#4cff93;
+
+}
+
+.crossCircle{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:80px;
+
+    height:80px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    border:2px solid #4cff93;
+
+}
+
+.scanLine{
+
+    position:absolute;
+
+    left:0;
+
+    top:-200px;
+
+    width:100%;
+
+    height:180px;
+
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        rgba(76,255,147,.15),
+        transparent
+    );
+
+    animation:scanMove 3s linear infinite;
+
+}
+
+@keyframes scanMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(calc(100vh + 300px));
+
+    }
+
+}
+
+.hudLeft,
+
+.hudRight{
+
+    position:absolute;
+
+    top:50px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    font-size:.82rem;
+
+    color:#4cff93;
+
+    letter-spacing:.18em;
+
+    font-weight:600;
+
+    text-shadow:
+    0 0 10px #4cff93;
+
+}
+
+.hudLeft{
+
+    left:40px;
+
+}
+
+.hudRight{
+
+    right:40px;
+
+    align-items:flex-end;
+
+}

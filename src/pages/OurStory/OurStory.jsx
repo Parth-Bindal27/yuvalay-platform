@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import StoryIntro from "../../components/OurStory/StoryIntro/StoryIntro";
 import StoryProblem from "../../components/OurStory/StoryProblem/StoryProblem";
-import StoryOrigin from "../../components/OurStory/StoryOrigin/StoryOrigin";
+import StoryLocation from "../../components/OurStory/StoryLocation/StoryLocation";
 
 const OurStory = () => {
   const [scene, setScene] = useState(0);
@@ -28,7 +28,7 @@ const OurStory = () => {
       )}
 
       {scene === 2 && (
-        <StoryOrigin
+        <StoryLocation
           onComplete={nextScene}
         />
       )}
