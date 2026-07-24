@@ -1,7 +1,6 @@
 .faqCategories{
 
     padding:100px 0;
-
     background:#f9fbf4;
 
 }
@@ -12,7 +11,7 @@
     margin:auto;
 
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
     gap:24px;
 
@@ -20,7 +19,7 @@
 
 .faqCategoryCard{
 
-    padding:35px 20px;
+    padding:35px 24px;
 
     text-align:center;
 
@@ -28,11 +27,14 @@
 
     background:#fff;
 
-    border:1px solid rgba(151,185,40,.15);
+    border:1px solid rgba(151,185,40,.12);
 
-    transition:.35s;
+    transition:.35s ease;
 
     cursor:pointer;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.04);
 
 }
 
@@ -40,20 +42,27 @@
 
     transform:translateY(-8px);
 
-    box-shadow:0 20px 45px rgba(151,185,40,.15);
+    border-color:rgba(151,185,40,.35);
+
+    box-shadow:
+    0 20px 45px rgba(151,185,40,.16);
 
 }
 
 .faqCategoryIcon{
 
-    width:70px;
-    height:70px;
+    width:72px;
+    height:72px;
 
     margin:auto;
 
-    border-radius:20px;
+    border-radius:22px;
 
-    background:#f6faeb;
+    background:linear-gradient(
+        135deg,
+        #f9fdea,
+        #eef8d7
+    );
 
     display:flex;
     justify-content:center;
@@ -63,40 +72,73 @@
 
     font-size:30px;
 
-    margin-bottom:20px;
+    margin-bottom:22px;
+
+    transition:.35s;
+
+}
+
+.faqCategoryCard:hover .faqCategoryIcon{
+
+    transform:scale(1.08) rotate(-6deg);
 
 }
 
 .faqCategoryCard h3{
 
-    font-size:20px;
+    font-size:1.25rem;
+
+    font-weight:700;
 
     color:#111;
 
-}
-
-@media(max-width:992px){
-
-.faqCategoriesContainer{
-
-    grid-template-columns:repeat(2,1fr);
+    line-height:1.4;
 
 }
 
-}
+@media (max-width:992px){
 
-@media(max-width:768px){
+    .faqCategories{
 
-.faqCategories{
+        padding:90px 0;
 
-    padding:80px 0;
-
-}
-
-.faqCategoriesContainer{
-
-    grid-template-columns:1fr;
+    }
 
 }
+
+@media (max-width:768px){
+
+    .faqCategories{
+
+        padding:70px 0;
+
+    }
+
+    .faqCategoriesContainer{
+
+        gap:18px;
+
+    }
+
+    .faqCategoryCard{
+
+        padding:28px 20px;
+
+    }
+
+    .faqCategoryIcon{
+
+        width:64px;
+        height:64px;
+
+        font-size:26px;
+
+    }
+
+    .faqCategoryCard h3{
+
+        font-size:1.1rem;
+
+    }
 
 }

@@ -1,127 +1,977 @@
-.faqAccordion{
+/*==================================================
+                    FAQ SECTION
+==================================================*/
 
-    padding:20px 0 120px;
-    background:#fff;
+.faqAccordionSection{
+
+    padding:120px 0;
+
+    background:
+    radial-gradient(circle at top right,#eff8dc 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#f4fbe7 0%,transparent 40%),
+    linear-gradient(180deg,#ffffff,#f9fcf5);
+
+    overflow:hidden;
 
 }
 
 .faqAccordionContainer{
 
-    width:min(1000px,92%);
+    width:min(1350px,92%);
     margin:auto;
 
 }
 
-.faqItem{
+/*==================================================
+                    HEADER
+==================================================*/
 
-    border:1px solid rgba(151,185,40,.15);
-    border-radius:24px;
-    margin-bottom:18px;
-    overflow:hidden;
-    transition:.35s;
-    background:#fff;
+.faqAccordionHeader{
 
-}
-
-.faqItem:hover{
-
-    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 70px;
 
 }
 
-.faqQuestion{
+.faqSubtitle{
 
-    width:100%;
-    background:none;
-    border:none;
-    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    background:#edf7d8;
+
+    color:#88ab1f;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+
+}
+
+.faqAccordionHeader h2{
+
+    font-size:clamp(2.3rem,5vw,3.7rem);
+
+    line-height:1.15;
+
+    color:#17301c;
+
+    margin-bottom:20px;
+
+}
+
+.faqAccordionHeader p{
+
+    color:#66727b;
+
+    font-size:1.08rem;
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+                    SEARCH
+==================================================*/
+
+.faqAccordionSearch{
+
+    width:min(760px,100%);
+
+    margin:0 auto 45px;
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
 
-    padding:28px 30px;
-    text-align:left;
+    gap:18px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(151,185,40,.18);
+
+    border-radius:22px;
+
+    padding:20px 28px;
+
+    transition:.35s;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.05);
 
 }
 
-.faqQuestion h3{
+.faqAccordionSearch:hover{
 
-    margin-top:12px;
+    border-color:#97B92888;
+
+    transform:translateY(-2px);
+
+}
+
+.faqAccordionSearch:focus-within{
+
+    border-color:#97B928;
+
+    box-shadow:
+    0 0 0 4px rgba(151,185,40,.15),
+    0 20px 50px rgba(151,185,40,.15);
+
+}
+
+.faqAccordionSearch svg{
+
     font-size:22px;
-    color:#111;
-    font-weight:600;
 
-}
-
-.faqQuestion svg{
-
-    font-size:26px;
     color:#97B928;
+
     flex-shrink:0;
 
 }
 
-.faqCategoryBadge{
+.faqAccordionSearch input{
 
-    display:inline-block;
-    padding:6px 14px;
-    border-radius:999px;
-    background:#f6faeb;
-    color:#97B928;
-    font-size:13px;
-    font-weight:600;
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font-size:17px;
+
+    color:#203028;
 
 }
 
-.faqAnswer{
+.faqAccordionSearch input::placeholder{
+
+    color:#98a2aa;
+
+}
+
+/*==================================================
+                    FILTERS
+==================================================*/
+
+.faqAccordionFilters{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    margin-bottom:45px;
+
+}
+
+.faqFilter{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    background:#fff;
+
+    border:1px solid rgba(151,185,40,.18);
+
+    color:#4d5a4d;
+
+    padding:13px 24px;
+
+    border-radius:999px;
+
+    font-size:.94rem;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:
+    0 10px 22px rgba(0,0,0,.04);
+
+}
+
+.faqFilter:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#97B928;
+
+    color:#7d9f19;
+
+}
+
+.faqFilter.active{
+
+    background:#97B928;
+
+    color:#fff;
+
+    border-color:#97B928;
+
+    box-shadow:
+    0 18px 40px rgba(151,185,40,.35);
+
+}
+
+/*==================================================
+                    RESULT COUNT
+==================================================*/
+
+.faqResultCount{
+
+    text-align:center;
+
+    color:#70807a;
+
+    margin-bottom:45px;
+
+    font-size:15px;
+
+}
+
+.faqResultCount strong{
+
+    color:#97B928;
+
+    font-size:18px;
+
+}
+
+/*==================================================
+                    FAQ LIST
+==================================================*/
+
+.faqList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/*==================================================
+                    FAQ CARD
+==================================================*/
+
+.faqAccordionCard{
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(151,185,40,.15);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.05);
+     padding: 35px 32px;
+}
+
+.faqAccordionCard:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#97B92855;
+
+    box-shadow:
+    0 28px 60px rgba(0,0,0,.08);
+
+}
+
+.faqAccordionCard.active{
+
+    border-color:#97B928;
+
+    box-shadow:
+    0 25px 70px rgba(151,185,40,.18);
+
+}
+
+/*==================================================
+                    QUESTION
+==================================================*/
+
+.faqAccordionQuestion{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+
+    padding:28px 32px;
+
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    text-align:left;
+}
+
+.faqAccordionQuestionLeft{
+    flex:1;
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.faqAccordionQuestionLeft h3{
+    margin:0;
+
+    font-size:1.15rem;
+    line-height:1.5;
+    color:#1f2b24;
+
+    word-break:break-word;
+}
+
+/*==================================================
+                    BADGES
+==================================================*/
+
+.faqBadges{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.faqCategory{
+
+    padding:7px 16px;
+
+    border-radius:999px;
+
+    background:#edf7d8;
+
+    color:#7d9f19;
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+.faqPopular{
+
+    padding:7px 16px;
+
+    border-radius:999px;
+
+    background:#fff4cf;
+
+    color:#d69d00;
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+}
+
+/*==================================================
+                    PLUS ICON
+==================================================*/
+
+.faqIcon{
+width:44px;
+    height:44px;
+
+    min-width:44px;
+    min-height:44px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#f3f8e6;
+
+    color:#97B928;
+
+    flex-shrink:0;
+
+    margin:auto 0;
+
+    transition:.3s;
+
+}
+
+.faqAccordionCard.active .faqIcon{
+    transform:rotate(45deg);
+    background:#97B928;
+    color:#fff;
+}
+
+/*==================================================
+                    ANSWER
+==================================================*/
+
+.faqAccordionAnswer{
 
     max-height:0;
     overflow:hidden;
-    transition:max-height .45s ease;
 
+    transition:max-height .4s ease;
+
+    padding:0 32px;
 }
 
-.faqItem.active .faqAnswer{
+.faqAccordionAnswer.show{
 
-    max-height:300px;
+    max-height:400px;
 
+    padding:0 32px 30px;
 }
 
-.faqAnswer p{
+.faqAccordionAnswer p{
 
-    padding:0 30px 28px;
-    color:#666;
+    color:#66727b;
+
     line-height:1.9;
-    font-size:16px;
+
+    font-size:1rem;
 
 }
 
-@media(max-width:768px){
+/*==================================================
+                    EMPTY STATE
+==================================================*/
 
-.faqAccordion{
+.faqEmpty{
 
-padding:20px 0 80px;
+    text-align:center;
 
-}
+    padding:70px 30px;
 
-.faqQuestion{
+    background:#fff;
 
-padding:22px;
+    border-radius:28px;
 
-}
-
-.faqQuestion h3{
-
-font-size:18px;
+    border:1px solid rgba(151,185,40,.15);
 
 }
 
-.faqAnswer p{
+.faqEmpty h3{
 
-padding:0 22px 22px;
-font-size:15px;
+    color:#203028;
+
+    font-size:2rem;
+
+    margin-bottom:16px;
 
 }
+
+.faqEmpty p{
+
+    color:#7b878f;
+
+    margin-bottom:30px;
+
+}
+
+.faqEmpty button{
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#97B928;
+
+    color:#fff;
+
+    padding:15px 28px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.faqEmpty button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 15px 35px rgba(151,185,40,.35);
+
+}
+
+/*==================================================
+                    CONTACT CTA
+==================================================*/
+
+.faqAccordionCTAButton{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:40px;
+
+    padding:55px;
+
+    background:linear-gradient(135deg,#97B928,#7ea51d);
+
+    border-radius:30px;
+
+    color:#fff;
+    margin-top: 100px;
+}
+
+.faqAccordionCTAButton > div{
+    flex:1;
+    min-width:0;
+}
+
+
+
+.faqAccordionCTAButton p{
+
+    line-height:1.8;
+    margin-left: 50px;
+    opacity:.95;
+
+    max-width:650px;
+
+}
+
+.faqAccordionCTAButtonButton{
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:180px;
+    height:58px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    background:#fff;
+
+    color:#7d9f19;
+
+    font-weight:700;
+}
+
+.faqAccordionCTAButtonButton:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 20px 40px rgba(255,255,255,.3);
+
+}
+
+/*==================================================
+                RESPONSIVE DESIGN
+==================================================*/
+
+@media (max-width:1200px){
+
+    .faqAccordionCTAButton{
+
+        padding:45px;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .faqAccordionSection{
+
+        padding:90px 0;
+
+    }
+
+    .faqAccordionHeader{
+
+        margin-bottom:55px;
+
+    }
+
+    .faqAccordionQuestion{
+
+        padding:24px;
+
+    }
+
+    .faqAccordionAnswer.show{
+
+        padding:0 24px 24px;
+
+    }
+
+    .faqAccordionCTAButton{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:40px 30px;
+
+    }
+
+    .faqAccordionCTAButton p{
+
+        max-width:100%;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .faqAccordionSection{
+
+        padding:70px 0;
+
+    }
+
+    . h2{
+
+        font-size:2.4rem;
+
+    }
+
+    . p{
+
+        font-size:1rem;
+
+    }
+
+    .faqAccordionSearch{
+
+        padding:16px 20px;
+
+        border-radius:18px;
+
+    }
+
+    .faqAccordionSearch input{
+
+        font-size:15px;
+
+    }
+
+    .faqAccordionFilters{
+
+        flex-wrap:nowrap;
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+
+        padding-bottom:8px;
+
+        scrollbar-width:none;
+
+        -ms-overflow-style:none;
+
+    }
+
+    .faqAccordionFilters::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    .faqFilter{
+
+        flex-shrink:0;
+
+        padding:12px 20px;
+
+        font-size:.85rem;
+
+    }
+
+    .faqAccordionQuestion{
+
+        gap:18px;
+
+        padding:22px;
+
+    }
+
+    .faqAccordionQuestionLeft h3{
+
+        font-size:1.02rem;
+
+        line-height:1.5;
+
+    }
+
+    .faqCategory,
+    .faqPopular{
+
+        font-size:.72rem;
+
+        padding:6px 13px;
+
+    }
+
+    .faqIcon{
+
+        font-size:26px;
+
+    }
+
+    .faqAccordionAnswer.show{
+
+        padding:0 22px 22px;
+
+    }
+
+    .faqAccordionAnswer p{
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+    .faqAccordionCTAButton{
+
+        border-radius:24px;
+
+    }
+
+    .faqAccordionCTAButton h2{
+
+        font-size:1.6rem;
+
+    }
+
+    .faqAccordionCTAButtonButton{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .faqAccordionSection{
+
+        padding:60px 0;
+
+    }
+
+    .faqAccordionContainer{
+
+        width:94%;
+
+    }
+
+    .{
+
+        margin-bottom:40px;
+
+    }
+
+    .faqSubtitle{
+
+        font-size:.75rem;
+
+        padding:8px 18px;
+
+    }
+
+    . h2{
+
+        font-size:2rem;
+
+    }
+
+    .faqAccordionSearch{
+
+        gap:12px;
+
+        padding:15px 18px;
+
+    }
+
+    .faqAccordionQuestion{
+
+        padding:18px;
+
+    }
+
+    .faqAccordionQuestionLeft h3{
+
+        font-size:.96rem;
+
+    }
+
+    .faqBadges{
+
+        margin-bottom:12px;
+
+        gap:8px;
+
+    }
+
+    .faqCategory,
+    .faqPopular{
+
+        font-size:.68rem;
+
+        padding:5px 11px;
+
+    }
+
+    .faqAccordionAnswer.show{
+
+        padding:0 18px 18px;
+
+    }
+
+    .faqAccordionAnswer p{
+
+        font-size:.92rem;
+
+    }
+
+    .faqEmpty{
+
+        padding:45px 20px;
+
+    }
+
+    .faqEmpty h3{
+
+        font-size:1.5rem;
+
+    }
+
+    .faqAccordionCTAButton{
+
+        margin-top:70px;
+
+        padding:30px 22px;
+
+    }
+
+    .faqAccordionCTAButton h2{
+
+        font-size:1.45rem;
+
+    }
+
+    .faqAccordionCTAButton p{
+
+        font-size:.95rem;
+
+    }
+
+    .faqAccordionCTAButtonButton{
+
+        padding:15px 24px;
+
+    }
+
+}
+
+/*==================================================
+                SMOOTH ANIMATIONS
+==================================================*/
+
+.faqAccordionCard,
+.faqFilter,
+.faqAccordionCTAButtonButton,
+.faqAccordionSearch{
+
+    will-change:transform;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+.faqAccordionCard{
+
+    animation:faqFade .45s ease both;
+
+}
+
+@keyframes faqFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.faqAccordionQuestion:focus-visible{
+
+    outline:3px solid rgba(151,185,40,.35);
+
+    outline-offset:4px;
+
+    border-radius:18px;
+
+}
+
+.faqAccordionCTAButtonButton:active,
+.faqFilter:active,
+.faqEmpty button:active{
+
+    transform:scale(.97);
 
 }
