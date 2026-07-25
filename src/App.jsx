@@ -55,6 +55,10 @@ import News from "./pages/News";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AdminRoute from "./routes/AdminRoute";
 
+
+import HistoryPage from "./pages/History/HistoryPage";
+
+
 function AppLayout() {
 
     const location = useLocation();
@@ -90,6 +94,10 @@ function AppLayout() {
                   element={<Home />}
                 />
         
+                <Route
+                  path="/our-story/history"
+                  element={<HistoryPage />}
+                />
 
                 <Route
                   path="/about"

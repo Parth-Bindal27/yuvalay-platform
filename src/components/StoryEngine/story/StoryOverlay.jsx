@@ -38,13 +38,6 @@ export default function StoryOverlay({ scene }) {
 
                 </p>
 
-                <div className="story-scene-scroll">
-
-                    <div className="story-scene-line"></div>
-
-                    <p>Scroll To Continue</p>
-
-                </div>
 
             </div>
 

@@ -4,6 +4,8 @@ import gsap from "gsap";
 import StoryOverlay from "./StoryOverlay";
 import storyTimeline from "./storyTimeline";
 
+import { useNavigate } from "react-router-dom";
+
 import { useParticleController } from "../core/ParticleController";
 
 export default function StoryManager() {
@@ -14,26 +16,48 @@ export default function StoryManager() {
 
     const timeline = useRef(null);
 
+    const navigate = useNavigate();
+
+
     useEffect(() => {
 
         setMode(storyTimeline[0].mode);
 
         const tl = gsap.timeline({
 
-            repeat: -1,
+            // Play only once
+            repeat: 0,
 
             defaults: {
 
                 ease: "power3.inOut"
 
-            }
+            },
+
+            onComplete: () => {
+
+    gsap.to(".story-scene-box", {
+
+        opacity: 0,
+
+        duration: 0.6
+
+    });
+
+    gsap.delayedCall(0.8, () => {
+
+        navigate("/our-story/history");
+
+    });
+
+}
 
         });
 
         storyTimeline.forEach((scene, index) => {
 
             //-----------------------------------------
-            // Fade Out
+            // Fade Out Previous Text
             //-----------------------------------------
 
             if (index !== 0) {
@@ -46,26 +70,48 @@ export default function StoryManager() {
 
                     filter: "blur(10px)",
 
-                    duration: 0.9
+                    duration: 0.8
 
                 });
 
             }
 
             //-----------------------------------------
-            // Change Scene
+            // Change Particle Scene
             //-----------------------------------------
 
             tl.call(() => {
-
-                setSceneIndex(index);
 
                 setMode(scene.mode);
 
             });
 
             //-----------------------------------------
-            // Fade In
+            // Special delay for Vadodara
+            //-----------------------------------------
+
+            if (scene.mode === "vadodara") {
+
+                tl.to({}, {
+
+                    duration: 2.3
+
+                });
+
+            }
+
+            //-----------------------------------------
+            // Change Text
+            //-----------------------------------------
+
+            tl.call(() => {
+
+                setSceneIndex(index);
+
+            });
+
+            //-----------------------------------------
+            // Fade In Text
             //-----------------------------------------
 
             tl.to(".story-scene-box", {
@@ -76,7 +122,7 @@ export default function StoryManager() {
 
                 filter: "blur(0px)",
 
-                duration: 1
+                duration: 0.9
 
             });
 

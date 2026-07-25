@@ -66,17 +66,17 @@ const storyTimeline = [
     },
 
     {
-        id: 5,
+    id: 5,
 
-        mode: "yuvalay",
+    mode: "scatter",
 
-        duration: 5000,
+    duration: 3000,
 
-        title: "This is Yuvalay",
+    title: "Our Story Begins Here",
 
-        description:
-            "A makerspace where curiosity becomes innovation and students become creators."
-    }
+    description:
+        "Every great innovation starts with a single dream."
+},
 
 ];
 

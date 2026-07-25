@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import gsap from "gsap";
-import * as THREE from "three";
 
 import { useParticleController } from "./ParticleController";
 
@@ -10,6 +9,8 @@ export default function VadodaraPin() {
     const { mode } = useParticleController();
 
     const pin = useRef();
+
+    const BASE_SCALE = 0.55;
 
     useEffect(() => {
 
@@ -33,27 +34,57 @@ export default function VadodaraPin() {
             0.2
         );
 
+        gsap.killTweensOf(pin.current.position);
+        gsap.killTweensOf(pin.current.scale);
+
+        // Drop Animation
         gsap.to(pin.current.position, {
 
             y: -0.45,
 
-            duration: 1.2,
+            duration: 1.1,
 
             ease: "bounce.out"
 
         });
 
+        // Scale In
         gsap.to(pin.current.scale, {
 
-            x: 1,
+            x: BASE_SCALE,
 
-            y: 1,
+            y: BASE_SCALE,
 
-            z: 1,
+            z: BASE_SCALE,
 
-            duration: 0.6,
+            duration: 0.45,
 
             ease: "back.out(2)"
+
+        });
+
+        // Shrink & Hide
+        gsap.to(pin.current.scale, {
+
+            x: 0,
+
+            y: 0,
+
+            z: 0,
+
+            delay: 1.8,
+
+            duration: 0.45,
+
+            ease: "power2.in"
+
+        });
+
+        gsap.delayedCall(2.3, () => {
+
+            if (pin.current)
+
+                pin.current.visible = false;
 
         });
 
@@ -65,17 +96,22 @@ export default function VadodaraPin() {
 
         if (mode !== "vadodara") return;
 
-        const pulse = 1 + Math.sin(clock.elapsedTime * 4) * 0.08;
+        if (!pin.current.visible) return;
 
-        pin.current.scale.set(
+        // Pulse only while visible
+        if (pin.current.scale.x > 0.05) {
 
-            pulse,
+            const pulse =
+                BASE_SCALE +
+                Math.sin(clock.elapsedTime * 5) * 0.02;
 
-            pulse,
+            pin.current.scale.set(
+                pulse,
+                pulse,
+                pulse
+            );
 
-            pulse
-
-        );
+        }
 
     });
 
@@ -84,20 +120,18 @@ export default function VadodaraPin() {
         <group ref={pin} visible={false}>
 
             {/* Head */}
-
             <mesh>
 
-                <sphereGeometry args={[0.12, 32, 32]} />
+                <sphereGeometry args={[0.08, 32, 32]} />
 
                 <meshBasicMaterial color="#ff2d2d" />
 
             </mesh>
 
             {/* Tail */}
+            <mesh position={[0, -0.11, 0]}>
 
-            <mesh position={[0, -0.18, 0]}>
-
-                <coneGeometry args={[0.08, 0.25, 32]} />
+                <coneGeometry args={[0.05, 0.16, 32]} />
 
                 <meshBasicMaterial color="#ff2d2d" />
 

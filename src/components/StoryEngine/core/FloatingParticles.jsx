@@ -32,6 +32,7 @@ export default function FloatingParticles() {
     const earthPositions = useRef(null);
     const indiaPositions = useRef(null);
     const gujaratPositions = useRef(null);
+    const scatterVelocity = useRef([]);
 
     //-----------------------------------------
     // Geometry
@@ -259,6 +260,34 @@ export default function FloatingParticles() {
 
                 break;
 
+            case "scatter": {
+
+    scatterVelocity.current = [];
+
+    for (let i = 0; i < COUNT; i++) {
+
+        // Random direction
+        const dir = new THREE.Vector3(
+            Math.random() - 0.5,
+            Math.random() - 0.5,
+            0 // <- IMPORTANT (don't move towards camera)
+        ).normalize();
+
+        scatterVelocity.current.push({
+
+            x: dir.x * (0.05 + Math.random() * 0.08),
+
+            y: dir.y * (0.05 + Math.random() * 0.08),
+
+            z: 0
+
+        });
+
+    }
+
+    break;
+}
+
             default:
 
                 break;
@@ -299,6 +328,24 @@ export default function FloatingParticles() {
             attribute.needsUpdate = true;
 
         }
+
+        if (mode === "scatter") {
+
+    for (let i = 0; i < COUNT; i++) {
+
+        array[i * 3] += scatterVelocity.current[i].x;
+
+        array[i * 3 + 1] += scatterVelocity.current[i].y;
+
+        // Don't move in Z direction
+        // This keeps particles far from camera
+        array[i * 3 + 2] *= 0.995;
+
+    }
+
+    attribute.needsUpdate = true;
+
+}
 
         if (!particles.current) return;
 
@@ -549,21 +596,21 @@ export default function FloatingParticles() {
 
             <pointsMaterial
 
-                vertexColors
+    vertexColors
 
-                size={0.07}
+    size={0.018}
 
-                transparent
+    transparent
 
-                opacity={1}
+    opacity={0.38}
 
-                depthWrite={false}
+    depthWrite={false}
 
-                blending={THREE.AdditiveBlending}
+    blending={THREE.AdditiveBlending}
 
-                sizeAttenuation
+    sizeAttenuation
 
-            />
+/>
 
         </points>
 
