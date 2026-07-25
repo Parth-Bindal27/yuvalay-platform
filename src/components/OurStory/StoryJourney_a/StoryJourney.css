@@ -1,0 +1,387 @@
+/* ==========================================================
+   STORY JOURNEY
+========================================================== */
+
+.story-journey{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+
+    background:#000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    isolation:isolate;
+}
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.story-bg{
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 50% 50%,
+    rgba(24,255,132,.08),
+    transparent 35%),
+
+    radial-gradient(circle at 20% 20%,
+    rgba(0,255,170,.05),
+    transparent 45%),
+
+    radial-gradient(circle at 80% 80%,
+    rgba(0,255,120,.04),
+    transparent 50%),
+
+    #000;
+
+    z-index:0;
+}
+
+
+/* ==========================================================
+   FILM GRAIN
+========================================================== */
+
+.story-noise{
+    position:absolute;
+    inset:0;
+
+    opacity:.04;
+
+    background-image:
+    radial-gradient(#ffffff 1px, transparent 1px);
+
+    background-size:5px 5px;
+
+    animation:noiseMove 8s linear infinite;
+
+    pointer-events:none;
+
+    z-index:2;
+}
+
+@keyframes noiseMove{
+
+0%{
+transform:translate(0,0);
+}
+
+50%{
+transform:translate(30px,-40px);
+}
+
+100%{
+transform:translate(0,0);
+}
+
+}
+
+
+/* ==========================================================
+   VIGNETTE
+========================================================== */
+
+.story-vignette{
+
+position:absolute;
+inset:0;
+
+background:
+radial-gradient(circle,
+transparent 40%,
+rgba(0,0,0,.55) 100%);
+
+pointer-events:none;
+
+z-index:3;
+
+}
+
+
+/* ==========================================================
+   PROGRESS BAR
+========================================================== */
+
+.story-progress{
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+height:3px;
+
+background:rgba(255,255,255,.08);
+
+z-index:50;
+
+overflow:hidden;
+
+}
+
+.story-progress-fill{
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+#19ff89,
+#8dffd0
+);
+
+transform-origin:left center;
+
+transform:scaleX(0);
+
+box-shadow:
+
+0 0 10px #19ff89,
+
+0 0 25px #19ff89,
+
+0 0 40px #19ff89;
+
+}
+
+
+/* ==========================================================
+   CHAPTER
+========================================================== */
+
+.chapter{
+
+position:absolute;
+
+top:60px;
+left:70px;
+
+z-index:30;
+
+max-width:500px;
+
+}
+
+.chapter span{
+
+display:inline-block;
+
+letter-spacing:7px;
+
+font-size:.78rem;
+
+font-weight:700;
+
+color:#18ff8c;
+
+margin-bottom:16px;
+
+text-transform:uppercase;
+
+}
+
+.chapter h2{
+
+font-size:4rem;
+
+font-weight:700;
+
+line-height:1;
+
+color:white;
+
+margin:0;
+
+text-shadow:
+
+0 0 30px rgba(24,255,140,.35);
+
+}
+
+
+/* ==========================================================
+   STAGE
+========================================================== */
+
+.story-stage{
+
+position:absolute;
+
+inset:0;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+z-index:20;
+
+}
+
+
+/* ==========================================================
+   GLOW
+========================================================== */
+
+.story-stage::before{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+
+rgba(20,255,120,.12),
+
+transparent 70%);
+
+filter:blur(80px);
+
+animation:glowPulse 5s ease-in-out infinite;
+
+}
+
+
+@keyframes glowPulse{
+
+0%{
+
+transform:scale(.85);
+opacity:.4;
+
+}
+
+50%{
+
+transform:scale(1);
+opacity:.8;
+
+}
+
+100%{
+
+transform:scale(.85);
+opacity:.4;
+
+}
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:900px){
+
+.chapter{
+
+left:30px;
+top:35px;
+
+}
+
+.chapter h2{
+
+font-size:2.4rem;
+
+}
+
+.chapter span{
+
+font-size:.65rem;
+
+letter-spacing:5px;
+
+}
+
+.story-stage::before{
+
+width:400px;
+height:400px;
+
+}
+
+}
+
+/* ==========================================================
+   MOVIE STAGE
+========================================================== */
+
+.story-journey__stage{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+z-index:10;
+
+}
+
+/* ==========================================================
+   CHAPTER CARD
+========================================================== */
+
+.story-journey__chapter{
+
+position:absolute;
+
+top:60px;
+left:70px;
+
+z-index:100;
+
+pointer-events:none;
+
+}
+
+.story-journey__chapter span{
+
+display:block;
+
+margin-bottom:18px;
+
+font-size:.8rem;
+
+letter-spacing:6px;
+
+color:#1aff8c;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+}
+
+.story-journey__chapter h2{
+
+margin:0;
+
+font-size:clamp(2.5rem,5vw,4.5rem);
+
+line-height:1;
+
+font-weight:700;
+
+color:white;
+
+text-shadow:
+
+0 0 20px rgba(26,255,140,.35);
+
+}

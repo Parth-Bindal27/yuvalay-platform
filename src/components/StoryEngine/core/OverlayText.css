@@ -1,0 +1,149 @@
+.story-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+    pointer-events:none;
+
+}
+
+.story-overlay-box{
+
+    width:min(950px,90vw);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.story-chapter{
+
+    color:#18ff8c;
+
+    font-size:.9rem;
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+}
+
+.story-title{
+
+    margin:0;
+
+    color:white;
+
+    font-size:clamp(4rem,8vw,7rem);
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    text-shadow:0 0 35px rgba(24,255,140,.25);
+
+}
+
+.story-description{
+
+    margin-top:35px;
+
+    width:min(700px,90vw);
+
+    color:#dadada;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+}
+
+.story-description span{
+
+    color:#18ff8c;
+
+    font-weight:700;
+
+}
+
+.story-scroll{
+
+    margin-top:70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.story-scroll-line{
+
+    width:2px;
+
+    height:60px;
+
+    background:#18ff8c;
+
+    animation:storyScroll 1.5s infinite;
+
+}
+
+.story-scroll p{
+
+    margin:0;
+
+    color:white;
+
+    font-size:1rem;
+
+}
+
+@keyframes storyScroll{
+
+    0%{
+
+        transform:scaleY(.3);
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        transform:scaleY(1);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scaleY(.3);
+
+        opacity:.3;
+
+    }
+
+}

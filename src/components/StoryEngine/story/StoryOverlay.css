@@ -1,0 +1,141 @@
+.story-scene-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    pointer-events:none;
+
+    z-index:1000;
+
+}
+
+.story-scene-box{
+
+    width:min(900px,90vw);
+
+    text-align:center;
+
+    opacity:1;
+
+    transform:scale(1);
+
+    filter:blur(0px);
+
+    will-change:transform,opacity,filter;
+
+}
+
+.story-scene-chapter{
+
+    display:block;
+
+    color:#18ff8c;
+
+    font-size:.9rem;
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    margin-bottom:30px;
+
+}
+
+.story-scene-title{
+
+    margin:0;
+
+    color:white;
+
+    font-size:clamp(4rem,8vw,7rem);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    text-shadow:0 0 30px rgba(24,255,140,.25);
+
+}
+
+.story-scene-description{
+
+    width:min(700px,90vw);
+
+    margin:35px auto 0;
+
+    color:#d6d6d6;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+}
+
+.story-scene-scroll{
+
+    margin-top:70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.story-scene-line{
+
+    width:2px;
+
+    height:60px;
+
+    background:#18ff8c;
+
+    animation:storyLine 1.6s infinite;
+
+}
+
+.story-scene-scroll p{
+
+    color:white;
+
+    margin:0;
+
+}
+
+@keyframes storyLine{
+
+    0%{
+
+        transform:scaleY(.3);
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        transform:scaleY(1);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scaleY(.3);
+
+        opacity:.3;
+
+    }
+
+}
